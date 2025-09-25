@@ -34,6 +34,54 @@ def load_data():
     
     return df
 
+@st.cache_data
+def load_additional_games_data():
+    """Load additional games data for comparison"""
+    additional_games = {}
+    
+    # Basketball Zero
+    try:
+        with open('sportGames/BasketballZero_universe_7028566528/daily_revenue_20250921_011912.json', 'r') as f:
+            data = json.load(f)
+        df_basketball = pd.DataFrame(data['kpiData'])
+        df_basketball['date'] = pd.to_datetime(df_basketball['date'])
+        additional_games['Basketball Zero'] = df_basketball
+    except FileNotFoundError:
+        pass
+    
+    # Blue Lock Rivals
+    try:
+        with open('sportGames/BlueLockRivals_universe_6325068386/daily_revenue_20250921_011832.json', 'r') as f:
+            data = json.load(f)
+        df_bluelock = pd.DataFrame(data['kpiData'])
+        df_bluelock['date'] = pd.to_datetime(df_bluelock['date'])
+        additional_games['Blue Lock Rivals'] = df_bluelock
+    except FileNotFoundError:
+        pass
+    
+    return additional_games
+
+def calculate_additional_games_weekly_averages(additional_games, robux_to_usd):
+    """Calculate weekly averages for additional games"""
+    weekly_data = {}
+    
+    for game_name, game_df in additional_games.items():
+        # Convert to USD
+        game_df['Estimated Revenue USD'] = game_df['Estimated Revenue'] * robux_to_usd
+        
+        # Create week column (starting from Monday)
+        game_df['week'] = game_df['date'].dt.to_period('W-MON')
+        
+        # Calculate weekly averages
+        weekly_avg = game_df.groupby('week').agg({
+            'Estimated Revenue USD': 'mean'
+        }).reset_index()
+        weekly_avg['week_start'] = weekly_avg['week'].dt.start_time
+        
+        weekly_data[game_name] = weekly_avg
+    
+    return weekly_data
+
 def calculate_weekly_averages(df, robux_to_usd):
     """Calculate weekly averages from daily data"""
     # Convert Robux to USD
@@ -53,7 +101,7 @@ def calculate_weekly_averages(df, robux_to_usd):
 
 def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_scale, december_scale, 
                                             may_deviation_pattern, normal_week_deviations, 
-                                            historical_peak_weekly, decay_pct=0.0, months=18):
+                                            historical_peak_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, months=18):
     """Generate weekly projection using average as base and applying weekly deviation patterns"""
     projection_weekly_dates = []
     projection_weekly_revenues = []
@@ -74,13 +122,13 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_sc
     while current_date < end_date:
         month = current_date.month
         
-        # Determine base scaling factor for the month
+        # Determine base scaling factor for the month based on toggle settings
         if month in summer_months:
-            month_scale = 1.0  # Summer months close to average
-        elif month == december_month:
-            month_scale = may_scale  # Use May's scale for December
+            month_scale = 1.2 if summer_peaks else 1.0  # Summer months with moderate peak if enabled
         elif month == may_month:
-            month_scale = may_scale
+            month_scale = may_scale if summer_peaks else 1.0  # May uses its historical pattern if summer peaks enabled
+        elif month == december_month:
+            month_scale = may_scale if december_peaks else 1.0  # Use May's scale for December if enabled
         else:
             month_scale = 1.0
         
@@ -108,14 +156,18 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_sc
             
             temp_date += pd.DateOffset(days=7)
         
-        # Apply weekly deviation pattern based on month type
+        # Apply weekly deviation pattern based on month type and toggle settings
         for week_idx, week_start in enumerate(weeks_in_month):
-            if month == may_month or month == december_month:
-                # Use May's deviation pattern for May and December (spike months)
+            if month == may_month and summer_peaks:
+                # Use May's deviation pattern for May if summer peaks enabled
+                deviation_idx = week_idx % len(may_deviation_pattern)
+                weekly_deviation = may_deviation_pattern[deviation_idx]
+            elif month == december_month and december_peaks:
+                # Use May's deviation pattern for December if December peaks enabled
                 deviation_idx = week_idx % len(may_deviation_pattern)
                 weekly_deviation = may_deviation_pattern[deviation_idx]
             else:
-                # Use small deviations for other months (close to average)
+                # Use small deviations for other months or when peaks are disabled
                 deviation_idx = week_idx % len(normal_week_deviations)
                 weekly_deviation = normal_week_deviations[deviation_idx]
             
@@ -136,7 +188,7 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_sc
     
     return projection_weekly_dates, projection_weekly_revenues
 
-def create_revenue_analysis_chart(df, weekly_avg, projection_df):
+def create_revenue_analysis_chart(df, weekly_avg, projection_df, additional_games_weekly=None, show_additional_games=True):
     """Create the main revenue analysis chart"""
     fig = go.Figure()
     
@@ -144,6 +196,30 @@ def create_revenue_analysis_chart(df, weekly_avg, projection_df):
     df_dates_str = df['date'].dt.strftime('%Y-%m-%d')
     weekly_dates_str = weekly_avg['week_start'].dt.strftime('%Y-%m-%d')
     projection_dates_str = projection_df['date'].dt.strftime('%Y-%m-%d')
+    
+    # Add additional games data as dim lines (weekly averages)
+    if show_additional_games and additional_games_weekly:
+        for game_name, game_weekly in additional_games_weekly.items():
+            game_dates_str = game_weekly['week_start'].dt.strftime('%Y-%m-%d')
+            
+            # Set colors for specific games
+            if game_name == 'Basketball Zero':
+                color = 'orange'
+            elif game_name == 'Blue Lock Rivals':
+                color = 'pink'
+            else:
+                color = 'lightgray'
+            
+            fig.add_trace(go.Scatter(
+                x=game_dates_str,
+                y=game_weekly['Estimated Revenue USD'],
+                mode='lines+markers',
+                name=f'{game_name} (Historical)',
+                line=dict(color=color, width=0.8),
+                marker=dict(size=4, color=color),
+                opacity=0.4,
+                showlegend=True
+            ))
     
     # Plot historical daily revenue
     fig.add_trace(go.Scatter(
@@ -250,7 +326,7 @@ def create_revenue_analysis_chart(df, weekly_avg, projection_df):
             'font': {'size': 18}
         },
         xaxis_title='Date',
-        yaxis_title='Revenue (USD)',
+        yaxis_title='Daily Revenue (USD)',
         hovermode='x unified',
         legend=dict(
             orientation="v",
@@ -263,12 +339,12 @@ def create_revenue_analysis_chart(df, weekly_avg, projection_df):
         showlegend=True
     )
     
-    # Format y-axis to show currency
-    fig.update_yaxes(tickformat='$,.0f')
+    # Format y-axis to show currency and set range
+    fig.update_yaxes(tickformat='$,.0f', range=[0, 100000])
     
     return fig
 
-def calculate_investment_analysis(df, weekly_avg, projection_df, upfront, earnout, equity_pct, valuation, robux_to_usd, earnout_period_months=0, earnout_pct=0):
+def calculate_investment_analysis(df, weekly_avg, projection_df, upfront, earnout, equity_pct, robux_to_usd, earnout_period_months=0, earnout_pct=0):
     """Calculate investment analysis metrics"""
     # Calculate lifetime mean from historical data
     lifetime_mean = df['Estimated Revenue USD'].mean()
@@ -343,13 +419,14 @@ def main():
     
     # Load data
     df = load_data()
+    additional_games = load_additional_games_data()
     
     # Sidebar for investment parameters
     st.sidebar.header("💰 Investment Parameters")
     
     # Investment parameters
     upfront = st.sidebar.number_input(
-        "Total Upfront Investment ($)",
+        "Evaluation($)",
         min_value=0,
         value=8500000,
         step=100000,
@@ -378,7 +455,7 @@ def main():
         earnout = st.sidebar.number_input(
             "Total Earnout (max) ($)",
             min_value=0,
-            value=1500000,
+            value=1000000,
             step=100000,
             format="%d",
             help="Maximum earnout payment to developers (reduces investor returns)"
@@ -397,13 +474,6 @@ def main():
         earnout = 0
         earnout_period_months = 0
     
-    valuation = st.sidebar.number_input(
-        "Company Valuation ($)",
-        min_value=0,
-        value=10000000,
-        step=100000,
-        format="%d"
-    )
     
     robux_to_usd = st.sidebar.number_input(
         "Robux to USD Conversion Rate",
@@ -423,8 +493,37 @@ def main():
         help="Week-on-week exponential growth (negative) or decay (positive) percentage applied to projected revenue"
     )
     
+    # Seasonal peak toggles
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("**Seasonal Peaks**")
+    
+    summer_peaks = st.sidebar.toggle(
+        "Summer Peaks (May, Jun-Aug)",
+        value=True,
+        help="Enable higher revenue during peak months (May, June, July, August)"
+    )
+    
+    december_peaks = st.sidebar.toggle(
+        "December Peaks",
+        value=True,
+        help="Enable higher revenue during December (using May's pattern)"
+    )
+    
+    # Additional games toggle
+    st.sidebar.markdown("---")
+    st.sidebar.markdown("**Comparison Games**")
+    
+    show_additional_games = st.sidebar.toggle(
+        "Show Comparison Games",
+        value=False,
+        help="Display Basketball Zero and Blue Lock Rivals for comparison"
+    )
+    
     # Calculate data with user parameters
     df_with_usd, weekly_avg = calculate_weekly_averages(df.copy(), robux_to_usd)
+    
+    # Calculate weekly averages for additional games
+    additional_games_weekly = calculate_additional_games_weekly_averages(additional_games, robux_to_usd)
     
     # Calculate projection parameters
     lifetime_mean = df_with_usd['Estimated Revenue USD'].mean()
@@ -449,7 +548,7 @@ def main():
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
         start_date, lifetime_mean, may_scale, december_scale, 
         may_deviation_pattern, normal_week_deviations, 
-        historical_peak_weekly, decay_pct
+        historical_peak_weekly, decay_pct, summer_peaks, december_peaks
     )
     
     projection_df = pd.DataFrame({
@@ -464,14 +563,14 @@ def main():
     with col2:
         st.header("Volleyball Legends Investment Analysis")
     
-    fig = create_revenue_analysis_chart(df_with_usd, weekly_avg, projection_df)
+    fig = create_revenue_analysis_chart(df_with_usd, weekly_avg, projection_df, additional_games_weekly, show_additional_games)
     st.plotly_chart(fig, use_container_width=True)
     
     # Investment Analysis
     st.header("💼 Investment Analysis")
     
     analysis = calculate_investment_analysis(df_with_usd, weekly_avg, projection_df, 
-                                          upfront, earnout, equity_pct, valuation, robux_to_usd, earnout_period_months, earnout_pct)
+                                          upfront, earnout, equity_pct, robux_to_usd, earnout_period_months, earnout_pct)
     
     # Display key metrics in columns
     col1, col2, col3, col4 = st.columns(4)
@@ -502,6 +601,23 @@ def main():
             "18-Month Return Multiple",
             f"{analysis['return_18m']:.2f}x",
             help="Return multiple on investment over 18 months"
+        )
+    
+    # Add 6-month investor share metric
+    col5, col6 = st.columns(2)
+    
+    with col5:
+        st.metric(
+            "Investor's 6-Month Share",
+            f"${analysis['investor_6m']:,.0f}",
+            help="Investor's share of 6-month projected revenue (after earnout deduction)"
+        )
+    
+    with col6:
+        st.metric(
+            "6-Month Return Multiple",
+            f"{analysis['return_6m']:.2f}x",
+            help="Return multiple on investment over 6 months"
         )
     
     # Detailed analysis
@@ -552,6 +668,16 @@ def main():
         st.write(f"**Weekly Decay Rate:** {decay_pct:.1f}% per week")
     else:
         st.write(f"**Weekly Growth/Decay Rate:** 0.0% per week (no change)")
+    
+    st.write(f"**Summer Peaks (May, Jun-Aug):** {'Enabled' if summer_peaks else 'Disabled'}")
+    st.write(f"**December Peaks:** {'Enabled' if december_peaks else 'Disabled'}")
+    st.write(f"**Comparison Games:** {'Shown' if show_additional_games else 'Hidden'}")
+    
+    # Additional games info
+    if additional_games and show_additional_games:
+        st.markdown("**Additional Games (Weekly Averages):**")
+        for game_name, game_weekly in additional_games_weekly.items():
+            st.write(f"• {game_name}: {len(game_weekly)} weeks from {game_weekly['week_start'].min().strftime('%Y-%m-%d')} to {game_weekly['week_start'].max().strftime('%Y-%m-%d')}")
 
 if __name__ == "__main__":
     main()
