@@ -424,13 +424,27 @@ def main():
     # Sidebar for investment parameters
     st.sidebar.header("💰 Investment Parameters")
     
-    # Investment parameters
-    upfront = st.sidebar.number_input(
-        "Evaluation($)",
-        min_value=0,
-        value=8500000,
-        step=100000,
-        format="%d"
+    # Calculate annual revenue for multiple calculation (temporary calculation)
+    temp_annual_revenue = df['Estimated Revenue'].sum() * 0.0038 * (365 / len(df))  # Rough estimate
+    
+    # Evaluation multiple slider (only user input)
+    evaluation_multiple = st.sidebar.slider(
+        "Evaluation Multiple (Annual Revenue)",
+        min_value=0.1,
+        max_value=3.0,
+        value=1.0,
+        step=0.1,
+        help="Company valuation as multiple of annual revenue"
+    )
+    
+    # Calculate evaluation amount from multiple (non-adjustable)
+    upfront = int(temp_annual_revenue * evaluation_multiple)
+    
+    # Display calculated evaluation amount
+    st.sidebar.metric(
+        "Evaluation Amount",
+        f"${upfront:,}",
+        help="Calculated from annual revenue × multiple"
     )
     
     equity_pct = st.sidebar.slider(
@@ -662,6 +676,12 @@ def main():
     st.write(f"**Historical Data:** {len(df_with_usd)} days from {df_with_usd['date'].min().strftime('%Y-%m-%d')} to {df_with_usd['date'].max().strftime('%Y-%m-%d')}")
     st.write(f"**Projection Period:** {len(projection_df)} weeks from {projection_df['date'].min().strftime('%Y-%m-%d')} to {projection_df['date'].max().strftime('%Y-%m-%d')}")
     st.write(f"**Robux to USD Rate:** {robux_to_usd:.4f}")
+    
+    # Calculate and display current evaluation multiple
+    actual_annual_revenue = df_with_usd['Estimated Revenue USD'].sum() * (365 / len(df_with_usd))
+    current_multiple = upfront / actual_annual_revenue if actual_annual_revenue > 0 else 0
+    st.write(f"**Annual Revenue (extrapolated):** ${actual_annual_revenue:,.0f}")
+    st.write(f"**Current Evaluation Multiple:** {current_multiple:.1f}x")
     if decay_pct < 0:
         st.write(f"**Weekly Growth Rate:** {abs(decay_pct):.1f}% per week")
     elif decay_pct > 0:
