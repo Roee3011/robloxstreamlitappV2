@@ -427,25 +427,68 @@ def main():
     # Calculate annual revenue for multiple calculation (temporary calculation)
     temp_annual_revenue = df['Estimated Revenue'].sum() * 0.0038 * (365 / len(df))  # Rough estimate
     
-    # Evaluation multiple slider (only user input)
-    evaluation_multiple = st.sidebar.slider(
-        "Evaluation Multiple (Annual Revenue)",
-        min_value=0.1,
-        max_value=3.0,
-        value=1.0,
-        step=0.1,
-        help="Company valuation as multiple of annual revenue"
+    # Toggle between input modes
+    input_mode = st.sidebar.radio(
+        "Input Mode",
+        ["Evaluation Multiple", "Evaluation Amount"],
+        help="Choose whether to input multiple or amount directly"
     )
     
-    # Calculate evaluation amount from multiple (non-adjustable)
-    upfront = int(temp_annual_revenue * evaluation_multiple)
+    # Initialize session state for values
+    if 'evaluation_multiple' not in st.session_state:
+        st.session_state.evaluation_multiple = 1.0
+    if 'evaluation_amount' not in st.session_state:
+        st.session_state.evaluation_amount = int(temp_annual_revenue * 1.0)
     
-    # Display calculated evaluation amount
-    st.sidebar.metric(
-        "Evaluation Amount",
-        f"${upfront:,}",
-        help="Calculated from annual revenue × multiple"
-    )
+    if input_mode == "Evaluation Multiple":
+        # Input multiple, calculate amount
+        evaluation_multiple = st.sidebar.slider(
+            "Evaluation Multiple (Annual Revenue)",
+            min_value=0.1,
+            max_value=3.0,
+            value=st.session_state.evaluation_multiple,
+            step=0.05,
+            help="Company valuation as multiple of annual revenue"
+        )
+        
+        # Calculate amount from multiple
+        upfront = int(temp_annual_revenue * evaluation_multiple)
+        
+        # Update session state
+        st.session_state.evaluation_multiple = evaluation_multiple
+        st.session_state.evaluation_amount = upfront
+        
+        # Display calculated amount
+        st.sidebar.metric(
+            "Evaluation Amount",
+            f"${upfront:,}",
+            help="Calculated from annual revenue × multiple"
+        )
+        
+    else:  # input_mode == "Evaluation Amount"
+        # Input amount, calculate multiple
+        upfront = st.sidebar.number_input(
+            "Evaluation Amount ($)",
+            min_value=1000,
+            max_value=10000000,
+            value=st.session_state.evaluation_amount,
+            step=10000,
+            help="Total company valuation amount"
+        )
+        
+        # Calculate multiple from amount
+        evaluation_multiple = upfront / temp_annual_revenue
+        
+        # Update session state
+        st.session_state.evaluation_amount = upfront
+        st.session_state.evaluation_multiple = evaluation_multiple
+        
+        # Display calculated multiple
+        st.sidebar.metric(
+            "Evaluation Multiple (Annual Revenue)",
+            f"{evaluation_multiple:.2f}x",
+            help="Calculated from evaluation amount ÷ annual revenue"
+        )
     
     equity_pct = st.sidebar.slider(
         "Investor Equity (%)",
