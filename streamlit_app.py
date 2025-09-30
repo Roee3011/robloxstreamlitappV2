@@ -907,6 +907,18 @@ def main():
     # Calculate lifetime mean for peak detection
     lifetime_mean = df_with_usd['Estimated Revenue USD'].mean()
     
+    # Calculate last 3 months average for projection baseline
+    three_months_ago = df_with_usd['date'].max() - pd.DateOffset(months=3)
+    # Ensure datetime compatibility by converting to same timezone-naive format
+    three_months_ago = pd.to_datetime(three_months_ago).tz_localize(None)
+    weekly_start_normalized = pd.to_datetime(weekly_avg['week_start']).dt.tz_localize(None)
+    last_three_months_data = weekly_avg[weekly_start_normalized >= three_months_ago]
+    if len(last_three_months_data) > 0:
+        last_three_months_mean = last_three_months_data['Estimated Revenue USD'].mean()
+    else:
+        # Fallback to lifetime mean if not enough recent data
+        last_three_months_mean = lifetime_mean
+    
     # Analyze historical data to determine specific summer peak month
     summer_months = [5, 6, 7, 8]  # May, June, July, August
     summer_month_avgs = {}
@@ -919,12 +931,12 @@ def main():
             month_avg = month_data['Estimated Revenue USD'].mean()
             summer_month_avgs[month] = month_avg
     
-    # Find the summer month with highest average (if any exceed 25% threshold)
+    # Find the summer month with highest average (if any exceed 25% threshold based on last 3 months)
     if summer_month_avgs:
         best_month = max(summer_month_avgs.keys(), key=lambda k: summer_month_avgs[k])
         best_avg = summer_month_avgs[best_month]
         
-        if best_avg > lifetime_mean * 1.25:  # 25% greater than average
+        if best_avg > last_three_months_mean * 1.25:  # 25% greater than last 3 months average
             peak_summer_month = best_month
             summer_peak_detected = True
         else:
@@ -936,7 +948,7 @@ def main():
     december_data = weekly_avg[weekly_avg['week_start'].dt.month == 12]
     if len(december_data) > 0:
         december_avg = december_data['Estimated Revenue USD'].mean()
-        december_peak_detected = december_avg > lifetime_mean * 1.25  # 25% greater than average
+        december_peak_detected = december_avg > last_three_months_mean * 1.25  # 25% greater than last 3 months average
     else:
         december_peak_detected = False
     
@@ -951,13 +963,13 @@ def main():
     summer_peaks = st.sidebar.toggle(
         f"Summer Peak ({peak_month_name})",
         value=summer_peak_detected,
-        help=f"Enable higher revenue during {peak_month_name}. Auto-detected: {'Peak found in ' + peak_month_name if summer_peak_detected else 'No significant peak, defaulting to June'}"
+        help=f"Enable higher revenue during {peak_month_name}. Auto-detected: {'Peak found in ' + peak_month_name if summer_peak_detected else 'No significant peak, defaulting to June'} (based on last 3 months average)"
     )
     
     december_peaks = st.sidebar.toggle(
         "December Peaks",
         value=december_peak_detected,
-        help=f"Enable higher revenue during December. Auto-detected: {'Peak found' if december_peak_detected else 'No significant peak'}"
+        help=f"Enable higher revenue during December. Auto-detected: {'Peak found' if december_peak_detected else 'No significant peak'} (based on last 3 months average)"
     )
     
     # Additional games toggle
@@ -976,9 +988,9 @@ def main():
     # Calculate projection parameters
     historical_peak_weekly = weekly_avg['Estimated Revenue USD'].max()
     
-    # Calculate peak multiple based on highest observed peak (regardless of month)
+    # Calculate peak multiple based on highest observed peak (use last 3 months mean for more recent context)
     if historical_peak_weekly > 0:
-        peak_multiple = historical_peak_weekly / lifetime_mean
+        peak_multiple = historical_peak_weekly / last_three_months_mean
     else:
         peak_multiple = 1.5  # Conservative fallback
     
@@ -991,12 +1003,12 @@ def main():
     normal_week_deviations = [0.9, 1.0, 1.1, 0.95, 1.05]  # Small variations around average
     
     # Get the last observed weekly value to ensure smooth transition
-    last_observed_weekly = weekly_avg['Estimated Revenue USD'].iloc[-1] if len(weekly_avg) > 0 else lifetime_mean
+    last_observed_weekly = weekly_avg['Estimated Revenue USD'].iloc[-1] if len(weekly_avg) > 0 else last_three_months_mean
     
-    # Generate projection
+    # Generate projection using last 3 months average as baseline
     start_date = df_with_usd['date'].max() + pd.DateOffset(days=1)
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
-        start_date, lifetime_mean, december_scale, summer_scale,
+        start_date, last_three_months_mean, december_scale, summer_scale,
         normal_week_deviations, 
         historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month
     )
@@ -1115,6 +1127,8 @@ def main():
     current_multiple = upfront / actual_annual_revenue if actual_annual_revenue > 0 else 0
     st.write(f"**Annual Revenue (extrapolated):** ${actual_annual_revenue:,.0f}")
     st.write(f"**Current Evaluation Multiple:** {current_multiple:.1f}x")
+    st.write(f"**Projection Baseline (Last 3 Months Average):** ${last_three_months_mean:,.0f}")
+    st.write(f"**Lifetime Average:** ${lifetime_mean:,.0f}")
     if decay_pct < 0:
         st.write(f"**Weekly Growth Rate:** {abs(decay_pct):.1f}% per week")
     elif decay_pct > 0:
