@@ -470,7 +470,6 @@ def main():
         upfront = st.sidebar.number_input(
             "Evaluation Amount ($)",
             min_value=1000,
-            max_value=10000000,
             value=st.session_state.evaluation_amount,
             step=10000,
             help="Total company valuation amount"
@@ -618,7 +617,7 @@ def main():
     with col1:
         st.image("https://tr.rbxcdn.com/180DAY-a1260693b7f075c5e8482b83e0531ad7/512/512/Image/Webp/noFilter", width=100)
     with col2:
-        st.header("Volleyball Legends Investment Analysis")
+        st.header("Game Investment Analysis")
     
     fig = create_revenue_analysis_chart(df_with_usd, weekly_avg, projection_df, additional_games_weekly, show_additional_games)
     st.plotly_chart(fig, use_container_width=True)
