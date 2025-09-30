@@ -1,0 +1,6457 @@
+{
+  "ok": true,
+  "kpiData": [
+    {
+      "timestamp": "2021-04-21T00:00:00.000Z",
+      "visits_gained": 2173
+    },
+    {
+      "timestamp": "2021-04-22T00:00:00.000Z",
+      "visits_gained": 2068
+    },
+    {
+      "timestamp": "2021-04-23T00:00:00.000Z",
+      "visits_gained": 2204
+    },
+    {
+      "timestamp": "2021-04-24T00:00:00.000Z",
+      "visits_gained": 3110
+    },
+    {
+      "timestamp": "2021-04-25T00:00:00.000Z",
+      "visits_gained": 3195
+    },
+    {
+      "timestamp": "2021-04-26T00:00:00.000Z",
+      "visits_gained": 2299
+    },
+    {
+      "timestamp": "2021-04-27T00:00:00.000Z",
+      "visits_gained": 2248
+    },
+    {
+      "timestamp": "2021-04-28T00:00:00.000Z",
+      "visits_gained": 2193
+    },
+    {
+      "timestamp": "2021-04-29T00:00:00.000Z",
+      "visits_gained": 2162
+    },
+    {
+      "timestamp": "2021-04-30T00:00:00.000Z",
+      "visits_gained": 2250
+    },
+    {
+      "timestamp": "2021-05-01T00:00:00.000Z",
+      "visits_gained": 2698
+    },
+    {
+      "timestamp": "2021-05-02T00:00:00.000Z",
+      "visits_gained": 2708
+    },
+    {
+      "timestamp": "2021-05-03T00:00:00.000Z",
+      "visits_gained": 2270
+    },
+    {
+      "timestamp": "2021-05-04T00:00:00.000Z",
+      "visits_gained": 1884
+    },
+    {
+      "timestamp": "2021-05-05T00:00:00.000Z",
+      "visits_gained": 1867
+    },
+    {
+      "timestamp": "2021-05-06T00:00:00.000Z",
+      "visits_gained": 1874
+    },
+    {
+      "timestamp": "2021-05-07T00:00:00.000Z",
+      "visits_gained": 2128
+    },
+    {
+      "timestamp": "2021-05-08T00:00:00.000Z",
+      "visits_gained": 3172
+    },
+    {
+      "timestamp": "2021-05-09T00:00:00.000Z",
+      "visits_gained": 3376
+    },
+    {
+      "timestamp": "2021-05-10T00:00:00.000Z",
+      "visits_gained": 2610
+    },
+    {
+      "timestamp": "2021-05-11T00:00:00.000Z",
+      "visits_gained": 2599
+    },
+    {
+      "timestamp": "2021-05-12T00:00:00.000Z",
+      "visits_gained": 2613
+    },
+    {
+      "timestamp": "2021-05-13T00:00:00.000Z",
+      "visits_gained": 2716
+    },
+    {
+      "timestamp": "2021-05-14T00:00:00.000Z",
+      "visits_gained": 2921
+    },
+    {
+      "timestamp": "2021-05-15T00:00:00.000Z",
+      "visits_gained": 2867
+    },
+    {
+      "timestamp": "2021-05-16T00:00:00.000Z",
+      "visits_gained": 4105
+    },
+    {
+      "timestamp": "2021-05-17T00:00:00.000Z",
+      "visits_gained": 3375
+    },
+    {
+      "timestamp": "2021-05-18T00:00:00.000Z",
+      "visits_gained": 3105
+    },
+    {
+      "timestamp": "2021-05-19T00:00:00.000Z",
+      "visits_gained": 3397
+    },
+    {
+      "timestamp": "2021-05-20T00:00:00.000Z",
+      "visits_gained": 3380
+    },
+    {
+      "timestamp": "2021-05-21T00:00:00.000Z",
+      "visits_gained": 3422
+    },
+    {
+      "timestamp": "2021-05-22T00:00:00.000Z",
+      "visits_gained": 4166
+    },
+    {
+      "timestamp": "2021-05-23T00:00:00.000Z",
+      "visits_gained": 5658
+    },
+    {
+      "timestamp": "2021-05-24T00:00:00.000Z",
+      "visits_gained": 4329
+    },
+    {
+      "timestamp": "2021-05-25T00:00:00.000Z",
+      "visits_gained": 4057
+    },
+    {
+      "timestamp": "2021-05-26T00:00:00.000Z",
+      "visits_gained": 4305
+    },
+    {
+      "timestamp": "2021-05-27T00:00:00.000Z",
+      "visits_gained": 3964
+    },
+    {
+      "timestamp": "2021-05-28T00:00:00.000Z",
+      "visits_gained": 3947
+    },
+    {
+      "timestamp": "2021-05-29T00:00:00.000Z",
+      "visits_gained": 4932
+    },
+    {
+      "timestamp": "2021-05-30T00:00:00.000Z",
+      "visits_gained": 4777
+    },
+    {
+      "timestamp": "2021-05-31T00:00:00.000Z",
+      "visits_gained": 4624
+    },
+    {
+      "timestamp": "2021-06-01T00:00:00.000Z",
+      "visits_gained": 4411
+    },
+    {
+      "timestamp": "2021-06-02T00:00:00.000Z",
+      "visits_gained": 4455
+    },
+    {
+      "timestamp": "2021-06-03T00:00:00.000Z",
+      "visits_gained": 4558
+    },
+    {
+      "timestamp": "2021-06-04T00:00:00.000Z",
+      "visits_gained": 4565
+    },
+    {
+      "timestamp": "2021-06-05T00:00:00.000Z",
+      "visits_gained": 4497
+    },
+    {
+      "timestamp": "2021-06-06T00:00:00.000Z",
+      "visits_gained": 4756
+    },
+    {
+      "timestamp": "2021-06-07T00:00:00.000Z",
+      "visits_gained": 3707
+    },
+    {
+      "timestamp": "2021-06-08T00:00:00.000Z",
+      "visits_gained": 3478
+    },
+    {
+      "timestamp": "2021-06-09T00:00:00.000Z",
+      "visits_gained": 3663
+    },
+    {
+      "timestamp": "2021-06-10T00:00:00.000Z",
+      "visits_gained": 3704
+    },
+    {
+      "timestamp": "2021-06-11T00:00:00.000Z",
+      "visits_gained": 4082
+    },
+    {
+      "timestamp": "2021-06-12T00:00:00.000Z",
+      "visits_gained": 4803
+    },
+    {
+      "timestamp": "2021-06-13T00:00:00.000Z",
+      "visits_gained": 5346
+    },
+    {
+      "timestamp": "2021-06-14T00:00:00.000Z",
+      "visits_gained": 4649
+    },
+    {
+      "timestamp": "2021-06-15T00:00:00.000Z",
+      "visits_gained": 5627
+    },
+    {
+      "timestamp": "2021-06-16T00:00:00.000Z",
+      "visits_gained": 5824
+    },
+    {
+      "timestamp": "2021-06-17T00:00:00.000Z",
+      "visits_gained": 3131
+    },
+    {
+      "timestamp": "2021-06-18T00:00:00.000Z",
+      "visits_gained": 5517
+    },
+    {
+      "timestamp": "2021-06-19T00:00:00.000Z",
+      "visits_gained": 5942
+    },
+    {
+      "timestamp": "2021-06-20T00:00:00.000Z",
+      "visits_gained": 6442
+    },
+    {
+      "timestamp": "2021-06-21T00:00:00.000Z",
+      "visits_gained": 5410
+    },
+    {
+      "timestamp": "2021-06-22T00:00:00.000Z",
+      "visits_gained": 5521
+    },
+    {
+      "timestamp": "2021-06-23T00:00:00.000Z",
+      "visits_gained": 6010
+    },
+    {
+      "timestamp": "2021-06-24T00:00:00.000Z",
+      "visits_gained": 6569
+    },
+    {
+      "timestamp": "2021-06-25T00:00:00.000Z",
+      "visits_gained": 6546
+    },
+    {
+      "timestamp": "2021-06-26T00:00:00.000Z",
+      "visits_gained": 7153
+    },
+    {
+      "timestamp": "2021-06-27T00:00:00.000Z",
+      "visits_gained": 8286
+    },
+    {
+      "timestamp": "2021-06-28T00:00:00.000Z",
+      "visits_gained": 7546
+    },
+    {
+      "timestamp": "2021-06-29T00:00:00.000Z",
+      "visits_gained": 7288
+    },
+    {
+      "timestamp": "2021-06-30T00:00:00.000Z",
+      "visits_gained": 7142
+    },
+    {
+      "timestamp": "2021-07-01T00:00:00.000Z",
+      "visits_gained": 6819
+    },
+    {
+      "timestamp": "2021-07-02T00:00:00.000Z",
+      "visits_gained": 6587
+    },
+    {
+      "timestamp": "2021-07-03T00:00:00.000Z",
+      "visits_gained": 7960
+    },
+    {
+      "timestamp": "2021-07-04T00:00:00.000Z",
+      "visits_gained": 7596
+    },
+    {
+      "timestamp": "2021-07-05T00:00:00.000Z",
+      "visits_gained": 6591
+    },
+    {
+      "timestamp": "2021-07-06T00:00:00.000Z",
+      "visits_gained": 6823
+    },
+    {
+      "timestamp": "2021-07-07T00:00:00.000Z",
+      "visits_gained": 6692
+    },
+    {
+      "timestamp": "2021-07-08T00:00:00.000Z",
+      "visits_gained": 6521
+    },
+    {
+      "timestamp": "2021-07-09T00:00:00.000Z",
+      "visits_gained": 6631
+    },
+    {
+      "timestamp": "2021-07-10T00:00:00.000Z",
+      "visits_gained": 6972
+    },
+    {
+      "timestamp": "2021-07-11T00:00:00.000Z",
+      "visits_gained": 6617
+    },
+    {
+      "timestamp": "2021-07-12T00:00:00.000Z",
+      "visits_gained": 6299
+    },
+    {
+      "timestamp": "2021-07-13T00:00:00.000Z",
+      "visits_gained": 4057
+    },
+    {
+      "timestamp": "2021-07-14T00:00:00.000Z",
+      "visits_gained": 7090
+    },
+    {
+      "timestamp": "2021-07-15T00:00:00.000Z",
+      "visits_gained": 7131
+    },
+    {
+      "timestamp": "2021-07-16T00:00:00.000Z",
+      "visits_gained": 19397
+    },
+    {
+      "timestamp": "2021-07-17T00:00:00.000Z",
+      "visits_gained": 172830
+    },
+    {
+      "timestamp": "2021-07-18T00:00:00.000Z",
+      "visits_gained": 208569
+    },
+    {
+      "timestamp": "2021-07-19T00:00:00.000Z",
+      "visits_gained": 419569
+    },
+    {
+      "timestamp": "2021-07-20T00:00:00.000Z",
+      "visits_gained": 634247
+    },
+    {
+      "timestamp": "2021-07-21T00:00:00.000Z",
+      "visits_gained": 665123
+    },
+    {
+      "timestamp": "2021-07-22T00:00:00.000Z",
+      "visits_gained": 651147
+    },
+    {
+      "timestamp": "2021-07-23T00:00:00.000Z",
+      "visits_gained": 638407
+    },
+    {
+      "timestamp": "2021-07-24T00:00:00.000Z",
+      "visits_gained": 771188
+    },
+    {
+      "timestamp": "2021-07-25T00:00:00.000Z",
+      "visits_gained": 742075
+    },
+    {
+      "timestamp": "2021-07-26T00:00:00.000Z",
+      "visits_gained": 932835
+    },
+    {
+      "timestamp": "2021-07-27T00:00:00.000Z",
+      "visits_gained": 866269
+    },
+    {
+      "timestamp": "2021-07-28T00:00:00.000Z",
+      "visits_gained": 727175
+    },
+    {
+      "timestamp": "2021-07-29T00:00:00.000Z",
+      "visits_gained": 638837
+    },
+    {
+      "timestamp": "2021-07-30T00:00:00.000Z",
+      "visits_gained": 719705
+    },
+    {
+      "timestamp": "2021-07-31T00:00:00.000Z",
+      "visits_gained": 774446
+    },
+    {
+      "timestamp": "2021-08-01T00:00:00.000Z",
+      "visits_gained": 812175
+    },
+    {
+      "timestamp": "2021-08-02T00:00:00.000Z",
+      "visits_gained": 793389
+    },
+    {
+      "timestamp": "2021-08-03T00:00:00.000Z",
+      "visits_gained": 623125
+    },
+    {
+      "timestamp": "2021-08-04T00:00:00.000Z",
+      "visits_gained": 489644
+    },
+    {
+      "timestamp": "2021-08-05T00:00:00.000Z",
+      "visits_gained": 420557
+    },
+    {
+      "timestamp": "2021-08-06T00:00:00.000Z",
+      "visits_gained": 406655
+    },
+    {
+      "timestamp": "2021-08-07T00:00:00.000Z",
+      "visits_gained": 463478
+    },
+    {
+      "timestamp": "2021-08-08T00:00:00.000Z",
+      "visits_gained": 469626
+    },
+    {
+      "timestamp": "2021-08-09T00:00:00.000Z",
+      "visits_gained": 430837
+    },
+    {
+      "timestamp": "2021-08-10T00:00:00.000Z",
+      "visits_gained": 358166
+    },
+    {
+      "timestamp": "2021-08-11T00:00:00.000Z",
+      "visits_gained": 332117
+    },
+    {
+      "timestamp": "2021-08-12T00:00:00.000Z",
+      "visits_gained": 315098
+    },
+    {
+      "timestamp": "2021-08-13T00:00:00.000Z",
+      "visits_gained": 308220
+    },
+    {
+      "timestamp": "2021-08-14T00:00:00.000Z",
+      "visits_gained": 342737
+    },
+    {
+      "timestamp": "2021-08-15T00:00:00.000Z",
+      "visits_gained": 386535
+    },
+    {
+      "timestamp": "2021-08-16T00:00:00.000Z",
+      "visits_gained": 383981
+    },
+    {
+      "timestamp": "2021-08-17T00:00:00.000Z",
+      "visits_gained": 370914
+    },
+    {
+      "timestamp": "2021-08-18T00:00:00.000Z",
+      "visits_gained": 370074
+    },
+    {
+      "timestamp": "2021-08-19T00:00:00.000Z",
+      "visits_gained": 362360
+    },
+    {
+      "timestamp": "2021-08-20T00:00:00.000Z",
+      "visits_gained": 353918
+    },
+    {
+      "timestamp": "2021-08-21T00:00:00.000Z",
+      "visits_gained": 405741
+    },
+    {
+      "timestamp": "2021-08-22T00:00:00.000Z",
+      "visits_gained": 381874
+    },
+    {
+      "timestamp": "2021-08-23T00:00:00.000Z",
+      "visits_gained": 338828
+    },
+    {
+      "timestamp": "2021-08-24T00:00:00.000Z",
+      "visits_gained": 324864
+    },
+    {
+      "timestamp": "2021-08-25T00:00:00.000Z",
+      "visits_gained": 350575
+    },
+    {
+      "timestamp": "2021-08-26T00:00:00.000Z",
+      "visits_gained": 347909
+    },
+    {
+      "timestamp": "2021-08-27T00:00:00.000Z",
+      "visits_gained": 415244
+    },
+    {
+      "timestamp": "2021-08-28T00:00:00.000Z",
+      "visits_gained": 448983
+    },
+    {
+      "timestamp": "2021-08-29T00:00:00.000Z",
+      "visits_gained": 465114
+    },
+    {
+      "timestamp": "2021-08-30T00:00:00.000Z",
+      "visits_gained": 382737
+    },
+    {
+      "timestamp": "2021-08-31T00:00:00.000Z",
+      "visits_gained": 341644
+    },
+    {
+      "timestamp": "2021-09-01T00:00:00.000Z",
+      "visits_gained": 295054
+    },
+    {
+      "timestamp": "2021-09-02T00:00:00.000Z",
+      "visits_gained": 307558
+    },
+    {
+      "timestamp": "2021-09-03T00:00:00.000Z",
+      "visits_gained": 351417
+    },
+    {
+      "timestamp": "2021-09-04T00:00:00.000Z",
+      "visits_gained": 613133
+    },
+    {
+      "timestamp": "2021-09-05T00:00:00.000Z",
+      "visits_gained": 545793
+    },
+    {
+      "timestamp": "2021-09-06T00:00:00.000Z",
+      "visits_gained": 415190
+    },
+    {
+      "timestamp": "2021-09-07T00:00:00.000Z",
+      "visits_gained": 288371
+    },
+    {
+      "timestamp": "2021-09-08T00:00:00.000Z",
+      "visits_gained": 271601
+    },
+    {
+      "timestamp": "2021-09-09T00:00:00.000Z",
+      "visits_gained": 307810
+    },
+    {
+      "timestamp": "2021-09-10T00:00:00.000Z",
+      "visits_gained": 371848
+    },
+    {
+      "timestamp": "2021-09-11T00:00:00.000Z",
+      "visits_gained": 403612
+    },
+    {
+      "timestamp": "2021-09-12T00:00:00.000Z",
+      "visits_gained": 359497
+    },
+    {
+      "timestamp": "2021-09-13T00:00:00.000Z",
+      "visits_gained": 284372
+    },
+    {
+      "timestamp": "2021-09-14T00:00:00.000Z",
+      "visits_gained": 276630
+    },
+    {
+      "timestamp": "2021-09-15T00:00:00.000Z",
+      "visits_gained": 274683
+    },
+    {
+      "timestamp": "2021-09-16T00:00:00.000Z",
+      "visits_gained": 286154
+    },
+    {
+      "timestamp": "2021-09-17T00:00:00.000Z",
+      "visits_gained": 297455
+    },
+    {
+      "timestamp": "2021-09-18T00:00:00.000Z",
+      "visits_gained": 360620
+    },
+    {
+      "timestamp": "2021-09-19T00:00:00.000Z",
+      "visits_gained": 315194
+    },
+    {
+      "timestamp": "2021-09-20T00:00:00.000Z",
+      "visits_gained": 195864
+    },
+    {
+      "timestamp": "2021-09-21T00:00:00.000Z",
+      "visits_gained": 206357
+    },
+    {
+      "timestamp": "2021-09-22T00:00:00.000Z",
+      "visits_gained": 209031
+    },
+    {
+      "timestamp": "2021-09-23T00:00:00.000Z",
+      "visits_gained": 180094
+    },
+    {
+      "timestamp": "2021-09-24T00:00:00.000Z",
+      "visits_gained": 278579
+    },
+    {
+      "timestamp": "2021-09-25T00:00:00.000Z",
+      "visits_gained": 427781
+    },
+    {
+      "timestamp": "2021-09-26T00:00:00.000Z",
+      "visits_gained": 359064
+    },
+    {
+      "timestamp": "2021-09-27T00:00:00.000Z",
+      "visits_gained": 220439
+    },
+    {
+      "timestamp": "2021-09-28T00:00:00.000Z",
+      "visits_gained": 211966
+    },
+    {
+      "timestamp": "2021-09-29T00:00:00.000Z",
+      "visits_gained": 272285
+    },
+    {
+      "timestamp": "2021-09-30T00:00:00.000Z",
+      "visits_gained": 301781
+    },
+    {
+      "timestamp": "2021-10-01T00:00:00.000Z",
+      "visits_gained": 275803
+    },
+    {
+      "timestamp": "2021-10-02T00:00:00.000Z",
+      "visits_gained": 453455
+    },
+    {
+      "timestamp": "2021-10-03T00:00:00.000Z",
+      "visits_gained": 415454
+    },
+    {
+      "timestamp": "2021-10-04T00:00:00.000Z",
+      "visits_gained": 261163
+    },
+    {
+      "timestamp": "2021-10-05T00:00:00.000Z",
+      "visits_gained": 246175
+    },
+    {
+      "timestamp": "2021-10-06T00:00:00.000Z",
+      "visits_gained": 271241
+    },
+    {
+      "timestamp": "2021-10-07T00:00:00.000Z",
+      "visits_gained": 269935
+    },
+    {
+      "timestamp": "2021-10-08T00:00:00.000Z",
+      "visits_gained": 297813
+    },
+    {
+      "timestamp": "2021-10-09T00:00:00.000Z",
+      "visits_gained": 397322
+    },
+    {
+      "timestamp": "2021-10-10T00:00:00.000Z",
+      "visits_gained": 415918
+    },
+    {
+      "timestamp": "2021-10-11T00:00:00.000Z",
+      "visits_gained": 298840
+    },
+    {
+      "timestamp": "2021-10-12T00:00:00.000Z",
+      "visits_gained": 275232
+    },
+    {
+      "timestamp": "2021-10-13T00:00:00.000Z",
+      "visits_gained": 275763
+    },
+    {
+      "timestamp": "2021-10-14T00:00:00.000Z",
+      "visits_gained": 275182
+    },
+    {
+      "timestamp": "2021-10-15T00:00:00.000Z",
+      "visits_gained": 295497
+    },
+    {
+      "timestamp": "2021-10-16T00:00:00.000Z",
+      "visits_gained": 385305
+    },
+    {
+      "timestamp": "2021-10-17T00:00:00.000Z",
+      "visits_gained": 403704
+    },
+    {
+      "timestamp": "2021-10-18T00:00:00.000Z",
+      "visits_gained": 292490
+    },
+    {
+      "timestamp": "2021-10-19T00:00:00.000Z",
+      "visits_gained": 272911
+    },
+    {
+      "timestamp": "2021-10-20T00:00:00.000Z",
+      "visits_gained": 280720
+    },
+    {
+      "timestamp": "2021-10-21T00:00:00.000Z",
+      "visits_gained": 276573
+    },
+    {
+      "timestamp": "2021-10-22T00:00:00.000Z",
+      "visits_gained": 233056
+    },
+    {
+      "timestamp": "2021-10-23T00:00:00.000Z",
+      "visits_gained": 405101
+    },
+    {
+      "timestamp": "2021-10-24T00:00:00.000Z",
+      "visits_gained": 336785
+    },
+    {
+      "timestamp": "2021-10-25T00:00:00.000Z",
+      "visits_gained": 229451
+    },
+    {
+      "timestamp": "2021-10-26T00:00:00.000Z",
+      "visits_gained": 206197
+    },
+    {
+      "timestamp": "2021-10-27T00:00:00.000Z",
+      "visits_gained": 190831
+    },
+    {
+      "timestamp": "2021-10-28T00:00:00.000Z",
+      "visits_gained": 257086
+    },
+    {
+      "timestamp": "2021-10-29T00:00:00.000Z",
+      "visits_gained": 0
+    },
+    {
+      "timestamp": "2021-11-01T00:00:00.000Z",
+      "visits_gained": 248649
+    },
+    {
+      "timestamp": "2021-11-02T00:00:00.000Z",
+      "visits_gained": 304293
+    },
+    {
+      "timestamp": "2021-11-03T00:00:00.000Z",
+      "visits_gained": 270575
+    },
+    {
+      "timestamp": "2021-11-04T00:00:00.000Z",
+      "visits_gained": 277235
+    },
+    {
+      "timestamp": "2021-11-05T00:00:00.000Z",
+      "visits_gained": 230217
+    },
+    {
+      "timestamp": "2021-11-06T00:00:00.000Z",
+      "visits_gained": 421089
+    },
+    {
+      "timestamp": "2021-11-07T00:00:00.000Z",
+      "visits_gained": 386391
+    },
+    {
+      "timestamp": "2021-11-08T00:00:00.000Z",
+      "visits_gained": 247235
+    },
+    {
+      "timestamp": "2021-11-09T00:00:00.000Z",
+      "visits_gained": 271584
+    },
+    {
+      "timestamp": "2021-11-10T00:00:00.000Z",
+      "visits_gained": 282908
+    },
+    {
+      "timestamp": "2021-11-11T00:00:00.000Z",
+      "visits_gained": 301064
+    },
+    {
+      "timestamp": "2021-11-12T00:00:00.000Z",
+      "visits_gained": 274268
+    },
+    {
+      "timestamp": "2021-11-13T00:00:00.000Z",
+      "visits_gained": 366523
+    },
+    {
+      "timestamp": "2021-11-14T00:00:00.000Z",
+      "visits_gained": 384598
+    },
+    {
+      "timestamp": "2021-11-15T00:00:00.000Z",
+      "visits_gained": 255292
+    },
+    {
+      "timestamp": "2021-11-16T00:00:00.000Z",
+      "visits_gained": 227223
+    },
+    {
+      "timestamp": "2021-11-17T00:00:00.000Z",
+      "visits_gained": 216596
+    },
+    {
+      "timestamp": "2021-11-18T00:00:00.000Z",
+      "visits_gained": 209613
+    },
+    {
+      "timestamp": "2021-11-19T00:00:00.000Z",
+      "visits_gained": 218134
+    },
+    {
+      "timestamp": "2021-11-20T00:00:00.000Z",
+      "visits_gained": 319479
+    },
+    {
+      "timestamp": "2021-11-21T00:00:00.000Z",
+      "visits_gained": 302455
+    },
+    {
+      "timestamp": "2021-11-22T00:00:00.000Z",
+      "visits_gained": 181544
+    },
+    {
+      "timestamp": "2021-11-23T00:00:00.000Z",
+      "visits_gained": 175929
+    },
+    {
+      "timestamp": "2021-11-24T00:00:00.000Z",
+      "visits_gained": 191933
+    },
+    {
+      "timestamp": "2021-11-25T00:00:00.000Z",
+      "visits_gained": 193717
+    },
+    {
+      "timestamp": "2021-11-26T00:00:00.000Z",
+      "visits_gained": 210895
+    },
+    {
+      "timestamp": "2021-11-27T00:00:00.000Z",
+      "visits_gained": 262620
+    },
+    {
+      "timestamp": "2021-11-28T00:00:00.000Z",
+      "visits_gained": 253453
+    },
+    {
+      "timestamp": "2021-11-29T00:00:00.000Z",
+      "visits_gained": 171707
+    },
+    {
+      "timestamp": "2021-11-30T00:00:00.000Z",
+      "visits_gained": 164235
+    },
+    {
+      "timestamp": "2021-12-01T00:00:00.000Z",
+      "visits_gained": 158482
+    },
+    {
+      "timestamp": "2021-12-02T00:00:00.000Z",
+      "visits_gained": 145900
+    },
+    {
+      "timestamp": "2021-12-03T00:00:00.000Z",
+      "visits_gained": 169884
+    },
+    {
+      "timestamp": "2021-12-04T00:00:00.000Z",
+      "visits_gained": 175742
+    },
+    {
+      "timestamp": "2021-12-05T00:00:00.000Z",
+      "visits_gained": 218224
+    },
+    {
+      "timestamp": "2021-12-06T00:00:00.000Z",
+      "visits_gained": 145195
+    },
+    {
+      "timestamp": "2021-12-07T00:00:00.000Z",
+      "visits_gained": 136632
+    },
+    {
+      "timestamp": "2021-12-08T00:00:00.000Z",
+      "visits_gained": 153101
+    },
+    {
+      "timestamp": "2021-12-09T00:00:00.000Z",
+      "visits_gained": 143854
+    },
+    {
+      "timestamp": "2021-12-10T00:00:00.000Z",
+      "visits_gained": 149304
+    },
+    {
+      "timestamp": "2021-12-11T00:00:00.000Z",
+      "visits_gained": 204400
+    },
+    {
+      "timestamp": "2021-12-12T00:00:00.000Z",
+      "visits_gained": 100407
+    },
+    {
+      "timestamp": "2021-12-13T00:00:00.000Z",
+      "visits_gained": 75809
+    },
+    {
+      "timestamp": "2021-12-14T00:00:00.000Z",
+      "visits_gained": 104713
+    },
+    {
+      "timestamp": "2021-12-15T00:00:00.000Z",
+      "visits_gained": 98485
+    },
+    {
+      "timestamp": "2021-12-16T00:00:00.000Z",
+      "visits_gained": 53049
+    },
+    {
+      "timestamp": "2021-12-17T00:00:00.000Z",
+      "visits_gained": 117713
+    },
+    {
+      "timestamp": "2021-12-18T00:00:00.000Z",
+      "visits_gained": 171175
+    },
+    {
+      "timestamp": "2021-12-19T00:00:00.000Z",
+      "visits_gained": 159803
+    },
+    {
+      "timestamp": "2021-12-20T00:00:00.000Z",
+      "visits_gained": 139268
+    },
+    {
+      "timestamp": "2021-12-21T00:00:00.000Z",
+      "visits_gained": 140608
+    },
+    {
+      "timestamp": "2021-12-22T00:00:00.000Z",
+      "visits_gained": 145373
+    },
+    {
+      "timestamp": "2021-12-23T00:00:00.000Z",
+      "visits_gained": 144680
+    },
+    {
+      "timestamp": "2021-12-24T00:00:00.000Z",
+      "visits_gained": 136946
+    },
+    {
+      "timestamp": "2021-12-25T00:00:00.000Z",
+      "visits_gained": 116496
+    },
+    {
+      "timestamp": "2021-12-26T00:00:00.000Z",
+      "visits_gained": 125333
+    },
+    {
+      "timestamp": "2021-12-27T00:00:00.000Z",
+      "visits_gained": 126041
+    },
+    {
+      "timestamp": "2021-12-28T00:00:00.000Z",
+      "visits_gained": 132201
+    },
+    {
+      "timestamp": "2021-12-29T00:00:00.000Z",
+      "visits_gained": 138175
+    },
+    {
+      "timestamp": "2021-12-30T00:00:00.000Z",
+      "visits_gained": 143389
+    },
+    {
+      "timestamp": "2021-12-31T00:00:00.000Z",
+      "visits_gained": 142304
+    },
+    {
+      "timestamp": "2022-01-01T00:00:00.000Z",
+      "visits_gained": 143853
+    },
+    {
+      "timestamp": "2022-01-02T00:00:00.000Z",
+      "visits_gained": 148640
+    },
+    {
+      "timestamp": "2022-01-03T00:00:00.000Z",
+      "visits_gained": 140924
+    },
+    {
+      "timestamp": "2022-01-04T00:00:00.000Z",
+      "visits_gained": 127656
+    },
+    {
+      "timestamp": "2022-01-05T00:00:00.000Z",
+      "visits_gained": 114272
+    },
+    {
+      "timestamp": "2022-01-06T00:00:00.000Z",
+      "visits_gained": 108342
+    },
+    {
+      "timestamp": "2022-01-07T00:00:00.000Z",
+      "visits_gained": 112373
+    },
+    {
+      "timestamp": "2022-01-08T00:00:00.000Z",
+      "visits_gained": 227069
+    },
+    {
+      "timestamp": "2022-01-09T00:00:00.000Z",
+      "visits_gained": 210362
+    },
+    {
+      "timestamp": "2022-01-10T00:00:00.000Z",
+      "visits_gained": 90703
+    },
+    {
+      "timestamp": "2022-01-11T00:00:00.000Z",
+      "visits_gained": 151184
+    },
+    {
+      "timestamp": "2022-01-12T00:00:00.000Z",
+      "visits_gained": 89616
+    },
+    {
+      "timestamp": "2022-01-13T00:00:00.000Z",
+      "visits_gained": 159522
+    },
+    {
+      "timestamp": "2022-01-14T00:00:00.000Z",
+      "visits_gained": 178340
+    },
+    {
+      "timestamp": "2022-01-15T00:00:00.000Z",
+      "visits_gained": 262853
+    },
+    {
+      "timestamp": "2022-01-16T00:00:00.000Z",
+      "visits_gained": 235694
+    },
+    {
+      "timestamp": "2022-01-17T00:00:00.000Z",
+      "visits_gained": 182081
+    },
+    {
+      "timestamp": "2022-01-18T00:00:00.000Z",
+      "visits_gained": 156794
+    },
+    {
+      "timestamp": "2022-01-19T00:00:00.000Z",
+      "visits_gained": 146238
+    },
+    {
+      "timestamp": "2022-01-20T00:00:00.000Z",
+      "visits_gained": 141084
+    },
+    {
+      "timestamp": "2022-01-21T00:00:00.000Z",
+      "visits_gained": 180162
+    },
+    {
+      "timestamp": "2022-01-22T00:00:00.000Z",
+      "visits_gained": 137520
+    },
+    {
+      "timestamp": "2022-01-23T00:00:00.000Z",
+      "visits_gained": 255612
+    },
+    {
+      "timestamp": "2022-01-24T00:00:00.000Z",
+      "visits_gained": 181999
+    },
+    {
+      "timestamp": "2022-01-25T00:00:00.000Z",
+      "visits_gained": 173533
+    },
+    {
+      "timestamp": "2022-01-26T00:00:00.000Z",
+      "visits_gained": 189182
+    },
+    {
+      "timestamp": "2022-01-27T00:00:00.000Z",
+      "visits_gained": 198722
+    },
+    {
+      "timestamp": "2022-01-28T00:00:00.000Z",
+      "visits_gained": 207342
+    },
+    {
+      "timestamp": "2022-01-29T00:00:00.000Z",
+      "visits_gained": 246283
+    },
+    {
+      "timestamp": "2022-01-30T00:00:00.000Z",
+      "visits_gained": 169239
+    },
+    {
+      "timestamp": "2022-01-31T00:00:00.000Z",
+      "visits_gained": 188015
+    },
+    {
+      "timestamp": "2022-02-01T00:00:00.000Z",
+      "visits_gained": 173485
+    },
+    {
+      "timestamp": "2022-02-02T00:00:00.000Z",
+      "visits_gained": 172509
+    },
+    {
+      "timestamp": "2022-02-03T00:00:00.000Z",
+      "visits_gained": 174963
+    },
+    {
+      "timestamp": "2022-02-04T00:00:00.000Z",
+      "visits_gained": 189608
+    },
+    {
+      "timestamp": "2022-02-05T00:00:00.000Z",
+      "visits_gained": 230541
+    },
+    {
+      "timestamp": "2022-02-06T00:00:00.000Z",
+      "visits_gained": 234585
+    },
+    {
+      "timestamp": "2022-02-07T00:00:00.000Z",
+      "visits_gained": 175916
+    },
+    {
+      "timestamp": "2022-02-08T00:00:00.000Z",
+      "visits_gained": 167534
+    },
+    {
+      "timestamp": "2022-02-09T00:00:00.000Z",
+      "visits_gained": 165037
+    },
+    {
+      "timestamp": "2022-02-10T00:00:00.000Z",
+      "visits_gained": 96587
+    },
+    {
+      "timestamp": "2022-02-11T00:00:00.000Z",
+      "visits_gained": 172186
+    },
+    {
+      "timestamp": "2022-02-12T00:00:00.000Z",
+      "visits_gained": 214881
+    },
+    {
+      "timestamp": "2022-02-13T00:00:00.000Z",
+      "visits_gained": 217795
+    },
+    {
+      "timestamp": "2022-02-14T00:00:00.000Z",
+      "visits_gained": 159880
+    },
+    {
+      "timestamp": "2022-02-15T00:00:00.000Z",
+      "visits_gained": 152577
+    },
+    {
+      "timestamp": "2022-02-16T00:00:00.000Z",
+      "visits_gained": 158121
+    },
+    {
+      "timestamp": "2022-02-17T00:00:00.000Z",
+      "visits_gained": 160518
+    },
+    {
+      "timestamp": "2022-02-18T00:00:00.000Z",
+      "visits_gained": 244033
+    },
+    {
+      "timestamp": "2022-02-19T00:00:00.000Z",
+      "visits_gained": 281775
+    },
+    {
+      "timestamp": "2022-02-20T00:00:00.000Z",
+      "visits_gained": 260260
+    },
+    {
+      "timestamp": "2022-02-21T00:00:00.000Z",
+      "visits_gained": 201445
+    },
+    {
+      "timestamp": "2022-02-22T00:00:00.000Z",
+      "visits_gained": 183969
+    },
+    {
+      "timestamp": "2022-02-23T00:00:00.000Z",
+      "visits_gained": 178076
+    },
+    {
+      "timestamp": "2022-02-24T00:00:00.000Z",
+      "visits_gained": 177610
+    },
+    {
+      "timestamp": "2022-02-25T00:00:00.000Z",
+      "visits_gained": 199243
+    },
+    {
+      "timestamp": "2022-02-26T00:00:00.000Z",
+      "visits_gained": 244358
+    },
+    {
+      "timestamp": "2022-02-27T00:00:00.000Z",
+      "visits_gained": 236840
+    },
+    {
+      "timestamp": "2022-02-28T00:00:00.000Z",
+      "visits_gained": 168520
+    },
+    {
+      "timestamp": "2022-03-01T00:00:00.000Z",
+      "visits_gained": 157996
+    },
+    {
+      "timestamp": "2022-03-02T00:00:00.000Z",
+      "visits_gained": 147450
+    },
+    {
+      "timestamp": "2022-03-03T00:00:00.000Z",
+      "visits_gained": 137304
+    },
+    {
+      "timestamp": "2022-03-04T00:00:00.000Z",
+      "visits_gained": 148265
+    },
+    {
+      "timestamp": "2022-03-05T00:00:00.000Z",
+      "visits_gained": 185582
+    },
+    {
+      "timestamp": "2022-03-06T00:00:00.000Z",
+      "visits_gained": 263124
+    },
+    {
+      "timestamp": "2022-03-07T00:00:00.000Z",
+      "visits_gained": 189746
+    },
+    {
+      "timestamp": "2022-03-08T00:00:00.000Z",
+      "visits_gained": 181872
+    },
+    {
+      "timestamp": "2022-03-09T00:00:00.000Z",
+      "visits_gained": 167882
+    },
+    {
+      "timestamp": "2022-03-10T00:00:00.000Z",
+      "visits_gained": 152274
+    },
+    {
+      "timestamp": "2022-03-11T00:00:00.000Z",
+      "visits_gained": 193178
+    },
+    {
+      "timestamp": "2022-03-12T00:00:00.000Z",
+      "visits_gained": 235641
+    },
+    {
+      "timestamp": "2022-03-13T00:00:00.000Z",
+      "visits_gained": 221920
+    },
+    {
+      "timestamp": "2022-03-14T00:00:00.000Z",
+      "visits_gained": 143987
+    },
+    {
+      "timestamp": "2022-03-15T00:00:00.000Z",
+      "visits_gained": 137924
+    },
+    {
+      "timestamp": "2022-03-16T00:00:00.000Z",
+      "visits_gained": 133479
+    },
+    {
+      "timestamp": "2022-03-17T00:00:00.000Z",
+      "visits_gained": 127748
+    },
+    {
+      "timestamp": "2022-03-18T00:00:00.000Z",
+      "visits_gained": 187340
+    },
+    {
+      "timestamp": "2022-03-19T00:00:00.000Z",
+      "visits_gained": 144004
+    },
+    {
+      "timestamp": "2022-03-20T00:00:00.000Z",
+      "visits_gained": 230406
+    },
+    {
+      "timestamp": "2022-03-21T00:00:00.000Z",
+      "visits_gained": 148040
+    },
+    {
+      "timestamp": "2022-03-22T00:00:00.000Z",
+      "visits_gained": 137353
+    },
+    {
+      "timestamp": "2022-03-23T00:00:00.000Z",
+      "visits_gained": 131139
+    },
+    {
+      "timestamp": "2022-03-24T00:00:00.000Z",
+      "visits_gained": 127397
+    },
+    {
+      "timestamp": "2022-03-25T00:00:00.000Z",
+      "visits_gained": 144663
+    },
+    {
+      "timestamp": "2022-03-26T00:00:00.000Z",
+      "visits_gained": 168346
+    },
+    {
+      "timestamp": "2022-03-27T00:00:00.000Z",
+      "visits_gained": 155406
+    },
+    {
+      "timestamp": "2022-03-28T00:00:00.000Z",
+      "visits_gained": 102123
+    },
+    {
+      "timestamp": "2022-03-29T00:00:00.000Z",
+      "visits_gained": 133237
+    },
+    {
+      "timestamp": "2022-03-30T00:00:00.000Z",
+      "visits_gained": 86241
+    },
+    {
+      "timestamp": "2022-03-31T00:00:00.000Z",
+      "visits_gained": 121878
+    },
+    {
+      "timestamp": "2022-04-01T00:00:00.000Z",
+      "visits_gained": 174111
+    },
+    {
+      "timestamp": "2022-04-02T00:00:00.000Z",
+      "visits_gained": 217475
+    },
+    {
+      "timestamp": "2022-04-03T00:00:00.000Z",
+      "visits_gained": 226580
+    },
+    {
+      "timestamp": "2022-04-04T00:00:00.000Z",
+      "visits_gained": 148421
+    },
+    {
+      "timestamp": "2022-04-05T00:00:00.000Z",
+      "visits_gained": 129710
+    },
+    {
+      "timestamp": "2022-04-06T00:00:00.000Z",
+      "visits_gained": 121493
+    },
+    {
+      "timestamp": "2022-04-07T00:00:00.000Z",
+      "visits_gained": 116925
+    },
+    {
+      "timestamp": "2022-04-08T00:00:00.000Z",
+      "visits_gained": 218160
+    },
+    {
+      "timestamp": "2022-04-09T00:00:00.000Z",
+      "visits_gained": 290645
+    },
+    {
+      "timestamp": "2022-04-10T00:00:00.000Z",
+      "visits_gained": 257163
+    },
+    {
+      "timestamp": "2022-04-11T00:00:00.000Z",
+      "visits_gained": 188264
+    },
+    {
+      "timestamp": "2022-04-12T00:00:00.000Z",
+      "visits_gained": 174278
+    },
+    {
+      "timestamp": "2022-04-13T00:00:00.000Z",
+      "visits_gained": 172716
+    },
+    {
+      "timestamp": "2022-04-14T00:00:00.000Z",
+      "visits_gained": 174824
+    },
+    {
+      "timestamp": "2022-04-15T00:00:00.000Z",
+      "visits_gained": 292925
+    },
+    {
+      "timestamp": "2022-04-16T00:00:00.000Z",
+      "visits_gained": 265798
+    },
+    {
+      "timestamp": "2022-04-17T00:00:00.000Z",
+      "visits_gained": 232088
+    },
+    {
+      "timestamp": "2022-04-18T00:00:00.000Z",
+      "visits_gained": 201150
+    },
+    {
+      "timestamp": "2022-04-19T00:00:00.000Z",
+      "visits_gained": 170455
+    },
+    {
+      "timestamp": "2022-04-20T00:00:00.000Z",
+      "visits_gained": 163343
+    },
+    {
+      "timestamp": "2022-04-21T00:00:00.000Z",
+      "visits_gained": 164357
+    },
+    {
+      "timestamp": "2022-04-22T00:00:00.000Z",
+      "visits_gained": 203609
+    },
+    {
+      "timestamp": "2022-04-23T00:00:00.000Z",
+      "visits_gained": 221730
+    },
+    {
+      "timestamp": "2022-04-24T00:00:00.000Z",
+      "visits_gained": 203465
+    },
+    {
+      "timestamp": "2022-04-25T00:00:00.000Z",
+      "visits_gained": 137366
+    },
+    {
+      "timestamp": "2022-04-26T00:00:00.000Z",
+      "visits_gained": 125269
+    },
+    {
+      "timestamp": "2022-04-27T00:00:00.000Z",
+      "visits_gained": 125306
+    },
+    {
+      "timestamp": "2022-04-28T00:00:00.000Z",
+      "visits_gained": 118715
+    },
+    {
+      "timestamp": "2022-04-29T00:00:00.000Z",
+      "visits_gained": 159999
+    },
+    {
+      "timestamp": "2022-04-30T00:00:00.000Z",
+      "visits_gained": 188706
+    },
+    {
+      "timestamp": "2022-05-01T00:00:00.000Z",
+      "visits_gained": 180249
+    },
+    {
+      "timestamp": "2022-05-02T00:00:00.000Z",
+      "visits_gained": 139673
+    },
+    {
+      "timestamp": "2022-05-03T00:00:00.000Z",
+      "visits_gained": 117110
+    },
+    {
+      "timestamp": "2022-05-04T00:00:00.000Z",
+      "visits_gained": 54696
+    },
+    {
+      "timestamp": "2022-05-05T00:00:00.000Z",
+      "visits_gained": 107354
+    },
+    {
+      "timestamp": "2022-05-06T00:00:00.000Z",
+      "visits_gained": 168854
+    },
+    {
+      "timestamp": "2022-05-07T00:00:00.000Z",
+      "visits_gained": 210435
+    },
+    {
+      "timestamp": "2022-05-08T00:00:00.000Z",
+      "visits_gained": 199002
+    },
+    {
+      "timestamp": "2022-05-09T00:00:00.000Z",
+      "visits_gained": 131703
+    },
+    {
+      "timestamp": "2022-05-10T00:00:00.000Z",
+      "visits_gained": 127973
+    },
+    {
+      "timestamp": "2022-05-11T00:00:00.000Z",
+      "visits_gained": 127893
+    },
+    {
+      "timestamp": "2022-05-12T00:00:00.000Z",
+      "visits_gained": 120929
+    },
+    {
+      "timestamp": "2022-05-13T00:00:00.000Z",
+      "visits_gained": 132776
+    },
+    {
+      "timestamp": "2022-05-14T00:00:00.000Z",
+      "visits_gained": 261155
+    },
+    {
+      "timestamp": "2022-05-15T00:00:00.000Z",
+      "visits_gained": 279305
+    },
+    {
+      "timestamp": "2022-05-16T00:00:00.000Z",
+      "visits_gained": 206508
+    },
+    {
+      "timestamp": "2022-05-17T00:00:00.000Z",
+      "visits_gained": 200736
+    },
+    {
+      "timestamp": "2022-05-18T00:00:00.000Z",
+      "visits_gained": 213477
+    },
+    {
+      "timestamp": "2022-05-19T00:00:00.000Z",
+      "visits_gained": 206739
+    },
+    {
+      "timestamp": "2022-05-20T00:00:00.000Z",
+      "visits_gained": 218777
+    },
+    {
+      "timestamp": "2022-05-21T00:00:00.000Z",
+      "visits_gained": 327724
+    },
+    {
+      "timestamp": "2022-05-22T00:00:00.000Z",
+      "visits_gained": 352231
+    },
+    {
+      "timestamp": "2022-05-23T00:00:00.000Z",
+      "visits_gained": 210407
+    },
+    {
+      "timestamp": "2022-05-24T00:00:00.000Z",
+      "visits_gained": 198442
+    },
+    {
+      "timestamp": "2022-05-25T00:00:00.000Z",
+      "visits_gained": 197100
+    },
+    {
+      "timestamp": "2022-05-26T00:00:00.000Z",
+      "visits_gained": 206757
+    },
+    {
+      "timestamp": "2022-05-27T00:00:00.000Z",
+      "visits_gained": 291852
+    },
+    {
+      "timestamp": "2022-05-28T00:00:00.000Z",
+      "visits_gained": 314403
+    },
+    {
+      "timestamp": "2022-05-29T00:00:00.000Z",
+      "visits_gained": 276514
+    },
+    {
+      "timestamp": "2022-05-30T00:00:00.000Z",
+      "visits_gained": 220961
+    },
+    {
+      "timestamp": "2022-05-31T00:00:00.000Z",
+      "visits_gained": 220027
+    },
+    {
+      "timestamp": "2022-06-01T00:00:00.000Z",
+      "visits_gained": 205781
+    },
+    {
+      "timestamp": "2022-06-02T00:00:00.000Z",
+      "visits_gained": 181726
+    },
+    {
+      "timestamp": "2022-06-03T00:00:00.000Z",
+      "visits_gained": 202921
+    },
+    {
+      "timestamp": "2022-06-04T00:00:00.000Z",
+      "visits_gained": 212706
+    },
+    {
+      "timestamp": "2022-06-05T00:00:00.000Z",
+      "visits_gained": 197191
+    },
+    {
+      "timestamp": "2022-06-06T00:00:00.000Z",
+      "visits_gained": 157342
+    },
+    {
+      "timestamp": "2022-06-07T00:00:00.000Z",
+      "visits_gained": 145336
+    },
+    {
+      "timestamp": "2022-06-08T00:00:00.000Z",
+      "visits_gained": 144203
+    },
+    {
+      "timestamp": "2022-06-09T00:00:00.000Z",
+      "visits_gained": 130692
+    },
+    {
+      "timestamp": "2022-06-10T00:00:00.000Z",
+      "visits_gained": 144846
+    },
+    {
+      "timestamp": "2022-06-11T00:00:00.000Z",
+      "visits_gained": 340047
+    },
+    {
+      "timestamp": "2022-06-12T00:00:00.000Z",
+      "visits_gained": 288727
+    },
+    {
+      "timestamp": "2022-06-13T00:00:00.000Z",
+      "visits_gained": 214293
+    },
+    {
+      "timestamp": "2022-06-14T00:00:00.000Z",
+      "visits_gained": 190993
+    },
+    {
+      "timestamp": "2022-06-15T00:00:00.000Z",
+      "visits_gained": 193801
+    },
+    {
+      "timestamp": "2022-06-16T00:00:00.000Z",
+      "visits_gained": 228582
+    },
+    {
+      "timestamp": "2022-06-17T00:00:00.000Z",
+      "visits_gained": 226107
+    },
+    {
+      "timestamp": "2022-06-18T00:00:00.000Z",
+      "visits_gained": 232113
+    },
+    {
+      "timestamp": "2022-06-19T00:00:00.000Z",
+      "visits_gained": 222289
+    },
+    {
+      "timestamp": "2022-06-20T00:00:00.000Z",
+      "visits_gained": 176538
+    },
+    {
+      "timestamp": "2022-06-21T00:00:00.000Z",
+      "visits_gained": 163225
+    },
+    {
+      "timestamp": "2022-06-22T00:00:00.000Z",
+      "visits_gained": 146246
+    },
+    {
+      "timestamp": "2022-06-23T00:00:00.000Z",
+      "visits_gained": 138618
+    },
+    {
+      "timestamp": "2022-06-24T00:00:00.000Z",
+      "visits_gained": 141590
+    },
+    {
+      "timestamp": "2022-06-25T00:00:00.000Z",
+      "visits_gained": 150855
+    },
+    {
+      "timestamp": "2022-06-26T00:00:00.000Z",
+      "visits_gained": 146697
+    },
+    {
+      "timestamp": "2022-06-27T00:00:00.000Z",
+      "visits_gained": 133112
+    },
+    {
+      "timestamp": "2022-06-28T00:00:00.000Z",
+      "visits_gained": 134157
+    },
+    {
+      "timestamp": "2022-06-29T00:00:00.000Z",
+      "visits_gained": 136012
+    },
+    {
+      "timestamp": "2022-06-30T00:00:00.000Z",
+      "visits_gained": 134058
+    },
+    {
+      "timestamp": "2022-07-01T00:00:00.000Z",
+      "visits_gained": 139533
+    },
+    {
+      "timestamp": "2022-07-02T00:00:00.000Z",
+      "visits_gained": 154997
+    },
+    {
+      "timestamp": "2022-07-03T00:00:00.000Z",
+      "visits_gained": 139685
+    },
+    {
+      "timestamp": "2022-07-04T00:00:00.000Z",
+      "visits_gained": 121434
+    },
+    {
+      "timestamp": "2022-07-05T00:00:00.000Z",
+      "visits_gained": 119552
+    },
+    {
+      "timestamp": "2022-07-06T00:00:00.000Z",
+      "visits_gained": 126313
+    },
+    {
+      "timestamp": "2022-07-07T00:00:00.000Z",
+      "visits_gained": 137743
+    },
+    {
+      "timestamp": "2022-07-08T00:00:00.000Z",
+      "visits_gained": 133624
+    },
+    {
+      "timestamp": "2022-07-09T00:00:00.000Z",
+      "visits_gained": 160130
+    },
+    {
+      "timestamp": "2022-07-10T00:00:00.000Z",
+      "visits_gained": 168944
+    },
+    {
+      "timestamp": "2022-07-11T00:00:00.000Z",
+      "visits_gained": 145957
+    },
+    {
+      "timestamp": "2022-07-12T00:00:00.000Z",
+      "visits_gained": 139239
+    },
+    {
+      "timestamp": "2022-07-13T00:00:00.000Z",
+      "visits_gained": 131249
+    },
+    {
+      "timestamp": "2022-07-14T00:00:00.000Z",
+      "visits_gained": 134147
+    },
+    {
+      "timestamp": "2022-07-15T00:00:00.000Z",
+      "visits_gained": 157210
+    },
+    {
+      "timestamp": "2022-07-16T00:00:00.000Z",
+      "visits_gained": 179610
+    },
+    {
+      "timestamp": "2022-07-17T00:00:00.000Z",
+      "visits_gained": 172443
+    },
+    {
+      "timestamp": "2022-07-18T00:00:00.000Z",
+      "visits_gained": 164228
+    },
+    {
+      "timestamp": "2022-07-19T00:00:00.000Z",
+      "visits_gained": 162195
+    },
+    {
+      "timestamp": "2022-07-20T00:00:00.000Z",
+      "visits_gained": 153608
+    },
+    {
+      "timestamp": "2022-07-21T00:00:00.000Z",
+      "visits_gained": 154075
+    },
+    {
+      "timestamp": "2022-07-22T00:00:00.000Z",
+      "visits_gained": 155503
+    },
+    {
+      "timestamp": "2022-07-23T00:00:00.000Z",
+      "visits_gained": 170170
+    },
+    {
+      "timestamp": "2022-07-24T00:00:00.000Z",
+      "visits_gained": 161174
+    },
+    {
+      "timestamp": "2022-07-25T00:00:00.000Z",
+      "visits_gained": 151264
+    },
+    {
+      "timestamp": "2022-07-26T00:00:00.000Z",
+      "visits_gained": 165554
+    },
+    {
+      "timestamp": "2022-07-27T00:00:00.000Z",
+      "visits_gained": 178559
+    },
+    {
+      "timestamp": "2022-07-28T00:00:00.000Z",
+      "visits_gained": 146713
+    },
+    {
+      "timestamp": "2022-07-29T00:00:00.000Z",
+      "visits_gained": 180983
+    },
+    {
+      "timestamp": "2022-07-30T00:00:00.000Z",
+      "visits_gained": 175537
+    },
+    {
+      "timestamp": "2022-07-31T00:00:00.000Z",
+      "visits_gained": 176275
+    },
+    {
+      "timestamp": "2022-08-01T00:00:00.000Z",
+      "visits_gained": 163100
+    },
+    {
+      "timestamp": "2022-08-02T00:00:00.000Z",
+      "visits_gained": 153802
+    },
+    {
+      "timestamp": "2022-08-03T00:00:00.000Z",
+      "visits_gained": 144291
+    },
+    {
+      "timestamp": "2022-08-04T00:00:00.000Z",
+      "visits_gained": 145859
+    },
+    {
+      "timestamp": "2022-08-05T00:00:00.000Z",
+      "visits_gained": 160864
+    },
+    {
+      "timestamp": "2022-08-06T00:00:00.000Z",
+      "visits_gained": 166585
+    },
+    {
+      "timestamp": "2022-08-07T00:00:00.000Z",
+      "visits_gained": 166375
+    },
+    {
+      "timestamp": "2022-08-08T00:00:00.000Z",
+      "visits_gained": 149771
+    },
+    {
+      "timestamp": "2022-08-09T00:00:00.000Z",
+      "visits_gained": 137887
+    },
+    {
+      "timestamp": "2022-08-10T00:00:00.000Z",
+      "visits_gained": 134617
+    },
+    {
+      "timestamp": "2022-08-11T00:00:00.000Z",
+      "visits_gained": 128469
+    },
+    {
+      "timestamp": "2022-08-12T00:00:00.000Z",
+      "visits_gained": 134184
+    },
+    {
+      "timestamp": "2022-08-13T00:00:00.000Z",
+      "visits_gained": 135622
+    },
+    {
+      "timestamp": "2022-08-14T00:00:00.000Z",
+      "visits_gained": 133826
+    },
+    {
+      "timestamp": "2022-08-15T00:00:00.000Z",
+      "visits_gained": 125548
+    },
+    {
+      "timestamp": "2022-08-16T00:00:00.000Z",
+      "visits_gained": 117551
+    },
+    {
+      "timestamp": "2022-08-17T00:00:00.000Z",
+      "visits_gained": 119211
+    },
+    {
+      "timestamp": "2022-08-18T00:00:00.000Z",
+      "visits_gained": 116965
+    },
+    {
+      "timestamp": "2022-08-19T00:00:00.000Z",
+      "visits_gained": 122075
+    },
+    {
+      "timestamp": "2022-08-20T00:00:00.000Z",
+      "visits_gained": 129918
+    },
+    {
+      "timestamp": "2022-08-21T00:00:00.000Z",
+      "visits_gained": 130258
+    },
+    {
+      "timestamp": "2022-08-22T00:00:00.000Z",
+      "visits_gained": 115577
+    },
+    {
+      "timestamp": "2022-08-23T00:00:00.000Z",
+      "visits_gained": 113543
+    },
+    {
+      "timestamp": "2022-08-24T00:00:00.000Z",
+      "visits_gained": 109531
+    },
+    {
+      "timestamp": "2022-08-25T00:00:00.000Z",
+      "visits_gained": 107037
+    },
+    {
+      "timestamp": "2022-08-26T00:00:00.000Z",
+      "visits_gained": 130241
+    },
+    {
+      "timestamp": "2022-08-27T00:00:00.000Z",
+      "visits_gained": 126353
+    },
+    {
+      "timestamp": "2022-08-28T00:00:00.000Z",
+      "visits_gained": 142772
+    },
+    {
+      "timestamp": "2022-08-29T00:00:00.000Z",
+      "visits_gained": 121273
+    },
+    {
+      "timestamp": "2022-08-30T00:00:00.000Z",
+      "visits_gained": 102708
+    },
+    {
+      "timestamp": "2022-08-31T00:00:00.000Z",
+      "visits_gained": 97499
+    },
+    {
+      "timestamp": "2022-09-01T00:00:00.000Z",
+      "visits_gained": 91078
+    },
+    {
+      "timestamp": "2022-09-02T00:00:00.000Z",
+      "visits_gained": 94733
+    },
+    {
+      "timestamp": "2022-09-03T00:00:00.000Z",
+      "visits_gained": 114690
+    },
+    {
+      "timestamp": "2022-09-04T00:00:00.000Z",
+      "visits_gained": 129714
+    },
+    {
+      "timestamp": "2022-09-05T00:00:00.000Z",
+      "visits_gained": 94272
+    },
+    {
+      "timestamp": "2022-09-06T00:00:00.000Z",
+      "visits_gained": 76367
+    },
+    {
+      "timestamp": "2022-09-07T00:00:00.000Z",
+      "visits_gained": 74283
+    },
+    {
+      "timestamp": "2022-09-08T00:00:00.000Z",
+      "visits_gained": 68232
+    },
+    {
+      "timestamp": "2022-09-09T00:00:00.000Z",
+      "visits_gained": 74910
+    },
+    {
+      "timestamp": "2022-09-10T00:00:00.000Z",
+      "visits_gained": 98651
+    },
+    {
+      "timestamp": "2022-09-11T00:00:00.000Z",
+      "visits_gained": 109119
+    },
+    {
+      "timestamp": "2022-09-12T00:00:00.000Z",
+      "visits_gained": 69194
+    },
+    {
+      "timestamp": "2022-09-13T00:00:00.000Z",
+      "visits_gained": 59170
+    },
+    {
+      "timestamp": "2022-09-14T00:00:00.000Z",
+      "visits_gained": 59960
+    },
+    {
+      "timestamp": "2022-09-15T00:00:00.000Z",
+      "visits_gained": 56812
+    },
+    {
+      "timestamp": "2022-09-16T00:00:00.000Z",
+      "visits_gained": 63230
+    },
+    {
+      "timestamp": "2022-09-17T00:00:00.000Z",
+      "visits_gained": 88368
+    },
+    {
+      "timestamp": "2022-09-18T00:00:00.000Z",
+      "visits_gained": 99384
+    },
+    {
+      "timestamp": "2022-09-19T00:00:00.000Z",
+      "visits_gained": 62514
+    },
+    {
+      "timestamp": "2022-09-20T00:00:00.000Z",
+      "visits_gained": 52236
+    },
+    {
+      "timestamp": "2022-09-21T00:00:00.000Z",
+      "visits_gained": 51936
+    },
+    {
+      "timestamp": "2022-09-22T00:00:00.000Z",
+      "visits_gained": 52064
+    },
+    {
+      "timestamp": "2022-09-23T00:00:00.000Z",
+      "visits_gained": 115905
+    },
+    {
+      "timestamp": "2022-09-24T00:00:00.000Z",
+      "visits_gained": 167839
+    },
+    {
+      "timestamp": "2022-09-25T00:00:00.000Z",
+      "visits_gained": 165497
+    },
+    {
+      "timestamp": "2022-09-26T00:00:00.000Z",
+      "visits_gained": 111483
+    },
+    {
+      "timestamp": "2022-09-27T00:00:00.000Z",
+      "visits_gained": 105009
+    },
+    {
+      "timestamp": "2022-09-28T00:00:00.000Z",
+      "visits_gained": 110228
+    },
+    {
+      "timestamp": "2022-09-29T00:00:00.000Z",
+      "visits_gained": 105308
+    },
+    {
+      "timestamp": "2022-09-30T00:00:00.000Z",
+      "visits_gained": 123271
+    },
+    {
+      "timestamp": "2022-10-01T00:00:00.000Z",
+      "visits_gained": 163316
+    },
+    {
+      "timestamp": "2022-10-02T00:00:00.000Z",
+      "visits_gained": 184974
+    },
+    {
+      "timestamp": "2022-10-03T00:00:00.000Z",
+      "visits_gained": 127446
+    },
+    {
+      "timestamp": "2022-10-04T00:00:00.000Z",
+      "visits_gained": 101081
+    },
+    {
+      "timestamp": "2022-10-05T00:00:00.000Z",
+      "visits_gained": 103772
+    },
+    {
+      "timestamp": "2022-10-06T00:00:00.000Z",
+      "visits_gained": 94310
+    },
+    {
+      "timestamp": "2022-10-07T00:00:00.000Z",
+      "visits_gained": 101671
+    },
+    {
+      "timestamp": "2022-10-08T00:00:00.000Z",
+      "visits_gained": 127268
+    },
+    {
+      "timestamp": "2022-10-09T00:00:00.000Z",
+      "visits_gained": 143345
+    },
+    {
+      "timestamp": "2022-10-10T00:00:00.000Z",
+      "visits_gained": 106677
+    },
+    {
+      "timestamp": "2022-10-11T00:00:00.000Z",
+      "visits_gained": 87487
+    },
+    {
+      "timestamp": "2022-10-12T00:00:00.000Z",
+      "visits_gained": 86419
+    },
+    {
+      "timestamp": "2022-10-13T00:00:00.000Z",
+      "visits_gained": 84040
+    },
+    {
+      "timestamp": "2022-10-14T00:00:00.000Z",
+      "visits_gained": 102983
+    },
+    {
+      "timestamp": "2022-10-15T00:00:00.000Z",
+      "visits_gained": 129695
+    },
+    {
+      "timestamp": "2022-10-16T00:00:00.000Z",
+      "visits_gained": 142555
+    },
+    {
+      "timestamp": "2022-10-17T00:00:00.000Z",
+      "visits_gained": 84520
+    },
+    {
+      "timestamp": "2022-10-18T00:00:00.000Z",
+      "visits_gained": 78570
+    },
+    {
+      "timestamp": "2022-10-19T00:00:00.000Z",
+      "visits_gained": 77115
+    },
+    {
+      "timestamp": "2022-10-20T00:00:00.000Z",
+      "visits_gained": 78133
+    },
+    {
+      "timestamp": "2022-10-21T00:00:00.000Z",
+      "visits_gained": 100289
+    },
+    {
+      "timestamp": "2022-10-22T00:00:00.000Z",
+      "visits_gained": 132745
+    },
+    {
+      "timestamp": "2022-10-23T00:00:00.000Z",
+      "visits_gained": 130490
+    },
+    {
+      "timestamp": "2022-10-24T00:00:00.000Z",
+      "visits_gained": 85736
+    },
+    {
+      "timestamp": "2022-10-25T00:00:00.000Z",
+      "visits_gained": 78024
+    },
+    {
+      "timestamp": "2022-10-26T00:00:00.000Z",
+      "visits_gained": 72253
+    },
+    {
+      "timestamp": "2022-10-27T00:00:00.000Z",
+      "visits_gained": 68579
+    },
+    {
+      "timestamp": "2022-10-28T00:00:00.000Z",
+      "visits_gained": 73435
+    },
+    {
+      "timestamp": "2022-10-29T00:00:00.000Z",
+      "visits_gained": 92988
+    },
+    {
+      "timestamp": "2022-10-30T00:00:00.000Z",
+      "visits_gained": 89788
+    },
+    {
+      "timestamp": "2022-10-31T00:00:00.000Z",
+      "visits_gained": 63262
+    },
+    {
+      "timestamp": "2022-11-01T00:00:00.000Z",
+      "visits_gained": 56156
+    },
+    {
+      "timestamp": "2022-11-02T00:00:00.000Z",
+      "visits_gained": 54313
+    },
+    {
+      "timestamp": "2022-11-03T00:00:00.000Z",
+      "visits_gained": 50584
+    },
+    {
+      "timestamp": "2022-11-04T00:00:00.000Z",
+      "visits_gained": 53927
+    },
+    {
+      "timestamp": "2022-11-05T00:00:00.000Z",
+      "visits_gained": 74061
+    },
+    {
+      "timestamp": "2022-11-06T00:00:00.000Z",
+      "visits_gained": 79189
+    },
+    {
+      "timestamp": "2022-11-07T00:00:00.000Z",
+      "visits_gained": 45900
+    },
+    {
+      "timestamp": "2022-11-08T00:00:00.000Z",
+      "visits_gained": 127816
+    },
+    {
+      "timestamp": "2022-11-09T00:00:00.000Z",
+      "visits_gained": 94559
+    },
+    {
+      "timestamp": "2022-11-10T00:00:00.000Z",
+      "visits_gained": 71717
+    },
+    {
+      "timestamp": "2022-11-11T00:00:00.000Z",
+      "visits_gained": 81375
+    },
+    {
+      "timestamp": "2022-11-12T00:00:00.000Z",
+      "visits_gained": 108638
+    },
+    {
+      "timestamp": "2022-11-13T00:00:00.000Z",
+      "visits_gained": 113363
+    },
+    {
+      "timestamp": "2022-11-14T00:00:00.000Z",
+      "visits_gained": 102741
+    },
+    {
+      "timestamp": "2022-11-15T00:00:00.000Z",
+      "visits_gained": 86999
+    },
+    {
+      "timestamp": "2022-11-16T00:00:00.000Z",
+      "visits_gained": 77839
+    },
+    {
+      "timestamp": "2022-11-17T00:00:00.000Z",
+      "visits_gained": 73275
+    },
+    {
+      "timestamp": "2022-11-18T00:00:00.000Z",
+      "visits_gained": 80208
+    },
+    {
+      "timestamp": "2022-11-19T00:00:00.000Z",
+      "visits_gained": 112415
+    },
+    {
+      "timestamp": "2022-11-20T00:00:00.000Z",
+      "visits_gained": 114442
+    },
+    {
+      "timestamp": "2022-11-21T00:00:00.000Z",
+      "visits_gained": 66519
+    },
+    {
+      "timestamp": "2022-11-22T00:00:00.000Z",
+      "visits_gained": 63085
+    },
+    {
+      "timestamp": "2022-11-23T00:00:00.000Z",
+      "visits_gained": 66873
+    },
+    {
+      "timestamp": "2022-11-24T00:00:00.000Z",
+      "visits_gained": 67854
+    },
+    {
+      "timestamp": "2022-11-25T00:00:00.000Z",
+      "visits_gained": 74019
+    },
+    {
+      "timestamp": "2022-11-26T00:00:00.000Z",
+      "visits_gained": 98734
+    },
+    {
+      "timestamp": "2022-11-27T00:00:00.000Z",
+      "visits_gained": 102427
+    },
+    {
+      "timestamp": "2022-11-28T00:00:00.000Z",
+      "visits_gained": 57787
+    },
+    {
+      "timestamp": "2022-11-29T00:00:00.000Z",
+      "visits_gained": 50907
+    },
+    {
+      "timestamp": "2022-11-30T00:00:00.000Z",
+      "visits_gained": 52834
+    },
+    {
+      "timestamp": "2022-12-01T00:00:00.000Z",
+      "visits_gained": 48656
+    },
+    {
+      "timestamp": "2022-12-02T00:00:00.000Z",
+      "visits_gained": 78044
+    },
+    {
+      "timestamp": "2022-12-03T00:00:00.000Z",
+      "visits_gained": 124928
+    },
+    {
+      "timestamp": "2022-12-04T00:00:00.000Z",
+      "visits_gained": 132112
+    },
+    {
+      "timestamp": "2022-12-05T00:00:00.000Z",
+      "visits_gained": 82577
+    },
+    {
+      "timestamp": "2022-12-06T00:00:00.000Z",
+      "visits_gained": 77876
+    },
+    {
+      "timestamp": "2022-12-07T00:00:00.000Z",
+      "visits_gained": 78893
+    },
+    {
+      "timestamp": "2022-12-08T00:00:00.000Z",
+      "visits_gained": 93222
+    },
+    {
+      "timestamp": "2022-12-09T00:00:00.000Z",
+      "visits_gained": 105256
+    },
+    {
+      "timestamp": "2022-12-10T00:00:00.000Z",
+      "visits_gained": 148799
+    },
+    {
+      "timestamp": "2022-12-11T00:00:00.000Z",
+      "visits_gained": 157591
+    },
+    {
+      "timestamp": "2022-12-12T00:00:00.000Z",
+      "visits_gained": 116843
+    },
+    {
+      "timestamp": "2022-12-13T00:00:00.000Z",
+      "visits_gained": 106244
+    },
+    {
+      "timestamp": "2022-12-14T00:00:00.000Z",
+      "visits_gained": 110862
+    },
+    {
+      "timestamp": "2022-12-15T00:00:00.000Z",
+      "visits_gained": 118350
+    },
+    {
+      "timestamp": "2022-12-16T00:00:00.000Z",
+      "visits_gained": 132346
+    },
+    {
+      "timestamp": "2022-12-17T00:00:00.000Z",
+      "visits_gained": 148015
+    },
+    {
+      "timestamp": "2022-12-18T00:00:00.000Z",
+      "visits_gained": 145312
+    },
+    {
+      "timestamp": "2022-12-19T00:00:00.000Z",
+      "visits_gained": 108017
+    },
+    {
+      "timestamp": "2022-12-20T00:00:00.000Z",
+      "visits_gained": 107351
+    },
+    {
+      "timestamp": "2022-12-21T00:00:00.000Z",
+      "visits_gained": 102419
+    },
+    {
+      "timestamp": "2022-12-22T00:00:00.000Z",
+      "visits_gained": 104418
+    },
+    {
+      "timestamp": "2022-12-23T00:00:00.000Z",
+      "visits_gained": 105442
+    },
+    {
+      "timestamp": "2022-12-24T00:00:00.000Z",
+      "visits_gained": 100567
+    },
+    {
+      "timestamp": "2022-12-25T00:00:00.000Z",
+      "visits_gained": 79737
+    },
+    {
+      "timestamp": "2022-12-26T00:00:00.000Z",
+      "visits_gained": 81502
+    },
+    {
+      "timestamp": "2022-12-27T00:00:00.000Z",
+      "visits_gained": 82466
+    },
+    {
+      "timestamp": "2022-12-28T00:00:00.000Z",
+      "visits_gained": 83912
+    },
+    {
+      "timestamp": "2022-12-29T00:00:00.000Z",
+      "visits_gained": 84439
+    },
+    {
+      "timestamp": "2022-12-30T00:00:00.000Z",
+      "visits_gained": 85483
+    },
+    {
+      "timestamp": "2022-12-31T00:00:00.000Z",
+      "visits_gained": 51809
+    },
+    {
+      "timestamp": "2023-01-01T00:00:00.000Z",
+      "visits_gained": 78216
+    },
+    {
+      "timestamp": "2023-01-02T00:00:00.000Z",
+      "visits_gained": 78859
+    },
+    {
+      "timestamp": "2023-01-03T00:00:00.000Z",
+      "visits_gained": 71778
+    },
+    {
+      "timestamp": "2023-01-04T00:00:00.000Z",
+      "visits_gained": 67769
+    },
+    {
+      "timestamp": "2023-01-05T00:00:00.000Z",
+      "visits_gained": 64545
+    },
+    {
+      "timestamp": "2023-01-06T00:00:00.000Z",
+      "visits_gained": 66813
+    },
+    {
+      "timestamp": "2023-01-07T00:00:00.000Z",
+      "visits_gained": 97792
+    },
+    {
+      "timestamp": "2023-01-08T00:00:00.000Z",
+      "visits_gained": 114267
+    },
+    {
+      "timestamp": "2023-01-09T00:00:00.000Z",
+      "visits_gained": 77218
+    },
+    {
+      "timestamp": "2023-01-10T00:00:00.000Z",
+      "visits_gained": 76411
+    },
+    {
+      "timestamp": "2023-01-11T00:00:00.000Z",
+      "visits_gained": 74819
+    },
+    {
+      "timestamp": "2023-01-12T00:00:00.000Z",
+      "visits_gained": 74747
+    },
+    {
+      "timestamp": "2023-01-13T00:00:00.000Z",
+      "visits_gained": 84551
+    },
+    {
+      "timestamp": "2023-01-14T00:00:00.000Z",
+      "visits_gained": 119913
+    },
+    {
+      "timestamp": "2023-01-15T00:00:00.000Z",
+      "visits_gained": 143193
+    },
+    {
+      "timestamp": "2023-01-16T00:00:00.000Z",
+      "visits_gained": 110650
+    },
+    {
+      "timestamp": "2023-01-17T00:00:00.000Z",
+      "visits_gained": 119573
+    },
+    {
+      "timestamp": "2023-01-18T00:00:00.000Z",
+      "visits_gained": 115310
+    },
+    {
+      "timestamp": "2023-01-19T00:00:00.000Z",
+      "visits_gained": 121722
+    },
+    {
+      "timestamp": "2023-01-20T00:00:00.000Z",
+      "visits_gained": 129885
+    },
+    {
+      "timestamp": "2023-01-21T00:00:00.000Z",
+      "visits_gained": 100341
+    },
+    {
+      "timestamp": "2023-01-22T00:00:00.000Z",
+      "visits_gained": 166476
+    },
+    {
+      "timestamp": "2023-01-23T00:00:00.000Z",
+      "visits_gained": 123511
+    },
+    {
+      "timestamp": "2023-01-24T00:00:00.000Z",
+      "visits_gained": 110511
+    },
+    {
+      "timestamp": "2023-01-25T00:00:00.000Z",
+      "visits_gained": 110440
+    },
+    {
+      "timestamp": "2023-01-26T00:00:00.000Z",
+      "visits_gained": 107385
+    },
+    {
+      "timestamp": "2023-01-27T00:00:00.000Z",
+      "visits_gained": 111177
+    },
+    {
+      "timestamp": "2023-01-28T00:00:00.000Z",
+      "visits_gained": 135745
+    },
+    {
+      "timestamp": "2023-01-29T00:00:00.000Z",
+      "visits_gained": 138543
+    },
+    {
+      "timestamp": "2023-01-30T00:00:00.000Z",
+      "visits_gained": 105065
+    },
+    {
+      "timestamp": "2023-01-31T00:00:00.000Z",
+      "visits_gained": 106952
+    },
+    {
+      "timestamp": "2023-02-01T00:00:00.000Z",
+      "visits_gained": 110233
+    },
+    {
+      "timestamp": "2023-02-02T00:00:00.000Z",
+      "visits_gained": 90771
+    },
+    {
+      "timestamp": "2023-02-03T00:00:00.000Z",
+      "visits_gained": 89960
+    },
+    {
+      "timestamp": "2023-02-04T00:00:00.000Z",
+      "visits_gained": 140501
+    },
+    {
+      "timestamp": "2023-02-05T00:00:00.000Z",
+      "visits_gained": 177880
+    },
+    {
+      "timestamp": "2023-02-06T00:00:00.000Z",
+      "visits_gained": 112409
+    },
+    {
+      "timestamp": "2023-02-07T00:00:00.000Z",
+      "visits_gained": 107671
+    },
+    {
+      "timestamp": "2023-02-08T00:00:00.000Z",
+      "visits_gained": 94797
+    },
+    {
+      "timestamp": "2023-02-09T00:00:00.000Z",
+      "visits_gained": 90890
+    },
+    {
+      "timestamp": "2023-02-10T00:00:00.000Z",
+      "visits_gained": 107850
+    },
+    {
+      "timestamp": "2023-02-11T00:00:00.000Z",
+      "visits_gained": 126216
+    },
+    {
+      "timestamp": "2023-02-12T00:00:00.000Z",
+      "visits_gained": 111857
+    },
+    {
+      "timestamp": "2023-02-13T00:00:00.000Z",
+      "visits_gained": 113640
+    },
+    {
+      "timestamp": "2023-02-14T00:00:00.000Z",
+      "visits_gained": 111873
+    },
+    {
+      "timestamp": "2023-02-15T00:00:00.000Z",
+      "visits_gained": 72485
+    },
+    {
+      "timestamp": "2023-02-16T00:00:00.000Z",
+      "visits_gained": 70930
+    },
+    {
+      "timestamp": "2023-02-17T00:00:00.000Z",
+      "visits_gained": 78952
+    },
+    {
+      "timestamp": "2023-02-18T00:00:00.000Z",
+      "visits_gained": 91606
+    },
+    {
+      "timestamp": "2023-02-19T00:00:00.000Z",
+      "visits_gained": 94895
+    },
+    {
+      "timestamp": "2023-02-20T00:00:00.000Z",
+      "visits_gained": 86528
+    },
+    {
+      "timestamp": "2023-02-21T00:00:00.000Z",
+      "visits_gained": 85651
+    },
+    {
+      "timestamp": "2023-02-22T00:00:00.000Z",
+      "visits_gained": 86623
+    },
+    {
+      "timestamp": "2023-02-23T00:00:00.000Z",
+      "visits_gained": 87716
+    },
+    {
+      "timestamp": "2023-02-24T00:00:00.000Z",
+      "visits_gained": 88035
+    },
+    {
+      "timestamp": "2023-02-25T00:00:00.000Z",
+      "visits_gained": 95347
+    },
+    {
+      "timestamp": "2023-02-26T00:00:00.000Z",
+      "visits_gained": 107551
+    },
+    {
+      "timestamp": "2023-02-27T00:00:00.000Z",
+      "visits_gained": 109769
+    },
+    {
+      "timestamp": "2023-02-28T00:00:00.000Z",
+      "visits_gained": 73979
+    },
+    {
+      "timestamp": "2023-03-01T00:00:00.000Z",
+      "visits_gained": 75873
+    },
+    {
+      "timestamp": "2023-03-02T00:00:00.000Z",
+      "visits_gained": 76361
+    },
+    {
+      "timestamp": "2023-03-03T00:00:00.000Z",
+      "visits_gained": 88772
+    },
+    {
+      "timestamp": "2023-03-04T00:00:00.000Z",
+      "visits_gained": 141976
+    },
+    {
+      "timestamp": "2023-03-05T00:00:00.000Z",
+      "visits_gained": 166419
+    },
+    {
+      "timestamp": "2023-03-06T00:00:00.000Z",
+      "visits_gained": 120533
+    },
+    {
+      "timestamp": "2023-03-07T00:00:00.000Z",
+      "visits_gained": 106992
+    },
+    {
+      "timestamp": "2023-03-08T00:00:00.000Z",
+      "visits_gained": 95935
+    },
+    {
+      "timestamp": "2023-03-09T00:00:00.000Z",
+      "visits_gained": 87083
+    },
+    {
+      "timestamp": "2023-03-10T00:00:00.000Z",
+      "visits_gained": 98705
+    },
+    {
+      "timestamp": "2023-03-11T00:00:00.000Z",
+      "visits_gained": 143322
+    },
+    {
+      "timestamp": "2023-03-12T00:00:00.000Z",
+      "visits_gained": 147919
+    },
+    {
+      "timestamp": "2023-03-13T00:00:00.000Z",
+      "visits_gained": 90264
+    },
+    {
+      "timestamp": "2023-03-14T00:00:00.000Z",
+      "visits_gained": 85509
+    },
+    {
+      "timestamp": "2023-03-15T00:00:00.000Z",
+      "visits_gained": 87822
+    },
+    {
+      "timestamp": "2023-03-16T00:00:00.000Z",
+      "visits_gained": 84134
+    },
+    {
+      "timestamp": "2023-03-17T00:00:00.000Z",
+      "visits_gained": 90096
+    },
+    {
+      "timestamp": "2023-03-18T00:00:00.000Z",
+      "visits_gained": 146783
+    },
+    {
+      "timestamp": "2023-03-19T00:00:00.000Z",
+      "visits_gained": 145747
+    },
+    {
+      "timestamp": "2023-03-20T00:00:00.000Z",
+      "visits_gained": 90922
+    },
+    {
+      "timestamp": "2023-03-21T00:00:00.000Z",
+      "visits_gained": 84679
+    },
+    {
+      "timestamp": "2023-03-22T00:00:00.000Z",
+      "visits_gained": 84446
+    },
+    {
+      "timestamp": "2023-03-23T00:00:00.000Z",
+      "visits_gained": 85758
+    },
+    {
+      "timestamp": "2023-03-24T00:00:00.000Z",
+      "visits_gained": 94111
+    },
+    {
+      "timestamp": "2023-03-25T00:00:00.000Z",
+      "visits_gained": 139261
+    },
+    {
+      "timestamp": "2023-03-26T00:00:00.000Z",
+      "visits_gained": 145587
+    },
+    {
+      "timestamp": "2023-03-27T00:00:00.000Z",
+      "visits_gained": 89875
+    },
+    {
+      "timestamp": "2023-03-28T00:00:00.000Z",
+      "visits_gained": 88002
+    },
+    {
+      "timestamp": "2023-03-29T00:00:00.000Z",
+      "visits_gained": 86864
+    },
+    {
+      "timestamp": "2023-03-30T00:00:00.000Z",
+      "visits_gained": 85599
+    },
+    {
+      "timestamp": "2023-03-31T00:00:00.000Z",
+      "visits_gained": 99643
+    },
+    {
+      "timestamp": "2023-04-01T00:00:00.000Z",
+      "visits_gained": 142946
+    },
+    {
+      "timestamp": "2023-04-02T00:00:00.000Z",
+      "visits_gained": 151920
+    },
+    {
+      "timestamp": "2023-04-03T00:00:00.000Z",
+      "visits_gained": 112219
+    },
+    {
+      "timestamp": "2023-04-04T00:00:00.000Z",
+      "visits_gained": 112896
+    },
+    {
+      "timestamp": "2023-04-05T00:00:00.000Z",
+      "visits_gained": 117424
+    },
+    {
+      "timestamp": "2023-04-06T00:00:00.000Z",
+      "visits_gained": 130182
+    },
+    {
+      "timestamp": "2023-04-07T00:00:00.000Z",
+      "visits_gained": 147885
+    },
+    {
+      "timestamp": "2023-04-08T00:00:00.000Z",
+      "visits_gained": 151886
+    },
+    {
+      "timestamp": "2023-04-09T00:00:00.000Z",
+      "visits_gained": 148684
+    },
+    {
+      "timestamp": "2023-04-10T00:00:00.000Z",
+      "visits_gained": 129161
+    },
+    {
+      "timestamp": "2023-04-11T00:00:00.000Z",
+      "visits_gained": 114084
+    },
+    {
+      "timestamp": "2023-04-12T00:00:00.000Z",
+      "visits_gained": 115664
+    },
+    {
+      "timestamp": "2023-04-13T00:00:00.000Z",
+      "visits_gained": 106961
+    },
+    {
+      "timestamp": "2023-04-14T00:00:00.000Z",
+      "visits_gained": 108706
+    },
+    {
+      "timestamp": "2023-04-15T00:00:00.000Z",
+      "visits_gained": 139908
+    },
+    {
+      "timestamp": "2023-04-16T00:00:00.000Z",
+      "visits_gained": 146559
+    },
+    {
+      "timestamp": "2023-04-17T00:00:00.000Z",
+      "visits_gained": 98971
+    },
+    {
+      "timestamp": "2023-04-18T00:00:00.000Z",
+      "visits_gained": 94124
+    },
+    {
+      "timestamp": "2023-04-19T00:00:00.000Z",
+      "visits_gained": 97794
+    },
+    {
+      "timestamp": "2023-04-20T00:00:00.000Z",
+      "visits_gained": 100518
+    },
+    {
+      "timestamp": "2023-04-21T00:00:00.000Z",
+      "visits_gained": 114227
+    },
+    {
+      "timestamp": "2023-04-22T00:00:00.000Z",
+      "visits_gained": 146729
+    },
+    {
+      "timestamp": "2023-04-23T00:00:00.000Z",
+      "visits_gained": 152780
+    },
+    {
+      "timestamp": "2023-04-24T00:00:00.000Z",
+      "visits_gained": 104100
+    },
+    {
+      "timestamp": "2023-04-25T00:00:00.000Z",
+      "visits_gained": 100229
+    },
+    {
+      "timestamp": "2023-04-26T00:00:00.000Z",
+      "visits_gained": 93643
+    },
+    {
+      "timestamp": "2023-04-27T00:00:00.000Z",
+      "visits_gained": 95872
+    },
+    {
+      "timestamp": "2023-04-28T00:00:00.000Z",
+      "visits_gained": 105374
+    },
+    {
+      "timestamp": "2023-04-29T00:00:00.000Z",
+      "visits_gained": 155311
+    },
+    {
+      "timestamp": "2023-04-30T00:00:00.000Z",
+      "visits_gained": 172028
+    },
+    {
+      "timestamp": "2023-05-01T00:00:00.000Z",
+      "visits_gained": 153241
+    },
+    {
+      "timestamp": "2023-05-02T00:00:00.000Z",
+      "visits_gained": 108501
+    },
+    {
+      "timestamp": "2023-05-03T00:00:00.000Z",
+      "visits_gained": 104149
+    },
+    {
+      "timestamp": "2023-05-04T00:00:00.000Z",
+      "visits_gained": 100559
+    },
+    {
+      "timestamp": "2023-05-05T00:00:00.000Z",
+      "visits_gained": 112354
+    },
+    {
+      "timestamp": "2023-05-06T00:00:00.000Z",
+      "visits_gained": 148942
+    },
+    {
+      "timestamp": "2023-05-07T00:00:00.000Z",
+      "visits_gained": 157544
+    },
+    {
+      "timestamp": "2023-05-08T00:00:00.000Z",
+      "visits_gained": 108284
+    },
+    {
+      "timestamp": "2023-05-09T00:00:00.000Z",
+      "visits_gained": 92553
+    },
+    {
+      "timestamp": "2023-05-10T00:00:00.000Z",
+      "visits_gained": 87727
+    },
+    {
+      "timestamp": "2023-05-11T00:00:00.000Z",
+      "visits_gained": 82949
+    },
+    {
+      "timestamp": "2023-05-12T00:00:00.000Z",
+      "visits_gained": 89827
+    },
+    {
+      "timestamp": "2023-05-13T00:00:00.000Z",
+      "visits_gained": 136614
+    },
+    {
+      "timestamp": "2023-05-14T00:00:00.000Z",
+      "visits_gained": 131573
+    },
+    {
+      "timestamp": "2023-05-15T00:00:00.000Z",
+      "visits_gained": 87663
+    },
+    {
+      "timestamp": "2023-05-16T00:00:00.000Z",
+      "visits_gained": 79624
+    },
+    {
+      "timestamp": "2023-05-17T00:00:00.000Z",
+      "visits_gained": 83675
+    },
+    {
+      "timestamp": "2023-05-18T00:00:00.000Z",
+      "visits_gained": 91211
+    },
+    {
+      "timestamp": "2023-05-19T00:00:00.000Z",
+      "visits_gained": 97710
+    },
+    {
+      "timestamp": "2023-05-20T00:00:00.000Z",
+      "visits_gained": 129898
+    },
+    {
+      "timestamp": "2023-05-21T00:00:00.000Z",
+      "visits_gained": 140211
+    },
+    {
+      "timestamp": "2023-05-22T00:00:00.000Z",
+      "visits_gained": 84775
+    },
+    {
+      "timestamp": "2023-05-23T00:00:00.000Z",
+      "visits_gained": 84826
+    },
+    {
+      "timestamp": "2023-05-24T00:00:00.000Z",
+      "visits_gained": 83805
+    },
+    {
+      "timestamp": "2023-05-25T00:00:00.000Z",
+      "visits_gained": 81599
+    },
+    {
+      "timestamp": "2023-05-26T00:00:00.000Z",
+      "visits_gained": 98489
+    },
+    {
+      "timestamp": "2023-05-27T00:00:00.000Z",
+      "visits_gained": 140017
+    },
+    {
+      "timestamp": "2023-05-28T00:00:00.000Z",
+      "visits_gained": 146887
+    },
+    {
+      "timestamp": "2023-05-29T00:00:00.000Z",
+      "visits_gained": 114617
+    },
+    {
+      "timestamp": "2023-05-30T00:00:00.000Z",
+      "visits_gained": 94116
+    },
+    {
+      "timestamp": "2023-05-31T00:00:00.000Z",
+      "visits_gained": 103684
+    },
+    {
+      "timestamp": "2023-06-01T00:00:00.000Z",
+      "visits_gained": 115785
+    },
+    {
+      "timestamp": "2023-06-02T00:00:00.000Z",
+      "visits_gained": 114421
+    },
+    {
+      "timestamp": "2023-06-03T00:00:00.000Z",
+      "visits_gained": 134020
+    },
+    {
+      "timestamp": "2023-06-04T00:00:00.000Z",
+      "visits_gained": 136752
+    },
+    {
+      "timestamp": "2023-06-05T00:00:00.000Z",
+      "visits_gained": 104853
+    },
+    {
+      "timestamp": "2023-06-06T00:00:00.000Z",
+      "visits_gained": 95525
+    },
+    {
+      "timestamp": "2023-06-07T00:00:00.000Z",
+      "visits_gained": 89752
+    },
+    {
+      "timestamp": "2023-06-08T00:00:00.000Z",
+      "visits_gained": 92821
+    },
+    {
+      "timestamp": "2023-06-09T00:00:00.000Z",
+      "visits_gained": 97476
+    },
+    {
+      "timestamp": "2023-06-10T00:00:00.000Z",
+      "visits_gained": 129980
+    },
+    {
+      "timestamp": "2023-06-11T00:00:00.000Z",
+      "visits_gained": 130217
+    },
+    {
+      "timestamp": "2023-06-12T00:00:00.000Z",
+      "visits_gained": 103749
+    },
+    {
+      "timestamp": "2023-06-13T00:00:00.000Z",
+      "visits_gained": 94700
+    },
+    {
+      "timestamp": "2023-06-14T00:00:00.000Z",
+      "visits_gained": 95766
+    },
+    {
+      "timestamp": "2023-06-15T00:00:00.000Z",
+      "visits_gained": 97826
+    },
+    {
+      "timestamp": "2023-06-16T00:00:00.000Z",
+      "visits_gained": 99384
+    },
+    {
+      "timestamp": "2023-06-17T00:00:00.000Z",
+      "visits_gained": 127602
+    },
+    {
+      "timestamp": "2023-06-18T00:00:00.000Z",
+      "visits_gained": 125660
+    },
+    {
+      "timestamp": "2023-06-19T00:00:00.000Z",
+      "visits_gained": 101470
+    },
+    {
+      "timestamp": "2023-06-20T00:00:00.000Z",
+      "visits_gained": 102415
+    },
+    {
+      "timestamp": "2023-06-21T00:00:00.000Z",
+      "visits_gained": 99614
+    },
+    {
+      "timestamp": "2023-06-22T00:00:00.000Z",
+      "visits_gained": 98926
+    },
+    {
+      "timestamp": "2023-06-23T00:00:00.000Z",
+      "visits_gained": 109209
+    },
+    {
+      "timestamp": "2023-06-24T00:00:00.000Z",
+      "visits_gained": 124541
+    },
+    {
+      "timestamp": "2023-06-25T00:00:00.000Z",
+      "visits_gained": 129789
+    },
+    {
+      "timestamp": "2023-06-26T00:00:00.000Z",
+      "visits_gained": 123301
+    },
+    {
+      "timestamp": "2023-06-27T00:00:00.000Z",
+      "visits_gained": 126882
+    },
+    {
+      "timestamp": "2023-06-28T00:00:00.000Z",
+      "visits_gained": 125169
+    },
+    {
+      "timestamp": "2023-06-29T00:00:00.000Z",
+      "visits_gained": 126246
+    },
+    {
+      "timestamp": "2023-06-30T00:00:00.000Z",
+      "visits_gained": 131882
+    },
+    {
+      "timestamp": "2023-07-01T00:00:00.000Z",
+      "visits_gained": 148279
+    },
+    {
+      "timestamp": "2023-07-02T00:00:00.000Z",
+      "visits_gained": 150687
+    },
+    {
+      "timestamp": "2023-07-03T00:00:00.000Z",
+      "visits_gained": 134071
+    },
+    {
+      "timestamp": "2023-07-04T00:00:00.000Z",
+      "visits_gained": 140157
+    },
+    {
+      "timestamp": "2023-07-05T00:00:00.000Z",
+      "visits_gained": 134260
+    },
+    {
+      "timestamp": "2023-07-06T00:00:00.000Z",
+      "visits_gained": 136202
+    },
+    {
+      "timestamp": "2023-07-07T00:00:00.000Z",
+      "visits_gained": 143653
+    },
+    {
+      "timestamp": "2023-07-08T00:00:00.000Z",
+      "visits_gained": 156266
+    },
+    {
+      "timestamp": "2023-07-09T00:00:00.000Z",
+      "visits_gained": 172877
+    },
+    {
+      "timestamp": "2023-07-10T00:00:00.000Z",
+      "visits_gained": 149914
+    },
+    {
+      "timestamp": "2023-07-11T00:00:00.000Z",
+      "visits_gained": 155629
+    },
+    {
+      "timestamp": "2023-07-12T00:00:00.000Z",
+      "visits_gained": 161549
+    },
+    {
+      "timestamp": "2023-07-13T00:00:00.000Z",
+      "visits_gained": 175671
+    },
+    {
+      "timestamp": "2023-07-14T00:00:00.000Z",
+      "visits_gained": 179939
+    },
+    {
+      "timestamp": "2023-07-15T00:00:00.000Z",
+      "visits_gained": 188706
+    },
+    {
+      "timestamp": "2023-07-16T00:00:00.000Z",
+      "visits_gained": 189354
+    },
+    {
+      "timestamp": "2023-07-17T00:00:00.000Z",
+      "visits_gained": 184116
+    },
+    {
+      "timestamp": "2023-07-18T00:00:00.000Z",
+      "visits_gained": 188589
+    },
+    {
+      "timestamp": "2023-07-19T00:00:00.000Z",
+      "visits_gained": 179646
+    },
+    {
+      "timestamp": "2023-07-20T00:00:00.000Z",
+      "visits_gained": 158017
+    },
+    {
+      "timestamp": "2023-07-21T00:00:00.000Z",
+      "visits_gained": 185510
+    },
+    {
+      "timestamp": "2023-07-22T00:00:00.000Z",
+      "visits_gained": 189126
+    },
+    {
+      "timestamp": "2023-07-23T00:00:00.000Z",
+      "visits_gained": 184858
+    },
+    {
+      "timestamp": "2023-07-24T00:00:00.000Z",
+      "visits_gained": 180740
+    },
+    {
+      "timestamp": "2023-07-25T00:00:00.000Z",
+      "visits_gained": 174661
+    },
+    {
+      "timestamp": "2023-07-26T00:00:00.000Z",
+      "visits_gained": 176384
+    },
+    {
+      "timestamp": "2023-07-27T00:00:00.000Z",
+      "visits_gained": 168998
+    },
+    {
+      "timestamp": "2023-07-28T00:00:00.000Z",
+      "visits_gained": 173290
+    },
+    {
+      "timestamp": "2023-07-29T00:00:00.000Z",
+      "visits_gained": 176663
+    },
+    {
+      "timestamp": "2023-07-30T00:00:00.000Z",
+      "visits_gained": 190023
+    },
+    {
+      "timestamp": "2023-07-31T00:00:00.000Z",
+      "visits_gained": 188343
+    },
+    {
+      "timestamp": "2023-08-01T00:00:00.000Z",
+      "visits_gained": 187591
+    },
+    {
+      "timestamp": "2023-08-02T00:00:00.000Z",
+      "visits_gained": 179917
+    },
+    {
+      "timestamp": "2023-08-03T00:00:00.000Z",
+      "visits_gained": 174573
+    },
+    {
+      "timestamp": "2023-08-04T00:00:00.000Z",
+      "visits_gained": 180155
+    },
+    {
+      "timestamp": "2023-08-05T00:00:00.000Z",
+      "visits_gained": 192984
+    },
+    {
+      "timestamp": "2023-08-06T00:00:00.000Z",
+      "visits_gained": 176480
+    },
+    {
+      "timestamp": "2023-08-07T00:00:00.000Z",
+      "visits_gained": 168572
+    },
+    {
+      "timestamp": "2023-08-08T00:00:00.000Z",
+      "visits_gained": 167090
+    },
+    {
+      "timestamp": "2023-08-09T00:00:00.000Z",
+      "visits_gained": 160370
+    },
+    {
+      "timestamp": "2023-08-10T00:00:00.000Z",
+      "visits_gained": 158932
+    },
+    {
+      "timestamp": "2023-08-11T00:00:00.000Z",
+      "visits_gained": 156128
+    },
+    {
+      "timestamp": "2023-08-12T00:00:00.000Z",
+      "visits_gained": 161910
+    },
+    {
+      "timestamp": "2023-08-13T00:00:00.000Z",
+      "visits_gained": 168566
+    },
+    {
+      "timestamp": "2023-08-14T00:00:00.000Z",
+      "visits_gained": 150997
+    },
+    {
+      "timestamp": "2023-08-15T00:00:00.000Z",
+      "visits_gained": 147720
+    },
+    {
+      "timestamp": "2023-08-16T00:00:00.000Z",
+      "visits_gained": 137581
+    },
+    {
+      "timestamp": "2023-08-17T00:00:00.000Z",
+      "visits_gained": 134305
+    },
+    {
+      "timestamp": "2023-08-18T00:00:00.000Z",
+      "visits_gained": 134208
+    },
+    {
+      "timestamp": "2023-08-19T00:00:00.000Z",
+      "visits_gained": 145999
+    },
+    {
+      "timestamp": "2023-08-20T00:00:00.000Z",
+      "visits_gained": 152695
+    },
+    {
+      "timestamp": "2023-08-21T00:00:00.000Z",
+      "visits_gained": 137563
+    },
+    {
+      "timestamp": "2023-08-22T00:00:00.000Z",
+      "visits_gained": 128603
+    },
+    {
+      "timestamp": "2023-08-23T00:00:00.000Z",
+      "visits_gained": 120858
+    },
+    {
+      "timestamp": "2023-08-24T00:00:00.000Z",
+      "visits_gained": 124826
+    },
+    {
+      "timestamp": "2023-08-25T00:00:00.000Z",
+      "visits_gained": 122415
+    },
+    {
+      "timestamp": "2023-08-26T00:00:00.000Z",
+      "visits_gained": 139444
+    },
+    {
+      "timestamp": "2023-08-27T00:00:00.000Z",
+      "visits_gained": 145806
+    },
+    {
+      "timestamp": "2023-08-28T00:00:00.000Z",
+      "visits_gained": 118641
+    },
+    {
+      "timestamp": "2023-08-29T00:00:00.000Z",
+      "visits_gained": 111869
+    },
+    {
+      "timestamp": "2023-08-30T00:00:00.000Z",
+      "visits_gained": 113541
+    },
+    {
+      "timestamp": "2023-08-31T00:00:00.000Z",
+      "visits_gained": 108115
+    },
+    {
+      "timestamp": "2023-09-01T00:00:00.000Z",
+      "visits_gained": 110051
+    },
+    {
+      "timestamp": "2023-09-02T00:00:00.000Z",
+      "visits_gained": 134881
+    },
+    {
+      "timestamp": "2023-09-03T00:00:00.000Z",
+      "visits_gained": 136917
+    },
+    {
+      "timestamp": "2023-09-04T00:00:00.000Z",
+      "visits_gained": 109040
+    },
+    {
+      "timestamp": "2023-09-05T00:00:00.000Z",
+      "visits_gained": 85662
+    },
+    {
+      "timestamp": "2023-09-06T00:00:00.000Z",
+      "visits_gained": 76709
+    },
+    {
+      "timestamp": "2023-09-07T00:00:00.000Z",
+      "visits_gained": 76048
+    },
+    {
+      "timestamp": "2023-09-08T00:00:00.000Z",
+      "visits_gained": 81572
+    },
+    {
+      "timestamp": "2023-09-09T00:00:00.000Z",
+      "visits_gained": 121414
+    },
+    {
+      "timestamp": "2023-09-10T00:00:00.000Z",
+      "visits_gained": 130949
+    },
+    {
+      "timestamp": "2023-09-11T00:00:00.000Z",
+      "visits_gained": 74902
+    },
+    {
+      "timestamp": "2023-09-12T00:00:00.000Z",
+      "visits_gained": 72314
+    },
+    {
+      "timestamp": "2023-09-13T00:00:00.000Z",
+      "visits_gained": 76199
+    },
+    {
+      "timestamp": "2023-09-14T00:00:00.000Z",
+      "visits_gained": 73900
+    },
+    {
+      "timestamp": "2023-09-15T00:00:00.000Z",
+      "visits_gained": 80884
+    },
+    {
+      "timestamp": "2023-09-16T00:00:00.000Z",
+      "visits_gained": 128060
+    },
+    {
+      "timestamp": "2023-09-17T00:00:00.000Z",
+      "visits_gained": 135209
+    },
+    {
+      "timestamp": "2023-09-18T00:00:00.000Z",
+      "visits_gained": 88292
+    },
+    {
+      "timestamp": "2023-09-19T00:00:00.000Z",
+      "visits_gained": 89801
+    },
+    {
+      "timestamp": "2023-09-20T00:00:00.000Z",
+      "visits_gained": 91102
+    },
+    {
+      "timestamp": "2023-09-21T00:00:00.000Z",
+      "visits_gained": 81701
+    },
+    {
+      "timestamp": "2023-09-22T00:00:00.000Z",
+      "visits_gained": 87701
+    },
+    {
+      "timestamp": "2023-09-23T00:00:00.000Z",
+      "visits_gained": 145518
+    },
+    {
+      "timestamp": "2023-09-24T00:00:00.000Z",
+      "visits_gained": 160556
+    },
+    {
+      "timestamp": "2023-09-25T00:00:00.000Z",
+      "visits_gained": 92719
+    },
+    {
+      "timestamp": "2023-09-26T00:00:00.000Z",
+      "visits_gained": 92061
+    },
+    {
+      "timestamp": "2023-09-27T00:00:00.000Z",
+      "visits_gained": 101456
+    },
+    {
+      "timestamp": "2023-09-28T00:00:00.000Z",
+      "visits_gained": 113475
+    },
+    {
+      "timestamp": "2023-09-29T00:00:00.000Z",
+      "visits_gained": 112531
+    },
+    {
+      "timestamp": "2023-09-30T00:00:00.000Z",
+      "visits_gained": 146895
+    },
+    {
+      "timestamp": "2023-10-01T00:00:00.000Z",
+      "visits_gained": 300319
+    },
+    {
+      "timestamp": "2023-10-02T00:00:00.000Z",
+      "visits_gained": 261838
+    },
+    {
+      "timestamp": "2023-10-03T00:00:00.000Z",
+      "visits_gained": 213338
+    },
+    {
+      "timestamp": "2023-10-04T00:00:00.000Z",
+      "visits_gained": 183457
+    },
+    {
+      "timestamp": "2023-10-05T00:00:00.000Z",
+      "visits_gained": 190206
+    },
+    {
+      "timestamp": "2023-10-06T00:00:00.000Z",
+      "visits_gained": 190696
+    },
+    {
+      "timestamp": "2023-10-07T00:00:00.000Z",
+      "visits_gained": 247997
+    },
+    {
+      "timestamp": "2023-10-08T00:00:00.000Z",
+      "visits_gained": 247995
+    },
+    {
+      "timestamp": "2023-10-09T00:00:00.000Z",
+      "visits_gained": 164654
+    },
+    {
+      "timestamp": "2023-10-10T00:00:00.000Z",
+      "visits_gained": 145889
+    },
+    {
+      "timestamp": "2023-10-11T00:00:00.000Z",
+      "visits_gained": 163824
+    },
+    {
+      "timestamp": "2023-10-12T00:00:00.000Z",
+      "visits_gained": 179705
+    },
+    {
+      "timestamp": "2023-10-13T00:00:00.000Z",
+      "visits_gained": 197649
+    },
+    {
+      "timestamp": "2023-10-14T00:00:00.000Z",
+      "visits_gained": 222512
+    },
+    {
+      "timestamp": "2023-10-15T00:00:00.000Z",
+      "visits_gained": 212807
+    },
+    {
+      "timestamp": "2023-10-16T00:00:00.000Z",
+      "visits_gained": 134943
+    },
+    {
+      "timestamp": "2023-10-17T00:00:00.000Z",
+      "visits_gained": 125075
+    },
+    {
+      "timestamp": "2023-10-18T00:00:00.000Z",
+      "visits_gained": 119106
+    },
+    {
+      "timestamp": "2023-10-19T00:00:00.000Z",
+      "visits_gained": 111477
+    },
+    {
+      "timestamp": "2023-10-20T00:00:00.000Z",
+      "visits_gained": 119478
+    },
+    {
+      "timestamp": "2023-10-21T00:00:00.000Z",
+      "visits_gained": 148820
+    },
+    {
+      "timestamp": "2023-10-22T00:00:00.000Z",
+      "visits_gained": 164324
+    },
+    {
+      "timestamp": "2023-10-23T00:00:00.000Z",
+      "visits_gained": 107051
+    },
+    {
+      "timestamp": "2023-10-24T00:00:00.000Z",
+      "visits_gained": 98050
+    },
+    {
+      "timestamp": "2023-10-25T00:00:00.000Z",
+      "visits_gained": 96485
+    },
+    {
+      "timestamp": "2023-10-26T00:00:00.000Z",
+      "visits_gained": 93853
+    },
+    {
+      "timestamp": "2023-10-27T00:00:00.000Z",
+      "visits_gained": 101356
+    },
+    {
+      "timestamp": "2023-10-28T00:00:00.000Z",
+      "visits_gained": 131408
+    },
+    {
+      "timestamp": "2023-10-29T00:00:00.000Z",
+      "visits_gained": 137059
+    },
+    {
+      "timestamp": "2023-10-30T00:00:00.000Z",
+      "visits_gained": 97720
+    },
+    {
+      "timestamp": "2023-10-31T00:00:00.000Z",
+      "visits_gained": 93932
+    },
+    {
+      "timestamp": "2023-11-01T00:00:00.000Z",
+      "visits_gained": 106135
+    },
+    {
+      "timestamp": "2023-11-02T00:00:00.000Z",
+      "visits_gained": 109387
+    },
+    {
+      "timestamp": "2023-11-03T00:00:00.000Z",
+      "visits_gained": 127111
+    },
+    {
+      "timestamp": "2023-11-04T00:00:00.000Z",
+      "visits_gained": 157323
+    },
+    {
+      "timestamp": "2023-11-05T00:00:00.000Z",
+      "visits_gained": 164371
+    },
+    {
+      "timestamp": "2023-11-06T00:00:00.000Z",
+      "visits_gained": 103458
+    },
+    {
+      "timestamp": "2023-11-07T00:00:00.000Z",
+      "visits_gained": 99250
+    },
+    {
+      "timestamp": "2023-11-08T00:00:00.000Z",
+      "visits_gained": 95704
+    },
+    {
+      "timestamp": "2023-11-09T00:00:00.000Z",
+      "visits_gained": 107566
+    },
+    {
+      "timestamp": "2023-11-10T00:00:00.000Z",
+      "visits_gained": 131307
+    },
+    {
+      "timestamp": "2023-11-11T00:00:00.000Z",
+      "visits_gained": 193775
+    },
+    {
+      "timestamp": "2023-11-12T00:00:00.000Z",
+      "visits_gained": 201104
+    },
+    {
+      "timestamp": "2023-11-13T00:00:00.000Z",
+      "visits_gained": 117215
+    },
+    {
+      "timestamp": "2023-11-14T00:00:00.000Z",
+      "visits_gained": 109884
+    },
+    {
+      "timestamp": "2023-11-15T00:00:00.000Z",
+      "visits_gained": 116104
+    },
+    {
+      "timestamp": "2023-11-16T00:00:00.000Z",
+      "visits_gained": 110038
+    },
+    {
+      "timestamp": "2023-11-17T00:00:00.000Z",
+      "visits_gained": 121509
+    },
+    {
+      "timestamp": "2023-11-18T00:00:00.000Z",
+      "visits_gained": 183138
+    },
+    {
+      "timestamp": "2023-11-19T00:00:00.000Z",
+      "visits_gained": 190214
+    },
+    {
+      "timestamp": "2023-11-20T00:00:00.000Z",
+      "visits_gained": 123338
+    },
+    {
+      "timestamp": "2023-11-21T00:00:00.000Z",
+      "visits_gained": 112676
+    },
+    {
+      "timestamp": "2023-11-22T00:00:00.000Z",
+      "visits_gained": 119131
+    },
+    {
+      "timestamp": "2023-11-23T00:00:00.000Z",
+      "visits_gained": 120121
+    },
+    {
+      "timestamp": "2023-11-24T00:00:00.000Z",
+      "visits_gained": 130588
+    },
+    {
+      "timestamp": "2023-11-25T00:00:00.000Z",
+      "visits_gained": 171887
+    },
+    {
+      "timestamp": "2023-11-26T00:00:00.000Z",
+      "visits_gained": 170948
+    },
+    {
+      "timestamp": "2023-11-27T00:00:00.000Z",
+      "visits_gained": 105351
+    },
+    {
+      "timestamp": "2023-11-28T00:00:00.000Z",
+      "visits_gained": 91634
+    },
+    {
+      "timestamp": "2023-11-29T00:00:00.000Z",
+      "visits_gained": 91111
+    },
+    {
+      "timestamp": "2023-11-30T00:00:00.000Z",
+      "visits_gained": 85182
+    },
+    {
+      "timestamp": "2023-12-01T00:00:00.000Z",
+      "visits_gained": 92223
+    },
+    {
+      "timestamp": "2023-12-02T00:00:00.000Z",
+      "visits_gained": 127612
+    },
+    {
+      "timestamp": "2023-12-03T00:00:00.000Z",
+      "visits_gained": 143540
+    },
+    {
+      "timestamp": "2023-12-04T00:00:00.000Z",
+      "visits_gained": 83957
+    },
+    {
+      "timestamp": "2023-12-05T00:00:00.000Z",
+      "visits_gained": 82550
+    },
+    {
+      "timestamp": "2023-12-06T00:00:00.000Z",
+      "visits_gained": 82317
+    },
+    {
+      "timestamp": "2023-12-07T00:00:00.000Z",
+      "visits_gained": 81844
+    },
+    {
+      "timestamp": "2023-12-08T00:00:00.000Z",
+      "visits_gained": 87493
+    },
+    {
+      "timestamp": "2023-12-09T00:00:00.000Z",
+      "visits_gained": 115898
+    },
+    {
+      "timestamp": "2023-12-10T00:00:00.000Z",
+      "visits_gained": 122203
+    },
+    {
+      "timestamp": "2023-12-11T00:00:00.000Z",
+      "visits_gained": 82194
+    },
+    {
+      "timestamp": "2023-12-12T00:00:00.000Z",
+      "visits_gained": 76607
+    },
+    {
+      "timestamp": "2023-12-13T00:00:00.000Z",
+      "visits_gained": 76281
+    },
+    {
+      "timestamp": "2023-12-14T00:00:00.000Z",
+      "visits_gained": 73987
+    },
+    {
+      "timestamp": "2023-12-15T00:00:00.000Z",
+      "visits_gained": 79616
+    },
+    {
+      "timestamp": "2023-12-16T00:00:00.000Z",
+      "visits_gained": 108580
+    },
+    {
+      "timestamp": "2023-12-17T00:00:00.000Z",
+      "visits_gained": 115217
+    },
+    {
+      "timestamp": "2023-12-18T00:00:00.000Z",
+      "visits_gained": 85605
+    },
+    {
+      "timestamp": "2023-12-19T00:00:00.000Z",
+      "visits_gained": 89287
+    },
+    {
+      "timestamp": "2023-12-20T00:00:00.000Z",
+      "visits_gained": 91871
+    },
+    {
+      "timestamp": "2023-12-21T00:00:00.000Z",
+      "visits_gained": 94123
+    },
+    {
+      "timestamp": "2023-12-22T00:00:00.000Z",
+      "visits_gained": 109175
+    },
+    {
+      "timestamp": "2023-12-23T00:00:00.000Z",
+      "visits_gained": 127103
+    },
+    {
+      "timestamp": "2023-12-24T00:00:00.000Z",
+      "visits_gained": 124569
+    },
+    {
+      "timestamp": "2023-12-25T00:00:00.000Z",
+      "visits_gained": 99932
+    },
+    {
+      "timestamp": "2023-12-26T00:00:00.000Z",
+      "visits_gained": 112206
+    },
+    {
+      "timestamp": "2023-12-27T00:00:00.000Z",
+      "visits_gained": 120124
+    },
+    {
+      "timestamp": "2023-12-28T00:00:00.000Z",
+      "visits_gained": 124859
+    },
+    {
+      "timestamp": "2023-12-29T00:00:00.000Z",
+      "visits_gained": 133981
+    },
+    {
+      "timestamp": "2023-12-30T00:00:00.000Z",
+      "visits_gained": 134199
+    },
+    {
+      "timestamp": "2023-12-31T00:00:00.000Z",
+      "visits_gained": 128478
+    },
+    {
+      "timestamp": "2024-01-01T00:00:00.000Z",
+      "visits_gained": 128464
+    },
+    {
+      "timestamp": "2024-01-02T00:00:00.000Z",
+      "visits_gained": 128058
+    },
+    {
+      "timestamp": "2024-01-03T00:00:00.000Z",
+      "visits_gained": 123955
+    },
+    {
+      "timestamp": "2024-01-04T00:00:00.000Z",
+      "visits_gained": 122046
+    },
+    {
+      "timestamp": "2024-01-05T00:00:00.000Z",
+      "visits_gained": 129630
+    },
+    {
+      "timestamp": "2024-01-06T00:00:00.000Z",
+      "visits_gained": 148369
+    },
+    {
+      "timestamp": "2024-01-07T00:00:00.000Z",
+      "visits_gained": 150048
+    },
+    {
+      "timestamp": "2024-01-08T00:00:00.000Z",
+      "visits_gained": 109101
+    },
+    {
+      "timestamp": "2024-01-09T00:00:00.000Z",
+      "visits_gained": 98578
+    },
+    {
+      "timestamp": "2024-01-10T00:00:00.000Z",
+      "visits_gained": 96196
+    },
+    {
+      "timestamp": "2024-01-11T00:00:00.000Z",
+      "visits_gained": 86585
+    },
+    {
+      "timestamp": "2024-01-12T00:00:00.000Z",
+      "visits_gained": 93584
+    },
+    {
+      "timestamp": "2024-01-13T00:00:00.000Z",
+      "visits_gained": 129024
+    },
+    {
+      "timestamp": "2024-01-14T00:00:00.000Z",
+      "visits_gained": 136817
+    },
+    {
+      "timestamp": "2024-01-15T00:00:00.000Z",
+      "visits_gained": 104421
+    },
+    {
+      "timestamp": "2024-01-16T00:00:00.000Z",
+      "visits_gained": 104296
+    },
+    {
+      "timestamp": "2024-01-17T00:00:00.000Z",
+      "visits_gained": 102261
+    },
+    {
+      "timestamp": "2024-01-18T00:00:00.000Z",
+      "visits_gained": 96144
+    },
+    {
+      "timestamp": "2024-01-19T00:00:00.000Z",
+      "visits_gained": 102572
+    },
+    {
+      "timestamp": "2024-01-20T00:00:00.000Z",
+      "visits_gained": 142973
+    },
+    {
+      "timestamp": "2024-01-21T00:00:00.000Z",
+      "visits_gained": 147744
+    },
+    {
+      "timestamp": "2024-01-22T00:00:00.000Z",
+      "visits_gained": 105192
+    },
+    {
+      "timestamp": "2024-01-23T00:00:00.000Z",
+      "visits_gained": 102914
+    },
+    {
+      "timestamp": "2024-01-24T00:00:00.000Z",
+      "visits_gained": 104072
+    },
+    {
+      "timestamp": "2024-01-25T00:00:00.000Z",
+      "visits_gained": 100732
+    },
+    {
+      "timestamp": "2024-01-26T00:00:00.000Z",
+      "visits_gained": 108610
+    },
+    {
+      "timestamp": "2024-01-27T00:00:00.000Z",
+      "visits_gained": 141855
+    },
+    {
+      "timestamp": "2024-01-28T00:00:00.000Z",
+      "visits_gained": 155446
+    },
+    {
+      "timestamp": "2024-01-29T00:00:00.000Z",
+      "visits_gained": 104599
+    },
+    {
+      "timestamp": "2024-01-30T00:00:00.000Z",
+      "visits_gained": 102694
+    },
+    {
+      "timestamp": "2024-01-31T00:00:00.000Z",
+      "visits_gained": 98173
+    },
+    {
+      "timestamp": "2024-02-01T00:00:00.000Z",
+      "visits_gained": 91459
+    },
+    {
+      "timestamp": "2024-02-02T00:00:00.000Z",
+      "visits_gained": 95159
+    },
+    {
+      "timestamp": "2024-02-03T00:00:00.000Z",
+      "visits_gained": 129848
+    },
+    {
+      "timestamp": "2024-02-04T00:00:00.000Z",
+      "visits_gained": 136857
+    },
+    {
+      "timestamp": "2024-02-05T00:00:00.000Z",
+      "visits_gained": 90196
+    },
+    {
+      "timestamp": "2024-02-06T00:00:00.000Z",
+      "visits_gained": 83266
+    },
+    {
+      "timestamp": "2024-02-07T00:00:00.000Z",
+      "visits_gained": 82135
+    },
+    {
+      "timestamp": "2024-02-08T00:00:00.000Z",
+      "visits_gained": 82156
+    },
+    {
+      "timestamp": "2024-02-09T00:00:00.000Z",
+      "visits_gained": 90989
+    },
+    {
+      "timestamp": "2024-02-10T00:00:00.000Z",
+      "visits_gained": 119843
+    },
+    {
+      "timestamp": "2024-02-11T00:00:00.000Z",
+      "visits_gained": 126500
+    },
+    {
+      "timestamp": "2024-02-12T00:00:00.000Z",
+      "visits_gained": 92533
+    },
+    {
+      "timestamp": "2024-02-13T00:00:00.000Z",
+      "visits_gained": 94252
+    },
+    {
+      "timestamp": "2024-02-14T00:00:00.000Z",
+      "visits_gained": 92730
+    },
+    {
+      "timestamp": "2024-02-15T00:00:00.000Z",
+      "visits_gained": 85381
+    },
+    {
+      "timestamp": "2024-02-16T00:00:00.000Z",
+      "visits_gained": 94178
+    },
+    {
+      "timestamp": "2024-02-17T00:00:00.000Z",
+      "visits_gained": 119242
+    },
+    {
+      "timestamp": "2024-02-18T00:00:00.000Z",
+      "visits_gained": 128147
+    },
+    {
+      "timestamp": "2024-02-19T00:00:00.000Z",
+      "visits_gained": 95247
+    },
+    {
+      "timestamp": "2024-02-20T00:00:00.000Z",
+      "visits_gained": 84823
+    },
+    {
+      "timestamp": "2024-02-21T00:00:00.000Z",
+      "visits_gained": 82432
+    },
+    {
+      "timestamp": "2024-02-22T00:00:00.000Z",
+      "visits_gained": 83429
+    },
+    {
+      "timestamp": "2024-02-23T00:00:00.000Z",
+      "visits_gained": 91138
+    },
+    {
+      "timestamp": "2024-02-24T00:00:00.000Z",
+      "visits_gained": 128370
+    },
+    {
+      "timestamp": "2024-02-25T00:00:00.000Z",
+      "visits_gained": 143449
+    },
+    {
+      "timestamp": "2024-02-26T00:00:00.000Z",
+      "visits_gained": 93806
+    },
+    {
+      "timestamp": "2024-02-27T00:00:00.000Z",
+      "visits_gained": 92086
+    },
+    {
+      "timestamp": "2024-02-28T00:00:00.000Z",
+      "visits_gained": 94004
+    },
+    {
+      "timestamp": "2024-02-29T00:00:00.000Z",
+      "visits_gained": 92137
+    },
+    {
+      "timestamp": "2024-03-01T00:00:00.000Z",
+      "visits_gained": 96376
+    },
+    {
+      "timestamp": "2024-03-02T00:00:00.000Z",
+      "visits_gained": 140109
+    },
+    {
+      "timestamp": "2024-03-03T00:00:00.000Z",
+      "visits_gained": 157596
+    },
+    {
+      "timestamp": "2024-03-04T00:00:00.000Z",
+      "visits_gained": 104698
+    },
+    {
+      "timestamp": "2024-03-05T00:00:00.000Z",
+      "visits_gained": 97094
+    },
+    {
+      "timestamp": "2024-03-06T00:00:00.000Z",
+      "visits_gained": 96927
+    },
+    {
+      "timestamp": "2024-03-07T00:00:00.000Z",
+      "visits_gained": 100713
+    },
+    {
+      "timestamp": "2024-03-08T00:00:00.000Z",
+      "visits_gained": 119865
+    },
+    {
+      "timestamp": "2024-03-09T00:00:00.000Z",
+      "visits_gained": 166120
+    },
+    {
+      "timestamp": "2024-03-10T00:00:00.000Z",
+      "visits_gained": 171954
+    },
+    {
+      "timestamp": "2024-03-11T00:00:00.000Z",
+      "visits_gained": 113344
+    },
+    {
+      "timestamp": "2024-03-12T00:00:00.000Z",
+      "visits_gained": 106648
+    },
+    {
+      "timestamp": "2024-03-13T00:00:00.000Z",
+      "visits_gained": 105093
+    },
+    {
+      "timestamp": "2024-03-14T00:00:00.000Z",
+      "visits_gained": 102366
+    },
+    {
+      "timestamp": "2024-03-15T00:00:00.000Z",
+      "visits_gained": 109494
+    },
+    {
+      "timestamp": "2024-03-16T00:00:00.000Z",
+      "visits_gained": 143464
+    },
+    {
+      "timestamp": "2024-03-17T00:00:00.000Z",
+      "visits_gained": 156415
+    },
+    {
+      "timestamp": "2024-03-18T00:00:00.000Z",
+      "visits_gained": 98500
+    },
+    {
+      "timestamp": "2024-03-19T00:00:00.000Z",
+      "visits_gained": 95006
+    },
+    {
+      "timestamp": "2024-03-20T00:00:00.000Z",
+      "visits_gained": 98266
+    },
+    {
+      "timestamp": "2024-03-21T00:00:00.000Z",
+      "visits_gained": 94654
+    },
+    {
+      "timestamp": "2024-03-22T00:00:00.000Z",
+      "visits_gained": 105829
+    },
+    {
+      "timestamp": "2024-03-23T00:00:00.000Z",
+      "visits_gained": 153594
+    },
+    {
+      "timestamp": "2024-03-24T00:00:00.000Z",
+      "visits_gained": 170450
+    },
+    {
+      "timestamp": "2024-03-25T00:00:00.000Z",
+      "visits_gained": 123726
+    },
+    {
+      "timestamp": "2024-03-26T00:00:00.000Z",
+      "visits_gained": 126868
+    },
+    {
+      "timestamp": "2024-03-27T00:00:00.000Z",
+      "visits_gained": 131009
+    },
+    {
+      "timestamp": "2024-03-28T00:00:00.000Z",
+      "visits_gained": 143258
+    },
+    {
+      "timestamp": "2024-03-29T00:00:00.000Z",
+      "visits_gained": 163496
+    },
+    {
+      "timestamp": "2024-03-30T00:00:00.000Z",
+      "visits_gained": 168847
+    },
+    {
+      "timestamp": "2024-03-31T00:00:00.000Z",
+      "visits_gained": 172351
+    },
+    {
+      "timestamp": "2024-04-01T00:00:00.000Z",
+      "visits_gained": 149318
+    },
+    {
+      "timestamp": "2024-04-02T00:00:00.000Z",
+      "visits_gained": 131564
+    },
+    {
+      "timestamp": "2024-04-03T00:00:00.000Z",
+      "visits_gained": 130629
+    },
+    {
+      "timestamp": "2024-04-04T00:00:00.000Z",
+      "visits_gained": 129257
+    },
+    {
+      "timestamp": "2024-04-05T00:00:00.000Z",
+      "visits_gained": 133553
+    },
+    {
+      "timestamp": "2024-04-06T00:00:00.000Z",
+      "visits_gained": 163951
+    },
+    {
+      "timestamp": "2024-04-07T00:00:00.000Z",
+      "visits_gained": 178748
+    },
+    {
+      "timestamp": "2024-04-08T00:00:00.000Z",
+      "visits_gained": 129836
+    },
+    {
+      "timestamp": "2024-04-09T00:00:00.000Z",
+      "visits_gained": 145894
+    },
+    {
+      "timestamp": "2024-04-10T00:00:00.000Z",
+      "visits_gained": 147655
+    },
+    {
+      "timestamp": "2024-04-11T00:00:00.000Z",
+      "visits_gained": 142898
+    },
+    {
+      "timestamp": "2024-04-12T00:00:00.000Z",
+      "visits_gained": 149878
+    },
+    {
+      "timestamp": "2024-04-13T00:00:00.000Z",
+      "visits_gained": 282121
+    },
+    {
+      "timestamp": "2024-04-14T00:00:00.000Z",
+      "visits_gained": 291443
+    },
+    {
+      "timestamp": "2024-04-15T00:00:00.000Z",
+      "visits_gained": 173777
+    },
+    {
+      "timestamp": "2024-04-16T00:00:00.000Z",
+      "visits_gained": 177606
+    },
+    {
+      "timestamp": "2024-04-17T00:00:00.000Z",
+      "visits_gained": 175096
+    },
+    {
+      "timestamp": "2024-04-18T00:00:00.000Z",
+      "visits_gained": 180177
+    },
+    {
+      "timestamp": "2024-04-19T00:00:00.000Z",
+      "visits_gained": 183355
+    },
+    {
+      "timestamp": "2024-04-20T00:00:00.000Z",
+      "visits_gained": 272993
+    },
+    {
+      "timestamp": "2024-04-21T00:00:00.000Z",
+      "visits_gained": 275409
+    },
+    {
+      "timestamp": "2024-04-22T00:00:00.000Z",
+      "visits_gained": 173002
+    },
+    {
+      "timestamp": "2024-04-23T00:00:00.000Z",
+      "visits_gained": 160843
+    },
+    {
+      "timestamp": "2024-04-24T00:00:00.000Z",
+      "visits_gained": 153659
+    },
+    {
+      "timestamp": "2024-04-25T00:00:00.000Z",
+      "visits_gained": 155074
+    },
+    {
+      "timestamp": "2024-04-26T00:00:00.000Z",
+      "visits_gained": 159358
+    },
+    {
+      "timestamp": "2024-04-27T00:00:00.000Z",
+      "visits_gained": 202491
+    },
+    {
+      "timestamp": "2024-04-28T00:00:00.000Z",
+      "visits_gained": 214975
+    },
+    {
+      "timestamp": "2024-04-29T00:00:00.000Z",
+      "visits_gained": 148326
+    },
+    {
+      "timestamp": "2024-04-30T00:00:00.000Z",
+      "visits_gained": 139678
+    },
+    {
+      "timestamp": "2024-05-01T00:00:00.000Z",
+      "visits_gained": 163241
+    },
+    {
+      "timestamp": "2024-05-02T00:00:00.000Z",
+      "visits_gained": 129295
+    },
+    {
+      "timestamp": "2024-05-03T00:00:00.000Z",
+      "visits_gained": 134159
+    },
+    {
+      "timestamp": "2024-05-04T00:00:00.000Z",
+      "visits_gained": 176957
+    },
+    {
+      "timestamp": "2024-05-05T00:00:00.000Z",
+      "visits_gained": 187588
+    },
+    {
+      "timestamp": "2024-05-06T00:00:00.000Z",
+      "visits_gained": 133375
+    },
+    {
+      "timestamp": "2024-05-07T00:00:00.000Z",
+      "visits_gained": 114706
+    },
+    {
+      "timestamp": "2024-05-08T00:00:00.000Z",
+      "visits_gained": 118038
+    },
+    {
+      "timestamp": "2024-05-09T00:00:00.000Z",
+      "visits_gained": 90380
+    },
+    {
+      "timestamp": "2024-05-10T00:00:00.000Z",
+      "visits_gained": 126247
+    },
+    {
+      "timestamp": "2024-05-11T00:00:00.000Z",
+      "visits_gained": 160374
+    },
+    {
+      "timestamp": "2024-05-12T00:00:00.000Z",
+      "visits_gained": 158040
+    },
+    {
+      "timestamp": "2024-05-13T00:00:00.000Z",
+      "visits_gained": 104742
+    },
+    {
+      "timestamp": "2024-05-14T00:00:00.000Z",
+      "visits_gained": 101220
+    },
+    {
+      "timestamp": "2024-05-15T00:00:00.000Z",
+      "visits_gained": 106219
+    },
+    {
+      "timestamp": "2024-05-16T00:00:00.000Z",
+      "visits_gained": 99619
+    },
+    {
+      "timestamp": "2024-05-17T00:00:00.000Z",
+      "visits_gained": 105126
+    },
+    {
+      "timestamp": "2024-05-18T00:00:00.000Z",
+      "visits_gained": 142687
+    },
+    {
+      "timestamp": "2024-05-19T00:00:00.000Z",
+      "visits_gained": 154032
+    },
+    {
+      "timestamp": "2024-05-20T00:00:00.000Z",
+      "visits_gained": 109986
+    },
+    {
+      "timestamp": "2024-05-21T00:00:00.000Z",
+      "visits_gained": 99040
+    },
+    {
+      "timestamp": "2024-05-22T00:00:00.000Z",
+      "visits_gained": 102412
+    },
+    {
+      "timestamp": "2024-05-23T00:00:00.000Z",
+      "visits_gained": 96208
+    },
+    {
+      "timestamp": "2024-05-24T00:00:00.000Z",
+      "visits_gained": 100539
+    },
+    {
+      "timestamp": "2024-05-25T00:00:00.000Z",
+      "visits_gained": 130393
+    },
+    {
+      "timestamp": "2024-05-26T00:00:00.000Z",
+      "visits_gained": 141284
+    },
+    {
+      "timestamp": "2024-05-27T00:00:00.000Z",
+      "visits_gained": 119404
+    },
+    {
+      "timestamp": "2024-05-28T00:00:00.000Z",
+      "visits_gained": 112790
+    },
+    {
+      "timestamp": "2024-05-29T00:00:00.000Z",
+      "visits_gained": 109636
+    },
+    {
+      "timestamp": "2024-05-30T00:00:00.000Z",
+      "visits_gained": 113732
+    },
+    {
+      "timestamp": "2024-05-31T00:00:00.000Z",
+      "visits_gained": 121233
+    },
+    {
+      "timestamp": "2024-06-01T00:00:00.000Z",
+      "visits_gained": 135270
+    },
+    {
+      "timestamp": "2024-06-02T00:00:00.000Z",
+      "visits_gained": 140543
+    },
+    {
+      "timestamp": "2024-06-03T00:00:00.000Z",
+      "visits_gained": 109429
+    },
+    {
+      "timestamp": "2024-06-04T00:00:00.000Z",
+      "visits_gained": 102824
+    },
+    {
+      "timestamp": "2024-06-05T00:00:00.000Z",
+      "visits_gained": 104592
+    },
+    {
+      "timestamp": "2024-06-06T00:00:00.000Z",
+      "visits_gained": 118141
+    },
+    {
+      "timestamp": "2024-06-07T00:00:00.000Z",
+      "visits_gained": 120982
+    },
+    {
+      "timestamp": "2024-06-08T00:00:00.000Z",
+      "visits_gained": 153787
+    },
+    {
+      "timestamp": "2024-06-09T00:00:00.000Z",
+      "visits_gained": 160982
+    },
+    {
+      "timestamp": "2024-06-10T00:00:00.000Z",
+      "visits_gained": 127922
+    },
+    {
+      "timestamp": "2024-06-11T00:00:00.000Z",
+      "visits_gained": 117911
+    },
+    {
+      "timestamp": "2024-06-12T00:00:00.000Z",
+      "visits_gained": 119396
+    },
+    {
+      "timestamp": "2024-06-13T00:00:00.000Z",
+      "visits_gained": 120006
+    },
+    {
+      "timestamp": "2024-06-14T00:00:00.000Z",
+      "visits_gained": 120734
+    },
+    {
+      "timestamp": "2024-06-15T00:00:00.000Z",
+      "visits_gained": 139971
+    },
+    {
+      "timestamp": "2024-06-16T00:00:00.000Z",
+      "visits_gained": 142547
+    },
+    {
+      "timestamp": "2024-06-17T00:00:00.000Z",
+      "visits_gained": 120487
+    },
+    {
+      "timestamp": "2024-06-18T00:00:00.000Z",
+      "visits_gained": 116921
+    },
+    {
+      "timestamp": "2024-06-19T00:00:00.000Z",
+      "visits_gained": 118895
+    },
+    {
+      "timestamp": "2024-06-20T00:00:00.000Z",
+      "visits_gained": 112119
+    },
+    {
+      "timestamp": "2024-06-21T00:00:00.000Z",
+      "visits_gained": 109790
+    },
+    {
+      "timestamp": "2024-06-22T00:00:00.000Z",
+      "visits_gained": 127470
+    },
+    {
+      "timestamp": "2024-06-23T00:00:00.000Z",
+      "visits_gained": 126335
+    },
+    {
+      "timestamp": "2024-06-24T00:00:00.000Z",
+      "visits_gained": 111634
+    },
+    {
+      "timestamp": "2024-06-25T00:00:00.000Z",
+      "visits_gained": 108427
+    },
+    {
+      "timestamp": "2024-06-26T00:00:00.000Z",
+      "visits_gained": 111320
+    },
+    {
+      "timestamp": "2024-06-27T00:00:00.000Z",
+      "visits_gained": 114422
+    },
+    {
+      "timestamp": "2024-06-28T00:00:00.000Z",
+      "visits_gained": 116430
+    },
+    {
+      "timestamp": "2024-06-29T00:00:00.000Z",
+      "visits_gained": 129420
+    },
+    {
+      "timestamp": "2024-06-30T00:00:00.000Z",
+      "visits_gained": 127379
+    },
+    {
+      "timestamp": "2024-07-01T00:00:00.000Z",
+      "visits_gained": 115300
+    },
+    {
+      "timestamp": "2024-07-02T00:00:00.000Z",
+      "visits_gained": 118573
+    },
+    {
+      "timestamp": "2024-07-03T00:00:00.000Z",
+      "visits_gained": 118393
+    },
+    {
+      "timestamp": "2024-07-04T00:00:00.000Z",
+      "visits_gained": 109326
+    },
+    {
+      "timestamp": "2024-07-05T00:00:00.000Z",
+      "visits_gained": 104491
+    },
+    {
+      "timestamp": "2024-07-06T00:00:00.000Z",
+      "visits_gained": 113745
+    },
+    {
+      "timestamp": "2024-07-07T00:00:00.000Z",
+      "visits_gained": 120137
+    },
+    {
+      "timestamp": "2024-07-08T00:00:00.000Z",
+      "visits_gained": 109472
+    },
+    {
+      "timestamp": "2024-07-09T00:00:00.000Z",
+      "visits_gained": 103583
+    },
+    {
+      "timestamp": "2024-07-10T00:00:00.000Z",
+      "visits_gained": 101375
+    },
+    {
+      "timestamp": "2024-07-11T00:00:00.000Z",
+      "visits_gained": 112317
+    },
+    {
+      "timestamp": "2024-07-12T00:00:00.000Z",
+      "visits_gained": 162692
+    },
+    {
+      "timestamp": "2024-07-13T00:00:00.000Z",
+      "visits_gained": 179447
+    },
+    {
+      "timestamp": "2024-07-14T00:00:00.000Z",
+      "visits_gained": 177551
+    },
+    {
+      "timestamp": "2024-07-15T00:00:00.000Z",
+      "visits_gained": 162391
+    },
+    {
+      "timestamp": "2024-07-16T00:00:00.000Z",
+      "visits_gained": 160931
+    },
+    {
+      "timestamp": "2024-07-17T00:00:00.000Z",
+      "visits_gained": 158514
+    },
+    {
+      "timestamp": "2024-07-18T00:00:00.000Z",
+      "visits_gained": 156592
+    },
+    {
+      "timestamp": "2024-07-19T00:00:00.000Z",
+      "visits_gained": 152487
+    },
+    {
+      "timestamp": "2024-07-20T00:00:00.000Z",
+      "visits_gained": 153523
+    },
+    {
+      "timestamp": "2024-07-21T00:00:00.000Z",
+      "visits_gained": 166920
+    },
+    {
+      "timestamp": "2024-07-22T00:00:00.000Z",
+      "visits_gained": 161351
+    },
+    {
+      "timestamp": "2024-07-23T00:00:00.000Z",
+      "visits_gained": 163542
+    },
+    {
+      "timestamp": "2024-07-24T00:00:00.000Z",
+      "visits_gained": 167077
+    },
+    {
+      "timestamp": "2024-07-25T00:00:00.000Z",
+      "visits_gained": 170700
+    },
+    {
+      "timestamp": "2024-07-26T00:00:00.000Z",
+      "visits_gained": 163049
+    },
+    {
+      "timestamp": "2024-07-27T00:00:00.000Z",
+      "visits_gained": 159365
+    },
+    {
+      "timestamp": "2024-07-28T00:00:00.000Z",
+      "visits_gained": 164681
+    },
+    {
+      "timestamp": "2024-07-29T00:00:00.000Z",
+      "visits_gained": 164459
+    },
+    {
+      "timestamp": "2024-07-30T00:00:00.000Z",
+      "visits_gained": 166093
+    },
+    {
+      "timestamp": "2024-07-31T00:00:00.000Z",
+      "visits_gained": 161328
+    },
+    {
+      "timestamp": "2024-08-01T00:00:00.000Z",
+      "visits_gained": 160375
+    },
+    {
+      "timestamp": "2024-08-02T00:00:00.000Z",
+      "visits_gained": 156141
+    },
+    {
+      "timestamp": "2024-08-03T00:00:00.000Z",
+      "visits_gained": 153119
+    },
+    {
+      "timestamp": "2024-08-04T00:00:00.000Z",
+      "visits_gained": 165019
+    },
+    {
+      "timestamp": "2024-08-05T00:00:00.000Z",
+      "visits_gained": 158932
+    },
+    {
+      "timestamp": "2024-08-06T00:00:00.000Z",
+      "visits_gained": 153761
+    },
+    {
+      "timestamp": "2024-08-07T00:00:00.000Z",
+      "visits_gained": 149446
+    },
+    {
+      "timestamp": "2024-08-08T00:00:00.000Z",
+      "visits_gained": 147824
+    },
+    {
+      "timestamp": "2024-08-09T00:00:00.000Z",
+      "visits_gained": 153328
+    },
+    {
+      "timestamp": "2024-08-10T00:00:00.000Z",
+      "visits_gained": 155630
+    },
+    {
+      "timestamp": "2024-08-11T00:00:00.000Z",
+      "visits_gained": 160606
+    },
+    {
+      "timestamp": "2024-08-12T00:00:00.000Z",
+      "visits_gained": 152905
+    },
+    {
+      "timestamp": "2024-08-13T00:00:00.000Z",
+      "visits_gained": 148742
+    },
+    {
+      "timestamp": "2024-08-14T00:00:00.000Z",
+      "visits_gained": 145671
+    },
+    {
+      "timestamp": "2024-08-15T00:00:00.000Z",
+      "visits_gained": 152891
+    },
+    {
+      "timestamp": "2024-08-16T00:00:00.000Z",
+      "visits_gained": 152681
+    },
+    {
+      "timestamp": "2024-08-17T00:00:00.000Z",
+      "visits_gained": 164792
+    },
+    {
+      "timestamp": "2024-08-18T00:00:00.000Z",
+      "visits_gained": 173766
+    },
+    {
+      "timestamp": "2024-08-19T00:00:00.000Z",
+      "visits_gained": 153321
+    },
+    {
+      "timestamp": "2024-08-20T00:00:00.000Z",
+      "visits_gained": 151994
+    },
+    {
+      "timestamp": "2024-08-21T00:00:00.000Z",
+      "visits_gained": 143677
+    },
+    {
+      "timestamp": "2024-08-22T00:00:00.000Z",
+      "visits_gained": 145454
+    },
+    {
+      "timestamp": "2024-08-23T00:00:00.000Z",
+      "visits_gained": 153425
+    },
+    {
+      "timestamp": "2024-08-24T00:00:00.000Z",
+      "visits_gained": 165457
+    },
+    {
+      "timestamp": "2024-08-25T00:00:00.000Z",
+      "visits_gained": 170213
+    },
+    {
+      "timestamp": "2024-08-26T00:00:00.000Z",
+      "visits_gained": 147075
+    },
+    {
+      "timestamp": "2024-08-27T00:00:00.000Z",
+      "visits_gained": 140099
+    },
+    {
+      "timestamp": "2024-08-28T00:00:00.000Z",
+      "visits_gained": 137985
+    },
+    {
+      "timestamp": "2024-08-29T00:00:00.000Z",
+      "visits_gained": 137004
+    },
+    {
+      "timestamp": "2024-08-30T00:00:00.000Z",
+      "visits_gained": 142462
+    },
+    {
+      "timestamp": "2024-08-31T00:00:00.000Z",
+      "visits_gained": 162431
+    },
+    {
+      "timestamp": "2024-09-01T00:00:00.000Z",
+      "visits_gained": 170695
+    },
+    {
+      "timestamp": "2024-09-02T00:00:00.000Z",
+      "visits_gained": 147800
+    },
+    {
+      "timestamp": "2024-09-03T00:00:00.000Z",
+      "visits_gained": 119707
+    },
+    {
+      "timestamp": "2024-09-04T00:00:00.000Z",
+      "visits_gained": 113350
+    },
+    {
+      "timestamp": "2024-09-05T00:00:00.000Z",
+      "visits_gained": 108338
+    },
+    {
+      "timestamp": "2024-09-06T00:00:00.000Z",
+      "visits_gained": 121271
+    },
+    {
+      "timestamp": "2024-09-07T00:00:00.000Z",
+      "visits_gained": 172186
+    },
+    {
+      "timestamp": "2024-09-08T00:00:00.000Z",
+      "visits_gained": 197233
+    },
+    {
+      "timestamp": "2024-09-09T00:00:00.000Z",
+      "visits_gained": 125794
+    },
+    {
+      "timestamp": "2024-09-10T00:00:00.000Z",
+      "visits_gained": 129677
+    },
+    {
+      "timestamp": "2024-09-11T00:00:00.000Z",
+      "visits_gained": 169644
+    },
+    {
+      "timestamp": "2024-09-12T00:00:00.000Z",
+      "visits_gained": 170212
+    },
+    {
+      "timestamp": "2024-09-13T00:00:00.000Z",
+      "visits_gained": 218551
+    },
+    {
+      "timestamp": "2024-09-14T00:00:00.000Z",
+      "visits_gained": 318718
+    },
+    {
+      "timestamp": "2024-09-15T00:00:00.000Z",
+      "visits_gained": 322792
+    },
+    {
+      "timestamp": "2024-09-16T00:00:00.000Z",
+      "visits_gained": 206853
+    },
+    {
+      "timestamp": "2024-09-17T00:00:00.000Z",
+      "visits_gained": 206797
+    },
+    {
+      "timestamp": "2024-09-18T00:00:00.000Z",
+      "visits_gained": 207035
+    },
+    {
+      "timestamp": "2024-09-19T00:00:00.000Z",
+      "visits_gained": 191873
+    },
+    {
+      "timestamp": "2024-09-20T00:00:00.000Z",
+      "visits_gained": 215667
+    },
+    {
+      "timestamp": "2024-09-21T00:00:00.000Z",
+      "visits_gained": 283400
+    },
+    {
+      "timestamp": "2024-09-22T00:00:00.000Z",
+      "visits_gained": 290208
+    },
+    {
+      "timestamp": "2024-09-23T00:00:00.000Z",
+      "visits_gained": 183196
+    },
+    {
+      "timestamp": "2024-09-24T00:00:00.000Z",
+      "visits_gained": 165072
+    },
+    {
+      "timestamp": "2024-09-25T00:00:00.000Z",
+      "visits_gained": 163938
+    },
+    {
+      "timestamp": "2024-09-26T00:00:00.000Z",
+      "visits_gained": 156023
+    },
+    {
+      "timestamp": "2024-09-27T00:00:00.000Z",
+      "visits_gained": 168247
+    },
+    {
+      "timestamp": "2024-09-28T00:00:00.000Z",
+      "visits_gained": 223357
+    },
+    {
+      "timestamp": "2024-09-29T00:00:00.000Z",
+      "visits_gained": 228083
+    },
+    {
+      "timestamp": "2024-09-30T00:00:00.000Z",
+      "visits_gained": 151504
+    },
+    {
+      "timestamp": "2024-10-01T00:00:00.000Z",
+      "visits_gained": 151391
+    },
+    {
+      "timestamp": "2024-10-02T00:00:00.000Z",
+      "visits_gained": 146850
+    },
+    {
+      "timestamp": "2024-10-03T00:00:00.000Z",
+      "visits_gained": 152230
+    },
+    {
+      "timestamp": "2024-10-04T00:00:00.000Z",
+      "visits_gained": 160523
+    },
+    {
+      "timestamp": "2024-10-05T00:00:00.000Z",
+      "visits_gained": 210944
+    },
+    {
+      "timestamp": "2024-10-06T00:00:00.000Z",
+      "visits_gained": 213053
+    },
+    {
+      "timestamp": "2024-10-07T00:00:00.000Z",
+      "visits_gained": 140306
+    },
+    {
+      "timestamp": "2024-10-08T00:00:00.000Z",
+      "visits_gained": 134258
+    },
+    {
+      "timestamp": "2024-10-09T00:00:00.000Z",
+      "visits_gained": 125492
+    },
+    {
+      "timestamp": "2024-10-10T00:00:00.000Z",
+      "visits_gained": 130734
+    },
+    {
+      "timestamp": "2024-10-11T00:00:00.000Z",
+      "visits_gained": 150282
+    },
+    {
+      "timestamp": "2024-10-12T00:00:00.000Z",
+      "visits_gained": 192824
+    },
+    {
+      "timestamp": "2024-10-13T00:00:00.000Z",
+      "visits_gained": 197963
+    },
+    {
+      "timestamp": "2024-10-14T00:00:00.000Z",
+      "visits_gained": 149145
+    },
+    {
+      "timestamp": "2024-10-15T00:00:00.000Z",
+      "visits_gained": 134031
+    },
+    {
+      "timestamp": "2024-10-16T00:00:00.000Z",
+      "visits_gained": 126925
+    },
+    {
+      "timestamp": "2024-10-17T00:00:00.000Z",
+      "visits_gained": 127523
+    },
+    {
+      "timestamp": "2024-10-18T00:00:00.000Z",
+      "visits_gained": 142249
+    },
+    {
+      "timestamp": "2024-10-19T00:00:00.000Z",
+      "visits_gained": 184391
+    },
+    {
+      "timestamp": "2024-10-20T00:00:00.000Z",
+      "visits_gained": 192833
+    },
+    {
+      "timestamp": "2024-10-21T00:00:00.000Z",
+      "visits_gained": 134480
+    },
+    {
+      "timestamp": "2024-10-22T00:00:00.000Z",
+      "visits_gained": 126576
+    },
+    {
+      "timestamp": "2024-10-23T00:00:00.000Z",
+      "visits_gained": 125442
+    },
+    {
+      "timestamp": "2024-10-24T00:00:00.000Z",
+      "visits_gained": 124438
+    },
+    {
+      "timestamp": "2024-10-25T00:00:00.000Z",
+      "visits_gained": 123868
+    },
+    {
+      "timestamp": "2024-10-26T00:00:00.000Z",
+      "visits_gained": 146231
+    },
+    {
+      "timestamp": "2024-10-27T00:00:00.000Z",
+      "visits_gained": 137191
+    },
+    {
+      "timestamp": "2024-10-28T00:00:00.000Z",
+      "visits_gained": 105574
+    },
+    {
+      "timestamp": "2024-10-29T00:00:00.000Z",
+      "visits_gained": 98645
+    },
+    {
+      "timestamp": "2024-10-30T00:00:00.000Z",
+      "visits_gained": 94926
+    },
+    {
+      "timestamp": "2024-10-31T00:00:00.000Z",
+      "visits_gained": 89647
+    },
+    {
+      "timestamp": "2024-11-01T00:00:00.000Z",
+      "visits_gained": 103364
+    },
+    {
+      "timestamp": "2024-11-02T00:00:00.000Z",
+      "visits_gained": 120796
+    },
+    {
+      "timestamp": "2024-11-03T00:00:00.000Z",
+      "visits_gained": 114623
+    },
+    {
+      "timestamp": "2024-11-04T00:00:00.000Z",
+      "visits_gained": 78296
+    },
+    {
+      "timestamp": "2024-11-05T00:00:00.000Z",
+      "visits_gained": 77105
+    },
+    {
+      "timestamp": "2024-11-06T00:00:00.000Z",
+      "visits_gained": 68874
+    },
+    {
+      "timestamp": "2024-11-07T00:00:00.000Z",
+      "visits_gained": 76966
+    },
+    {
+      "timestamp": "2024-11-08T00:00:00.000Z",
+      "visits_gained": 91904
+    },
+    {
+      "timestamp": "2024-11-09T00:00:00.000Z",
+      "visits_gained": 152954
+    },
+    {
+      "timestamp": "2024-11-10T00:00:00.000Z",
+      "visits_gained": 158440
+    },
+    {
+      "timestamp": "2024-11-11T00:00:00.000Z",
+      "visits_gained": 111718
+    },
+    {
+      "timestamp": "2024-11-12T00:00:00.000Z",
+      "visits_gained": 88646
+    },
+    {
+      "timestamp": "2024-11-13T00:00:00.000Z",
+      "visits_gained": 88997
+    },
+    {
+      "timestamp": "2024-11-14T00:00:00.000Z",
+      "visits_gained": 88732
+    },
+    {
+      "timestamp": "2024-11-15T00:00:00.000Z",
+      "visits_gained": 98414
+    },
+    {
+      "timestamp": "2024-11-16T00:00:00.000Z",
+      "visits_gained": 135245
+    },
+    {
+      "timestamp": "2024-11-17T00:00:00.000Z",
+      "visits_gained": 141545
+    },
+    {
+      "timestamp": "2024-11-18T00:00:00.000Z",
+      "visits_gained": 93500
+    },
+    {
+      "timestamp": "2024-11-19T00:00:00.000Z",
+      "visits_gained": 87226
+    },
+    {
+      "timestamp": "2024-11-20T00:00:00.000Z",
+      "visits_gained": 89674
+    },
+    {
+      "timestamp": "2024-11-21T00:00:00.000Z",
+      "visits_gained": 83384
+    },
+    {
+      "timestamp": "2024-11-22T00:00:00.000Z",
+      "visits_gained": 93188
+    },
+    {
+      "timestamp": "2024-11-23T00:00:00.000Z",
+      "visits_gained": 125092
+    },
+    {
+      "timestamp": "2024-11-24T00:00:00.000Z",
+      "visits_gained": 127129
+    },
+    {
+      "timestamp": "2024-11-25T00:00:00.000Z",
+      "visits_gained": 89743
+    },
+    {
+      "timestamp": "2024-11-26T00:00:00.000Z",
+      "visits_gained": 88932
+    },
+    {
+      "timestamp": "2024-11-27T00:00:00.000Z",
+      "visits_gained": 93912
+    },
+    {
+      "timestamp": "2024-11-28T00:00:00.000Z",
+      "visits_gained": 89333
+    },
+    {
+      "timestamp": "2024-11-29T00:00:00.000Z",
+      "visits_gained": 99825
+    },
+    {
+      "timestamp": "2024-11-30T00:00:00.000Z",
+      "visits_gained": 122155
+    },
+    {
+      "timestamp": "2024-12-01T00:00:00.000Z",
+      "visits_gained": 121825
+    },
+    {
+      "timestamp": "2024-12-02T00:00:00.000Z",
+      "visits_gained": 74830
+    },
+    {
+      "timestamp": "2024-12-03T00:00:00.000Z",
+      "visits_gained": 72404
+    },
+    {
+      "timestamp": "2024-12-04T00:00:00.000Z",
+      "visits_gained": 64659
+    },
+    {
+      "timestamp": "2024-12-05T00:00:00.000Z",
+      "visits_gained": 74145
+    },
+    {
+      "timestamp": "2024-12-06T00:00:00.000Z",
+      "visits_gained": 80135
+    },
+    {
+      "timestamp": "2024-12-07T00:00:00.000Z",
+      "visits_gained": 111222
+    },
+    {
+      "timestamp": "2024-12-08T00:00:00.000Z",
+      "visits_gained": 113420
+    },
+    {
+      "timestamp": "2024-12-09T00:00:00.000Z",
+      "visits_gained": 76800
+    },
+    {
+      "timestamp": "2024-12-10T00:00:00.000Z",
+      "visits_gained": 79933
+    },
+    {
+      "timestamp": "2024-12-11T00:00:00.000Z",
+      "visits_gained": 76536
+    },
+    {
+      "timestamp": "2024-12-12T00:00:00.000Z",
+      "visits_gained": 74825
+    },
+    {
+      "timestamp": "2024-12-13T00:00:00.000Z",
+      "visits_gained": 83046
+    },
+    {
+      "timestamp": "2024-12-14T00:00:00.000Z",
+      "visits_gained": 114222
+    },
+    {
+      "timestamp": "2024-12-15T00:00:00.000Z",
+      "visits_gained": 118068
+    },
+    {
+      "timestamp": "2024-12-16T00:00:00.000Z",
+      "visits_gained": 85156
+    },
+    {
+      "timestamp": "2024-12-17T00:00:00.000Z",
+      "visits_gained": 84017
+    },
+    {
+      "timestamp": "2024-12-18T00:00:00.000Z",
+      "visits_gained": 99228
+    },
+    {
+      "timestamp": "2024-12-19T00:00:00.000Z",
+      "visits_gained": 125916
+    },
+    {
+      "timestamp": "2024-12-20T00:00:00.000Z",
+      "visits_gained": 136713
+    },
+    {
+      "timestamp": "2024-12-21T00:00:00.000Z",
+      "visits_gained": 162343
+    },
+    {
+      "timestamp": "2024-12-22T00:00:00.000Z",
+      "visits_gained": 172202
+    },
+    {
+      "timestamp": "2024-12-23T00:00:00.000Z",
+      "visits_gained": 163551
+    },
+    {
+      "timestamp": "2024-12-24T00:00:00.000Z",
+      "visits_gained": 145208
+    },
+    {
+      "timestamp": "2024-12-25T00:00:00.000Z",
+      "visits_gained": 124079
+    },
+    {
+      "timestamp": "2024-12-26T00:00:00.000Z",
+      "visits_gained": 134094
+    },
+    {
+      "timestamp": "2024-12-27T00:00:00.000Z",
+      "visits_gained": 134005
+    },
+    {
+      "timestamp": "2024-12-28T00:00:00.000Z",
+      "visits_gained": 134525
+    },
+    {
+      "timestamp": "2024-12-29T00:00:00.000Z",
+      "visits_gained": 130657
+    },
+    {
+      "timestamp": "2024-12-30T00:00:00.000Z",
+      "visits_gained": 130693
+    },
+    {
+      "timestamp": "2024-12-31T00:00:00.000Z",
+      "visits_gained": 122606
+    },
+    {
+      "timestamp": "2025-01-01T00:00:00.000Z",
+      "visits_gained": 119716
+    },
+    {
+      "timestamp": "2025-01-02T00:00:00.000Z",
+      "visits_gained": 120259
+    },
+    {
+      "timestamp": "2025-01-03T00:00:00.000Z",
+      "visits_gained": 122588
+    },
+    {
+      "timestamp": "2025-01-04T00:00:00.000Z",
+      "visits_gained": 121779
+    },
+    {
+      "timestamp": "2025-01-05T00:00:00.000Z",
+      "visits_gained": 151275
+    },
+    {
+      "timestamp": "2025-01-06T00:00:00.000Z",
+      "visits_gained": 154031
+    },
+    {
+      "timestamp": "2025-01-07T00:00:00.000Z",
+      "visits_gained": 148288
+    },
+    {
+      "timestamp": "2025-01-08T00:00:00.000Z",
+      "visits_gained": 155957
+    },
+    {
+      "timestamp": "2025-01-09T00:00:00.000Z",
+      "visits_gained": 170619
+    },
+    {
+      "timestamp": "2025-01-10T00:00:00.000Z",
+      "visits_gained": 196500
+    },
+    {
+      "timestamp": "2025-01-11T00:00:00.000Z",
+      "visits_gained": 258645
+    },
+    {
+      "timestamp": "2025-01-12T00:00:00.000Z",
+      "visits_gained": 266444
+    },
+    {
+      "timestamp": "2025-01-13T00:00:00.000Z",
+      "visits_gained": 174350
+    },
+    {
+      "timestamp": "2025-01-14T00:00:00.000Z",
+      "visits_gained": 157005
+    },
+    {
+      "timestamp": "2025-01-15T00:00:00.000Z",
+      "visits_gained": 150071
+    },
+    {
+      "timestamp": "2025-01-16T00:00:00.000Z",
+      "visits_gained": 143277
+    },
+    {
+      "timestamp": "2025-01-17T00:00:00.000Z",
+      "visits_gained": 147243
+    },
+    {
+      "timestamp": "2025-01-18T00:00:00.000Z",
+      "visits_gained": 189742
+    },
+    {
+      "timestamp": "2025-01-19T00:00:00.000Z",
+      "visits_gained": 195870
+    },
+    {
+      "timestamp": "2025-01-20T00:00:00.000Z",
+      "visits_gained": 156143
+    },
+    {
+      "timestamp": "2025-01-21T00:00:00.000Z",
+      "visits_gained": 143756
+    },
+    {
+      "timestamp": "2025-01-22T00:00:00.000Z",
+      "visits_gained": 137837
+    },
+    {
+      "timestamp": "2025-01-23T00:00:00.000Z",
+      "visits_gained": 127119
+    },
+    {
+      "timestamp": "2025-01-24T00:00:00.000Z",
+      "visits_gained": 133176
+    },
+    {
+      "timestamp": "2025-01-25T00:00:00.000Z",
+      "visits_gained": 161685
+    },
+    {
+      "timestamp": "2025-01-26T00:00:00.000Z",
+      "visits_gained": 170013
+    },
+    {
+      "timestamp": "2025-01-27T00:00:00.000Z",
+      "visits_gained": 121080
+    },
+    {
+      "timestamp": "2025-01-28T00:00:00.000Z",
+      "visits_gained": 113852
+    },
+    {
+      "timestamp": "2025-01-29T00:00:00.000Z",
+      "visits_gained": 111117
+    },
+    {
+      "timestamp": "2025-01-30T00:00:00.000Z",
+      "visits_gained": 103219
+    },
+    {
+      "timestamp": "2025-01-31T00:00:00.000Z",
+      "visits_gained": 112453
+    },
+    {
+      "timestamp": "2025-02-01T00:00:00.000Z",
+      "visits_gained": 146383
+    },
+    {
+      "timestamp": "2025-02-02T00:00:00.000Z",
+      "visits_gained": 159695
+    },
+    {
+      "timestamp": "2025-02-03T00:00:00.000Z",
+      "visits_gained": 95260
+    },
+    {
+      "timestamp": "2025-02-04T00:00:00.000Z",
+      "visits_gained": 100065
+    },
+    {
+      "timestamp": "2025-02-05T00:00:00.000Z",
+      "visits_gained": 97871
+    },
+    {
+      "timestamp": "2025-02-06T00:00:00.000Z",
+      "visits_gained": 120909
+    },
+    {
+      "timestamp": "2025-02-07T00:00:00.000Z",
+      "visits_gained": 141076
+    },
+    {
+      "timestamp": "2025-02-08T00:00:00.000Z",
+      "visits_gained": 124370
+    },
+    {
+      "timestamp": "2025-02-09T00:00:00.000Z",
+      "visits_gained": 129042
+    },
+    {
+      "timestamp": "2025-02-10T00:00:00.000Z",
+      "visits_gained": 87303
+    },
+    {
+      "timestamp": "2025-02-11T00:00:00.000Z",
+      "visits_gained": 99722
+    },
+    {
+      "timestamp": "2025-02-12T00:00:00.000Z",
+      "visits_gained": 84299
+    },
+    {
+      "timestamp": "2025-02-13T00:00:00.000Z",
+      "visits_gained": 83210
+    },
+    {
+      "timestamp": "2025-02-14T00:00:00.000Z",
+      "visits_gained": 113066
+    },
+    {
+      "timestamp": "2025-02-15T00:00:00.000Z",
+      "visits_gained": 146424
+    },
+    {
+      "timestamp": "2025-02-16T00:00:00.000Z",
+      "visits_gained": 152640
+    },
+    {
+      "timestamp": "2025-02-17T00:00:00.000Z",
+      "visits_gained": 123415
+    },
+    {
+      "timestamp": "2025-02-18T00:00:00.000Z",
+      "visits_gained": 118029
+    },
+    {
+      "timestamp": "2025-02-19T00:00:00.000Z",
+      "visits_gained": 150867
+    },
+    {
+      "timestamp": "2025-02-20T00:00:00.000Z",
+      "visits_gained": 155573
+    },
+    {
+      "timestamp": "2025-02-21T00:00:00.000Z",
+      "visits_gained": 162451
+    },
+    {
+      "timestamp": "2025-02-22T00:00:00.000Z",
+      "visits_gained": 245428
+    },
+    {
+      "timestamp": "2025-02-23T00:00:00.000Z",
+      "visits_gained": 304098
+    },
+    {
+      "timestamp": "2025-02-24T00:00:00.000Z",
+      "visits_gained": 141429
+    },
+    {
+      "timestamp": "2025-02-25T00:00:00.000Z",
+      "visits_gained": 125199
+    },
+    {
+      "timestamp": "2025-02-26T00:00:00.000Z",
+      "visits_gained": 124663
+    },
+    {
+      "timestamp": "2025-02-27T00:00:00.000Z",
+      "visits_gained": 123384
+    },
+    {
+      "timestamp": "2025-02-28T00:00:00.000Z",
+      "visits_gained": 133337
+    },
+    {
+      "timestamp": "2025-03-01T00:00:00.000Z",
+      "visits_gained": 164065
+    },
+    {
+      "timestamp": "2025-03-02T00:00:00.000Z",
+      "visits_gained": 164852
+    },
+    {
+      "timestamp": "2025-03-03T00:00:00.000Z",
+      "visits_gained": 119336
+    },
+    {
+      "timestamp": "2025-03-04T00:00:00.000Z",
+      "visits_gained": 112813
+    },
+    {
+      "timestamp": "2025-03-05T00:00:00.000Z",
+      "visits_gained": 111508
+    },
+    {
+      "timestamp": "2025-03-06T00:00:00.000Z",
+      "visits_gained": 106379
+    },
+    {
+      "timestamp": "2025-03-07T00:00:00.000Z",
+      "visits_gained": 116618
+    },
+    {
+      "timestamp": "2025-03-08T00:00:00.000Z",
+      "visits_gained": 157377
+    },
+    {
+      "timestamp": "2025-03-09T00:00:00.000Z",
+      "visits_gained": 159567
+    },
+    {
+      "timestamp": "2025-03-10T00:00:00.000Z",
+      "visits_gained": 107152
+    },
+    {
+      "timestamp": "2025-03-11T00:00:00.000Z",
+      "visits_gained": 104766
+    },
+    {
+      "timestamp": "2025-03-12T00:00:00.000Z",
+      "visits_gained": 103194
+    },
+    {
+      "timestamp": "2025-03-13T00:00:00.000Z",
+      "visits_gained": 101127
+    },
+    {
+      "timestamp": "2025-03-14T00:00:00.000Z",
+      "visits_gained": 108654
+    },
+    {
+      "timestamp": "2025-03-15T00:00:00.000Z",
+      "visits_gained": 142441
+    },
+    {
+      "timestamp": "2025-03-16T00:00:00.000Z",
+      "visits_gained": 148535
+    },
+    {
+      "timestamp": "2025-03-17T00:00:00.000Z",
+      "visits_gained": 102428
+    },
+    {
+      "timestamp": "2025-03-18T00:00:00.000Z",
+      "visits_gained": 94991
+    },
+    {
+      "timestamp": "2025-03-19T00:00:00.000Z",
+      "visits_gained": 93587
+    },
+    {
+      "timestamp": "2025-03-20T00:00:00.000Z",
+      "visits_gained": 89414
+    },
+    {
+      "timestamp": "2025-03-21T00:00:00.000Z",
+      "visits_gained": 98406
+    },
+    {
+      "timestamp": "2025-03-22T00:00:00.000Z",
+      "visits_gained": 131378
+    },
+    {
+      "timestamp": "2025-03-23T00:00:00.000Z",
+      "visits_gained": 135192
+    },
+    {
+      "timestamp": "2025-03-24T00:00:00.000Z",
+      "visits_gained": 99865
+    },
+    {
+      "timestamp": "2025-03-25T00:00:00.000Z",
+      "visits_gained": 91344
+    },
+    {
+      "timestamp": "2025-03-26T00:00:00.000Z",
+      "visits_gained": 93069
+    },
+    {
+      "timestamp": "2025-03-27T00:00:00.000Z",
+      "visits_gained": 89988
+    },
+    {
+      "timestamp": "2025-03-28T00:00:00.000Z",
+      "visits_gained": 97798
+    },
+    {
+      "timestamp": "2025-03-29T00:00:00.000Z",
+      "visits_gained": 127205
+    },
+    {
+      "timestamp": "2025-03-30T00:00:00.000Z",
+      "visits_gained": 132981
+    },
+    {
+      "timestamp": "2025-03-31T00:00:00.000Z",
+      "visits_gained": 94391
+    },
+    {
+      "timestamp": "2025-04-01T00:00:00.000Z",
+      "visits_gained": 84978
+    },
+    {
+      "timestamp": "2025-04-02T00:00:00.000Z",
+      "visits_gained": 81727
+    },
+    {
+      "timestamp": "2025-04-03T00:00:00.000Z",
+      "visits_gained": 90100
+    },
+    {
+      "timestamp": "2025-04-04T00:00:00.000Z",
+      "visits_gained": 106428
+    },
+    {
+      "timestamp": "2025-04-05T00:00:00.000Z",
+      "visits_gained": 143911
+    },
+    {
+      "timestamp": "2025-04-06T00:00:00.000Z",
+      "visits_gained": 151411
+    },
+    {
+      "timestamp": "2025-04-07T00:00:00.000Z",
+      "visits_gained": 107749
+    },
+    {
+      "timestamp": "2025-04-08T00:00:00.000Z",
+      "visits_gained": 102824
+    },
+    {
+      "timestamp": "2025-04-09T00:00:00.000Z",
+      "visits_gained": 104414
+    },
+    {
+      "timestamp": "2025-04-10T00:00:00.000Z",
+      "visits_gained": 101968
+    },
+    {
+      "timestamp": "2025-04-11T00:00:00.000Z",
+      "visits_gained": 106649
+    },
+    {
+      "timestamp": "2025-04-12T00:00:00.000Z",
+      "visits_gained": 130437
+    },
+    {
+      "timestamp": "2025-04-13T00:00:00.000Z",
+      "visits_gained": 135972
+    },
+    {
+      "timestamp": "2025-04-14T00:00:00.000Z",
+      "visits_gained": 104413
+    },
+    {
+      "timestamp": "2025-04-15T00:00:00.000Z",
+      "visits_gained": 100713
+    },
+    {
+      "timestamp": "2025-04-16T00:00:00.000Z",
+      "visits_gained": 99879
+    },
+    {
+      "timestamp": "2025-04-17T00:00:00.000Z",
+      "visits_gained": 103288
+    },
+    {
+      "timestamp": "2025-04-18T00:00:00.000Z",
+      "visits_gained": 131996
+    },
+    {
+      "timestamp": "2025-04-19T00:00:00.000Z",
+      "visits_gained": 154106
+    },
+    {
+      "timestamp": "2025-04-20T00:00:00.000Z",
+      "visits_gained": 119614
+    },
+    {
+      "timestamp": "2025-04-21T00:00:00.000Z",
+      "visits_gained": 105892
+    },
+    {
+      "timestamp": "2025-04-22T00:00:00.000Z",
+      "visits_gained": 90577
+    },
+    {
+      "timestamp": "2025-04-23T00:00:00.000Z",
+      "visits_gained": 88287
+    },
+    {
+      "timestamp": "2025-04-24T00:00:00.000Z",
+      "visits_gained": 109391
+    },
+    {
+      "timestamp": "2025-04-25T00:00:00.000Z",
+      "visits_gained": 109784
+    },
+    {
+      "timestamp": "2025-04-26T00:00:00.000Z",
+      "visits_gained": 131576
+    },
+    {
+      "timestamp": "2025-04-27T00:00:00.000Z",
+      "visits_gained": 134809
+    },
+    {
+      "timestamp": "2025-04-28T00:00:00.000Z",
+      "visits_gained": 95397
+    },
+    {
+      "timestamp": "2025-04-29T00:00:00.000Z",
+      "visits_gained": 91803
+    },
+    {
+      "timestamp": "2025-04-30T00:00:00.000Z",
+      "visits_gained": 97649
+    },
+    {
+      "timestamp": "2025-05-01T00:00:00.000Z",
+      "visits_gained": 111290
+    },
+    {
+      "timestamp": "2025-05-02T00:00:00.000Z",
+      "visits_gained": 110164
+    },
+    {
+      "timestamp": "2025-05-03T00:00:00.000Z",
+      "visits_gained": 128447
+    },
+    {
+      "timestamp": "2025-05-04T00:00:00.000Z",
+      "visits_gained": 133067
+    },
+    {
+      "timestamp": "2025-05-05T00:00:00.000Z",
+      "visits_gained": 99376
+    },
+    {
+      "timestamp": "2025-05-06T00:00:00.000Z",
+      "visits_gained": 86233
+    },
+    {
+      "timestamp": "2025-05-07T00:00:00.000Z",
+      "visits_gained": 105415
+    },
+    {
+      "timestamp": "2025-05-08T00:00:00.000Z",
+      "visits_gained": 110081
+    },
+    {
+      "timestamp": "2025-05-09T00:00:00.000Z",
+      "visits_gained": 92538
+    },
+    {
+      "timestamp": "2025-05-10T00:00:00.000Z",
+      "visits_gained": 116760
+    },
+    {
+      "timestamp": "2025-05-11T00:00:00.000Z",
+      "visits_gained": 121384
+    },
+    {
+      "timestamp": "2025-05-12T00:00:00.000Z",
+      "visits_gained": 85154
+    },
+    {
+      "timestamp": "2025-05-13T00:00:00.000Z",
+      "visits_gained": 81556
+    },
+    {
+      "timestamp": "2025-05-14T00:00:00.000Z",
+      "visits_gained": 81965
+    },
+    {
+      "timestamp": "2025-05-15T00:00:00.000Z",
+      "visits_gained": 92020
+    },
+    {
+      "timestamp": "2025-05-16T00:00:00.000Z",
+      "visits_gained": 100339
+    },
+    {
+      "timestamp": "2025-05-17T00:00:00.000Z",
+      "visits_gained": 134828
+    },
+    {
+      "timestamp": "2025-05-18T00:00:00.000Z",
+      "visits_gained": 141089
+    },
+    {
+      "timestamp": "2025-05-19T00:00:00.000Z",
+      "visits_gained": 105177
+    },
+    {
+      "timestamp": "2025-05-20T00:00:00.000Z",
+      "visits_gained": 119000
+    },
+    {
+      "timestamp": "2025-05-21T00:00:00.000Z",
+      "visits_gained": 132837
+    },
+    {
+      "timestamp": "2025-05-22T00:00:00.000Z",
+      "visits_gained": 110819
+    },
+    {
+      "timestamp": "2025-05-23T00:00:00.000Z",
+      "visits_gained": 141989
+    },
+    {
+      "timestamp": "2025-05-24T00:00:00.000Z",
+      "visits_gained": 196474
+    },
+    {
+      "timestamp": "2025-05-25T00:00:00.000Z",
+      "visits_gained": 170745
+    },
+    {
+      "timestamp": "2025-05-26T00:00:00.000Z",
+      "visits_gained": 145054
+    },
+    {
+      "timestamp": "2025-05-27T00:00:00.000Z",
+      "visits_gained": 135966
+    },
+    {
+      "timestamp": "2025-05-28T00:00:00.000Z",
+      "visits_gained": 139476
+    },
+    {
+      "timestamp": "2025-05-29T00:00:00.000Z",
+      "visits_gained": 145181
+    },
+    {
+      "timestamp": "2025-05-30T00:00:00.000Z",
+      "visits_gained": 178061
+    },
+    {
+      "timestamp": "2025-05-31T00:00:00.000Z",
+      "visits_gained": 225131
+    },
+    {
+      "timestamp": "2025-06-01T00:00:00.000Z",
+      "visits_gained": 171518
+    },
+    {
+      "timestamp": "2025-06-02T00:00:00.000Z",
+      "visits_gained": 139107
+    },
+    {
+      "timestamp": "2025-06-03T00:00:00.000Z",
+      "visits_gained": 131913
+    },
+    {
+      "timestamp": "2025-06-04T00:00:00.000Z",
+      "visits_gained": 126911
+    },
+    {
+      "timestamp": "2025-06-05T00:00:00.000Z",
+      "visits_gained": 129908
+    },
+    {
+      "timestamp": "2025-06-06T00:00:00.000Z",
+      "visits_gained": 137316
+    },
+    {
+      "timestamp": "2025-06-07T00:00:00.000Z",
+      "visits_gained": 157742
+    },
+    {
+      "timestamp": "2025-06-08T00:00:00.000Z",
+      "visits_gained": 157725
+    },
+    {
+      "timestamp": "2025-06-09T00:00:00.000Z",
+      "visits_gained": 136118
+    },
+    {
+      "timestamp": "2025-06-10T00:00:00.000Z",
+      "visits_gained": 127298
+    },
+    {
+      "timestamp": "2025-06-11T00:00:00.000Z",
+      "visits_gained": 133288
+    },
+    {
+      "timestamp": "2025-06-12T00:00:00.000Z",
+      "visits_gained": 131034
+    },
+    {
+      "timestamp": "2025-06-13T00:00:00.000Z",
+      "visits_gained": 131159
+    },
+    {
+      "timestamp": "2025-06-14T00:00:00.000Z",
+      "visits_gained": 143355
+    },
+    {
+      "timestamp": "2025-06-15T00:00:00.000Z",
+      "visits_gained": 149239
+    },
+    {
+      "timestamp": "2025-06-16T00:00:00.000Z",
+      "visits_gained": 119984
+    },
+    {
+      "timestamp": "2025-06-17T00:00:00.000Z",
+      "visits_gained": 117597
+    },
+    {
+      "timestamp": "2025-06-18T00:00:00.000Z",
+      "visits_gained": 122027
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00.000Z",
+      "visits_gained": 126344
+    },
+    {
+      "timestamp": "2025-06-20T00:00:00.000Z",
+      "visits_gained": 124052
+    },
+    {
+      "timestamp": "2025-06-21T00:00:00.000Z",
+      "visits_gained": 129900
+    },
+    {
+      "timestamp": "2025-06-22T00:00:00.000Z",
+      "visits_gained": 137549
+    },
+    {
+      "timestamp": "2025-06-23T00:00:00.000Z",
+      "visits_gained": 127001
+    },
+    {
+      "timestamp": "2025-06-24T00:00:00.000Z",
+      "visits_gained": 125701
+    },
+    {
+      "timestamp": "2025-06-25T00:00:00.000Z",
+      "visits_gained": 120250
+    },
+    {
+      "timestamp": "2025-06-26T00:00:00.000Z",
+      "visits_gained": 121681
+    },
+    {
+      "timestamp": "2025-06-27T00:00:00.000Z",
+      "visits_gained": 112689
+    },
+    {
+      "timestamp": "2025-06-28T00:00:00.000Z",
+      "visits_gained": 113522
+    },
+    {
+      "timestamp": "2025-06-29T00:00:00.000Z",
+      "visits_gained": 118644
+    },
+    {
+      "timestamp": "2025-06-30T00:00:00.000Z",
+      "visits_gained": 114710
+    },
+    {
+      "timestamp": "2025-07-01T00:00:00.000Z",
+      "visits_gained": 113454
+    },
+    {
+      "timestamp": "2025-07-02T00:00:00.000Z",
+      "visits_gained": 124094
+    },
+    {
+      "timestamp": "2025-07-03T00:00:00.000Z",
+      "visits_gained": 156504
+    },
+    {
+      "timestamp": "2025-07-04T00:00:00.000Z",
+      "visits_gained": 143314
+    },
+    {
+      "timestamp": "2025-07-05T00:00:00.000Z",
+      "visits_gained": 138202
+    },
+    {
+      "timestamp": "2025-07-06T00:00:00.000Z",
+      "visits_gained": 135139
+    },
+    {
+      "timestamp": "2025-07-07T00:00:00.000Z",
+      "visits_gained": 130617
+    },
+    {
+      "timestamp": "2025-07-08T00:00:00.000Z",
+      "visits_gained": 128351
+    },
+    {
+      "timestamp": "2025-07-09T00:00:00.000Z",
+      "visits_gained": 126059
+    },
+    {
+      "timestamp": "2025-07-10T00:00:00.000Z",
+      "visits_gained": 124184
+    },
+    {
+      "timestamp": "2025-07-11T00:00:00.000Z",
+      "visits_gained": 121136
+    },
+    {
+      "timestamp": "2025-07-12T00:00:00.000Z",
+      "visits_gained": 120806
+    },
+    {
+      "timestamp": "2025-07-13T00:00:00.000Z",
+      "visits_gained": 201947
+    },
+    {
+      "timestamp": "2025-07-14T00:00:00.000Z",
+      "visits_gained": 222212
+    },
+    {
+      "timestamp": "2025-07-15T00:00:00.000Z",
+      "visits_gained": 124272
+    },
+    {
+      "timestamp": "2025-07-16T00:00:00.000Z",
+      "visits_gained": 123825
+    },
+    {
+      "timestamp": "2025-07-17T00:00:00.000Z",
+      "visits_gained": 124476
+    },
+    {
+      "timestamp": "2025-07-18T00:00:00.000Z",
+      "visits_gained": 122020
+    },
+    {
+      "timestamp": "2025-07-19T00:00:00.000Z",
+      "visits_gained": 121115
+    },
+    {
+      "timestamp": "2025-07-20T00:00:00.000Z",
+      "visits_gained": 124447
+    },
+    {
+      "timestamp": "2025-07-21T00:00:00.000Z",
+      "visits_gained": 122992
+    },
+    {
+      "timestamp": "2025-07-22T00:00:00.000Z",
+      "visits_gained": 121811
+    },
+    {
+      "timestamp": "2025-07-23T00:00:00.000Z",
+      "visits_gained": 124695
+    },
+    {
+      "timestamp": "2025-07-24T00:00:00.000Z",
+      "visits_gained": 125609
+    },
+    {
+      "timestamp": "2025-07-25T00:00:00.000Z",
+      "visits_gained": 125567
+    },
+    {
+      "timestamp": "2025-07-26T00:00:00.000Z",
+      "visits_gained": 121521
+    },
+    {
+      "timestamp": "2025-07-27T00:00:00.000Z",
+      "visits_gained": 137376
+    },
+    {
+      "timestamp": "2025-07-28T00:00:00.000Z",
+      "visits_gained": 137261
+    },
+    {
+      "timestamp": "2025-07-29T00:00:00.000Z",
+      "visits_gained": 137043
+    },
+    {
+      "timestamp": "2025-07-30T00:00:00.000Z",
+      "visits_gained": 133589
+    },
+    {
+      "timestamp": "2025-07-31T00:00:00.000Z",
+      "visits_gained": 135814
+    },
+    {
+      "timestamp": "2025-08-01T00:00:00.000Z",
+      "visits_gained": 132561
+    },
+    {
+      "timestamp": "2025-08-02T00:00:00.000Z",
+      "visits_gained": 127472
+    },
+    {
+      "timestamp": "2025-08-03T00:00:00.000Z",
+      "visits_gained": 130598
+    },
+    {
+      "timestamp": "2025-08-04T00:00:00.000Z",
+      "visits_gained": 127540
+    },
+    {
+      "timestamp": "2025-08-05T00:00:00.000Z",
+      "visits_gained": 123907
+    },
+    {
+      "timestamp": "2025-08-06T00:00:00.000Z",
+      "visits_gained": 124496
+    },
+    {
+      "timestamp": "2025-08-07T00:00:00.000Z",
+      "visits_gained": 123564
+    },
+    {
+      "timestamp": "2025-08-08T00:00:00.000Z",
+      "visits_gained": 120074
+    },
+    {
+      "timestamp": "2025-08-09T00:00:00.000Z",
+      "visits_gained": 117165
+    },
+    {
+      "timestamp": "2025-08-10T00:00:00.000Z",
+      "visits_gained": 125821
+    },
+    {
+      "timestamp": "2025-08-11T00:00:00.000Z",
+      "visits_gained": 119746
+    },
+    {
+      "timestamp": "2025-08-12T00:00:00.000Z",
+      "visits_gained": 118014
+    },
+    {
+      "timestamp": "2025-08-13T00:00:00.000Z",
+      "visits_gained": 110450
+    },
+    {
+      "timestamp": "2025-08-14T00:00:00.000Z",
+      "visits_gained": 117669
+    },
+    {
+      "timestamp": "2025-08-15T00:00:00.000Z",
+      "visits_gained": 119696
+    },
+    {
+      "timestamp": "2025-08-16T00:00:00.000Z",
+      "visits_gained": 125251
+    },
+    {
+      "timestamp": "2025-08-17T00:00:00.000Z",
+      "visits_gained": 128192
+    },
+    {
+      "timestamp": "2025-08-18T00:00:00.000Z",
+      "visits_gained": 115898
+    },
+    {
+      "timestamp": "2025-08-19T00:00:00.000Z",
+      "visits_gained": 111971
+    },
+    {
+      "timestamp": "2025-08-20T00:00:00.000Z",
+      "visits_gained": 107199
+    },
+    {
+      "timestamp": "2025-08-21T00:00:00.000Z",
+      "visits_gained": 107607
+    },
+    {
+      "timestamp": "2025-08-22T00:00:00.000Z",
+      "visits_gained": 113460
+    },
+    {
+      "timestamp": "2025-08-23T00:00:00.000Z",
+      "visits_gained": 116240
+    },
+    {
+      "timestamp": "2025-08-24T00:00:00.000Z",
+      "visits_gained": 123879
+    },
+    {
+      "timestamp": "2025-08-25T00:00:00.000Z",
+      "visits_gained": 108939
+    },
+    {
+      "timestamp": "2025-08-26T00:00:00.000Z",
+      "visits_gained": 103647
+    },
+    {
+      "timestamp": "2025-08-27T00:00:00.000Z",
+      "visits_gained": 101450
+    },
+    {
+      "timestamp": "2025-08-28T00:00:00.000Z",
+      "visits_gained": 103552
+    },
+    {
+      "timestamp": "2025-08-29T00:00:00.000Z",
+      "visits_gained": 102032
+    },
+    {
+      "timestamp": "2025-08-30T00:00:00.000Z",
+      "visits_gained": 106847
+    },
+    {
+      "timestamp": "2025-08-31T00:00:00.000Z",
+      "visits_gained": 114995
+    },
+    {
+      "timestamp": "2025-09-01T00:00:00.000Z",
+      "visits_gained": 98330
+    },
+    {
+      "timestamp": "2025-09-02T00:00:00.000Z",
+      "visits_gained": 79756
+    },
+    {
+      "timestamp": "2025-09-03T00:00:00.000Z",
+      "visits_gained": 73222
+    },
+    {
+      "timestamp": "2025-09-04T00:00:00.000Z",
+      "visits_gained": 515546
+    },
+    {
+      "timestamp": "2025-09-05T00:00:00.000Z",
+      "visits_gained": 657306
+    },
+    {
+      "timestamp": "2025-09-06T00:00:00.000Z",
+      "visits_gained": 206046
+    },
+    {
+      "timestamp": "2025-09-07T00:00:00.000Z",
+      "visits_gained": 184004
+    },
+    {
+      "timestamp": "2025-09-08T00:00:00.000Z",
+      "visits_gained": 110509
+    },
+    {
+      "timestamp": "2025-09-09T00:00:00.000Z",
+      "visits_gained": 98052
+    },
+    {
+      "timestamp": "2025-09-10T00:00:00.000Z",
+      "visits_gained": -74856
+    },
+    {
+      "timestamp": "2025-09-11T00:00:00.000Z",
+      "visits_gained": 88618
+    },
+    {
+      "timestamp": "2025-09-12T00:00:00.000Z",
+      "visits_gained": 92872
+    },
+    {
+      "timestamp": "2025-09-13T00:00:00.000Z",
+      "visits_gained": 121547
+    },
+    {
+      "timestamp": "2025-09-14T00:00:00.000Z",
+      "visits_gained": 135817
+    },
+    {
+      "timestamp": "2025-09-15T00:00:00.000Z",
+      "visits_gained": 90075
+    },
+    {
+      "timestamp": "2025-09-16T00:00:00.000Z",
+      "visits_gained": 77476
+    },
+    {
+      "timestamp": "2025-09-17T00:00:00.000Z",
+      "visits_gained": 76904
+    },
+    {
+      "timestamp": "2025-09-18T00:00:00.000Z",
+      "visits_gained": 63781
+    },
+    {
+      "timestamp": "2025-09-19T00:00:00.000Z",
+      "visits_gained": 86483
+    },
+    {
+      "timestamp": "2025-09-20T00:00:00.000Z",
+      "visits_gained": 119005
+    },
+    {
+      "timestamp": "2025-09-21T00:00:00.000Z",
+      "visits_gained": 34071
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "ok": true,
+  "kpiData": [
+    {
+      "timestamp": "2025-04-30T00:00:00.000Z",
+      "session_length": 14.970858742209042
+    },
+    {
+      "timestamp": "2025-05-01T00:00:00.000Z",
+      "session_length": 14.734753926595053
+    },
+    {
+      "timestamp": "2025-05-02T00:00:00.000Z",
+      "session_length": 14.890249927838644
+    },
+    {
+      "timestamp": "2025-05-03T00:00:00.000Z",
+      "session_length": 14.53811744848887
+    },
+    {
+      "timestamp": "2025-05-04T00:00:00.000Z",
+      "session_length": 14.579648812611898
+    },
+    {
+      "timestamp": "2025-05-05T00:00:00.000Z",
+      "session_length": 14.676216204961142
+    },
+    {
+      "timestamp": "2025-05-06T00:00:00.000Z",
+      "session_length": 15.688944339752197
+    },
+    {
+      "timestamp": "2025-05-07T00:00:00.000Z",
+      "session_length": 15.09029309645943
+    },
+    {
+      "timestamp": "2025-05-08T00:00:00.000Z",
+      "session_length": 14.92717452843984
+    },
+    {
+      "timestamp": "2025-05-09T00:00:00.000Z",
+      "session_length": 16.550636529922485
+    },
+    {
+      "timestamp": "2025-05-10T00:00:00.000Z",
+      "session_length": 15.123690883318583
+    },
+    {
+      "timestamp": "2025-05-11T00:00:00.000Z",
+      "session_length": 14.52274509270986
+    },
+    {
+      "timestamp": "2025-05-12T00:00:00.000Z",
+      "session_length": 13.889120737711588
+    },
+    {
+      "timestamp": "2025-05-13T00:00:00.000Z",
+      "session_length": 14.157066782315573
+    },
+    {
+      "timestamp": "2025-05-14T00:00:00.000Z",
+      "session_length": 13.977055629094442
+    },
+    {
+      "timestamp": "2025-05-15T00:00:00.000Z",
+      "session_length": 14.425489743550619
+    },
+    {
+      "timestamp": "2025-05-16T00:00:00.000Z",
+      "session_length": 13.612337430318197
+    },
+    {
+      "timestamp": "2025-05-17T00:00:00.000Z",
+      "session_length": 13.473708152770996
+    },
+    {
+      "timestamp": "2025-05-18T00:00:00.000Z",
+      "session_length": 14.166402260462442
+    },
+    {
+      "timestamp": "2025-05-19T00:00:00.000Z",
+      "session_length": 13.77903958161672
+    },
+    {
+      "timestamp": "2025-05-20T00:00:00.000Z",
+      "session_length": 8.62404990196228
+    },
+    {
+      "timestamp": "2025-05-21T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-05-22T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-05-23T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-05-24T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-05-25T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-05-26T00:00:00.000Z",
+      "session_length": 5.4998018344243365
+    },
+    {
+      "timestamp": "2025-05-27T00:00:00.000Z",
+      "session_length": 11.878609617551168
+    },
+    {
+      "timestamp": "2025-05-28T00:00:00.000Z",
+      "session_length": 12.085800170898438
+    },
+    {
+      "timestamp": "2025-05-29T00:00:00.000Z",
+      "session_length": 12.480027437210083
+    },
+    {
+      "timestamp": "2025-05-30T00:00:00.000Z",
+      "session_length": 14.419253547986349
+    },
+    {
+      "timestamp": "2025-05-31T00:00:00.000Z",
+      "session_length": 14.554160157839457
+    },
+    {
+      "timestamp": "2025-06-01T00:00:00.000Z",
+      "session_length": 0.10152936478455861
+    },
+    {
+      "timestamp": "2025-06-02T00:00:00.000Z",
+      "session_length": 0.037709067886074386
+    },
+    {
+      "timestamp": "2025-06-03T00:00:00.000Z",
+      "session_length": 0.04886854657282432
+    },
+    {
+      "timestamp": "2025-06-04T00:00:00.000Z",
+      "session_length": 0.17209137991691628
+    },
+    {
+      "timestamp": "2025-06-05T00:00:00.000Z",
+      "session_length": 0.21201194372648993
+    },
+    {
+      "timestamp": "2025-06-06T00:00:00.000Z",
+      "session_length": 0.10594009545942147
+    },
+    {
+      "timestamp": "2025-06-07T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-08T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-09T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-10T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-11T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-12T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-13T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-14T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-15T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-16T00:00:00.000Z",
+      "session_length": 0.25
+    },
+    {
+      "timestamp": "2025-06-17T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-18T00:00:00.000Z",
+      "session_length": 0.06679258247216542
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00.000Z",
+      "session_length": 0.008333333457509676
+    },
+    {
+      "timestamp": "2025-06-20T00:00:00.000Z",
+      "session_length": 0.026041666666666668
+    },
+    {
+      "timestamp": "2025-06-21T00:00:00.000Z",
+      "session_length": 0.08991703018546104
+    },
+    {
+      "timestamp": "2025-06-22T00:00:00.000Z",
+      "session_length": 0.05298132263123989
+    },
+    {
+      "timestamp": "2025-06-23T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-06-24T00:00:00.000Z",
+      "session_length": 3.8544511000315347
+    },
+    {
+      "timestamp": "2025-06-25T00:00:00.000Z",
+      "session_length": 17.82987932364146
+    },
+    {
+      "timestamp": "2025-06-26T00:00:00.000Z",
+      "session_length": 16.531737446784973
+    },
+    {
+      "timestamp": "2025-06-27T00:00:00.000Z",
+      "session_length": 17.319923996925354
+    },
+    {
+      "timestamp": "2025-06-28T00:00:00.000Z",
+      "session_length": 18.287927627563477
+    },
+    {
+      "timestamp": "2025-06-29T00:00:00.000Z",
+      "session_length": 18.49571939309438
+    },
+    {
+      "timestamp": "2025-06-30T00:00:00.000Z",
+      "session_length": 19.270729899406433
+    },
+    {
+      "timestamp": "2025-07-01T00:00:00.000Z",
+      "session_length": 18.77656388282776
+    },
+    {
+      "timestamp": "2025-07-02T00:00:00.000Z",
+      "session_length": 15.150428116321564
+    },
+    {
+      "timestamp": "2025-07-03T00:00:00.000Z",
+      "session_length": 8.891876498858133
+    },
+    {
+      "timestamp": "2025-07-04T00:00:00.000Z",
+      "session_length": 11.83955160776774
+    },
+    {
+      "timestamp": "2025-07-05T00:00:00.000Z",
+      "session_length": 10.065686901410421
+    },
+    {
+      "timestamp": "2025-07-06T00:00:00.000Z",
+      "session_length": 11.395777304967245
+    },
+    {
+      "timestamp": "2025-07-07T00:00:00.000Z",
+      "session_length": 10.028830091158548
+    },
+    {
+      "timestamp": "2025-07-08T00:00:00.000Z",
+      "session_length": 12.840032656987509
+    },
+    {
+      "timestamp": "2025-07-09T00:00:00.000Z",
+      "session_length": 12.148830572764078
+    },
+    {
+      "timestamp": "2025-07-10T00:00:00.000Z",
+      "session_length": 10.316348274548849
+    },
+    {
+      "timestamp": "2025-07-11T00:00:00.000Z",
+      "session_length": 12.026794135570526
+    },
+    {
+      "timestamp": "2025-07-12T00:00:00.000Z",
+      "session_length": 16.17744819323222
+    },
+    {
+      "timestamp": "2025-07-13T00:00:00.000Z",
+      "session_length": 14.201155622800192
+    },
+    {
+      "timestamp": "2025-07-14T00:00:00.000Z",
+      "session_length": 16.49152131875356
+    },
+    {
+      "timestamp": "2025-07-15T00:00:00.000Z",
+      "session_length": 15.867249449094137
+    },
+    {
+      "timestamp": "2025-07-16T00:00:00.000Z",
+      "session_length": 17.355799277623493
+    },
+    {
+      "timestamp": "2025-07-17T00:00:00.000Z",
+      "session_length": 15.65784486134847
+    },
+    {
+      "timestamp": "2025-07-18T00:00:00.000Z",
+      "session_length": 18.723092277844746
+    },
+    {
+      "timestamp": "2025-07-19T00:00:00.000Z",
+      "session_length": 16.25895643234253
+    },
+    {
+      "timestamp": "2025-07-20T00:00:00.000Z",
+      "session_length": 15.220152258872986
+    },
+    {
+      "timestamp": "2025-07-21T00:00:00.000Z",
+      "session_length": 16.876544038454693
+    },
+    {
+      "timestamp": "2025-07-22T00:00:00.000Z",
+      "session_length": 17.87881898880005
+    },
+    {
+      "timestamp": "2025-07-23T00:00:00.000Z",
+      "session_length": 16.2690403064092
+    },
+    {
+      "timestamp": "2025-07-24T00:00:00.000Z",
+      "session_length": 14.673468470573425
+    },
+    {
+      "timestamp": "2025-07-25T00:00:00.000Z",
+      "session_length": 13.375972668329874
+    },
+    {
+      "timestamp": "2025-07-26T00:00:00.000Z",
+      "session_length": 16.254087567329407
+    },
+    {
+      "timestamp": "2025-07-27T00:00:00.000Z",
+      "session_length": 15.545849442481995
+    },
+    {
+      "timestamp": "2025-07-28T00:00:00.000Z",
+      "session_length": 14.109989205996195
+    },
+    {
+      "timestamp": "2025-07-29T00:00:00.000Z",
+      "session_length": 15.816314617792765
+    },
+    {
+      "timestamp": "2025-07-30T00:00:00.000Z",
+      "session_length": 17.65431002775828
+    },
+    {
+      "timestamp": "2025-07-31T00:00:00.000Z",
+      "session_length": 15.617321650187174
+    },
+    {
+      "timestamp": "2025-08-01T00:00:00.000Z",
+      "session_length": 15.22989296913147
+    },
+    {
+      "timestamp": "2025-08-02T00:00:00.000Z",
+      "session_length": 17.45792031288147
+    },
+    {
+      "timestamp": "2025-08-03T00:00:00.000Z",
+      "session_length": 16.64940134684245
+    },
+    {
+      "timestamp": "2025-08-04T00:00:00.000Z",
+      "session_length": 15.421832283337912
+    },
+    {
+      "timestamp": "2025-08-05T00:00:00.000Z",
+      "session_length": 16.251502712567646
+    },
+    {
+      "timestamp": "2025-08-06T00:00:00.000Z",
+      "session_length": 17.261364539464314
+    },
+    {
+      "timestamp": "2025-08-07T00:00:00.000Z",
+      "session_length": 17.496057748794556
+    },
+    {
+      "timestamp": "2025-08-08T00:00:00.000Z",
+      "session_length": 16.59014077981313
+    },
+    {
+      "timestamp": "2025-08-09T00:00:00.000Z",
+      "session_length": 15.69906493028005
+    },
+    {
+      "timestamp": "2025-08-10T00:00:00.000Z",
+      "session_length": 21.698508898417156
+    },
+    {
+      "timestamp": "2025-08-11T00:00:00.000Z",
+      "session_length": 17.188337047894795
+    },
+    {
+      "timestamp": "2025-08-12T00:00:00.000Z",
+      "session_length": 15.975756963094076
+    },
+    {
+      "timestamp": "2025-08-13T00:00:00.000Z",
+      "session_length": 15.879186352094015
+    },
+    {
+      "timestamp": "2025-08-14T00:00:00.000Z",
+      "session_length": 16.782653490702312
+    },
+    {
+      "timestamp": "2025-08-15T00:00:00.000Z",
+      "session_length": 21.126780192057293
+    },
+    {
+      "timestamp": "2025-08-16T00:00:00.000Z",
+      "session_length": 14.791501760482788
+    },
+    {
+      "timestamp": "2025-08-17T00:00:00.000Z",
+      "session_length": 16.9884991645813
+    },
+    {
+      "timestamp": "2025-08-18T00:00:00.000Z",
+      "session_length": 20.33799334367116
+    },
+    {
+      "timestamp": "2025-08-19T00:00:00.000Z",
+      "session_length": 16.545700391133625
+    },
+    {
+      "timestamp": "2025-08-20T00:00:00.000Z",
+      "session_length": 16.962672750155132
+    },
+    {
+      "timestamp": "2025-08-21T00:00:00.000Z",
+      "session_length": 17.592089732487995
+    },
+    {
+      "timestamp": "2025-08-22T00:00:00.000Z",
+      "session_length": 17.62264609336853
+    },
+    {
+      "timestamp": "2025-08-23T00:00:00.000Z",
+      "session_length": 15.765388051668802
+    },
+    {
+      "timestamp": "2025-08-24T00:00:00.000Z",
+      "session_length": 17.478694478670757
+    },
+    {
+      "timestamp": "2025-08-25T00:00:00.000Z",
+      "session_length": 21.591423630714417
+    },
+    {
+      "timestamp": "2025-08-26T00:00:00.000Z",
+      "session_length": 27.50805727640788
+    },
+    {
+      "timestamp": "2025-08-27T00:00:00.000Z",
+      "session_length": 19.650477806727093
+    },
+    {
+      "timestamp": "2025-08-28T00:00:00.000Z",
+      "session_length": 17.741706371307373
+    },
+    {
+      "timestamp": "2025-08-29T00:00:00.000Z",
+      "session_length": 26.44915246963501
+    },
+    {
+      "timestamp": "2025-08-30T00:00:00.000Z",
+      "session_length": 18.449570178985596
+    },
+    {
+      "timestamp": "2025-08-31T00:00:00.000Z",
+      "session_length": 17.36592721939087
+    },
+    {
+      "timestamp": "2025-09-01T00:00:00.000Z",
+      "session_length": 35.17975083986918
+    },
+    {
+      "timestamp": "2025-09-02T00:00:00.000Z",
+      "session_length": 17.128938913345337
+    },
+    {
+      "timestamp": "2025-09-03T00:00:00.000Z",
+      "session_length": 24.025585214296978
+    },
+    {
+      "timestamp": "2025-09-04T00:00:00.000Z",
+      "session_length": 29.359222769737244
+    },
+    {
+      "timestamp": "2025-09-05T00:00:00.000Z",
+      "session_length": 61.605693361033566
+    },
+    {
+      "timestamp": "2025-09-06T00:00:00.000Z",
+      "session_length": 68.22038884596391
+    },
+    {
+      "timestamp": "2025-09-07T00:00:00.000Z",
+      "session_length": 19.607840579489004
+    },
+    {
+      "timestamp": "2025-09-08T00:00:00.000Z",
+      "session_length": 28.84206975590099
+    },
+    {
+      "timestamp": "2025-09-09T00:00:00.000Z",
+      "session_length": 24.448709921403363
+    },
+    {
+      "timestamp": "2025-09-10T00:00:00.000Z",
+      "session_length": 30.1534944715954
+    },
+    {
+      "timestamp": "2025-09-11T00:00:00.000Z",
+      "session_length": 63.41638068148964
+    },
+    {
+      "timestamp": "2025-09-12T00:00:00.000Z",
+      "session_length": 23.18488463488492
+    },
+    {
+      "timestamp": "2025-09-13T00:00:00.000Z",
+      "session_length": 33.59525899092356
+    },
+    {
+      "timestamp": "2025-09-14T00:00:00.000Z",
+      "session_length": 33.11925859036653
+    },
+    {
+      "timestamp": "2025-09-15T00:00:00.000Z",
+      "session_length": 88.00317896967348
+    },
+    {
+      "timestamp": "2025-09-16T00:00:00.000Z",
+      "session_length": 242.13211686270577
+    },
+    {
+      "timestamp": "2025-09-17T00:00:00.000Z",
+      "session_length": 34.64462011000689
+    },
+    {
+      "timestamp": "2025-09-18T00:00:00.000Z",
+      "session_length": 0
+    },
+    {
+      "timestamp": "2025-09-19T00:00:00.000Z",
+      "session_length": 17.155884742736816
+    },
+    {
+      "timestamp": "2025-09-20T00:00:00.000Z",
+      "session_length": 14.401601973034087
+    },
+    {
+      "timestamp": "2025-09-21T00:00:00.000Z",
+      "session_length": 14.573361277580261
+    }
+  ]
+}

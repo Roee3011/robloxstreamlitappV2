@@ -8,6 +8,9 @@ import seaborn as sns
 import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
+import os
+import glob
+import difflib
 
 # Set page config
 st.set_page_config(
@@ -21,45 +24,152 @@ plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
 @st.cache_data
-def load_data():
-    """Load the daily revenue data"""
-    with open('universe_6931042565/daily_revenue_20250921_011820.json', 'r') as f:
-        data = json.load(f)
-    
-    # Convert to DataFrame
-    df = pd.DataFrame(data['kpiData'])
-    
-    # Convert date column to datetime
-    df['date'] = pd.to_datetime(df['date'])
-    
+def load_games_catalog():
+    """Load the top 500 earning games catalog"""
+    df = pd.read_csv('top_500_earning_games.csv')
     return df
+
+def search_games(games_df, search_term):
+    """Search games by name with fuzzy matching suggestions"""
+    if not search_term:
+        return games_df
+    
+    # Case-insensitive exact/partial matches first
+    exact_mask = games_df['name'].str.contains(search_term, case=False, na=False)
+    exact_matches = games_df[exact_mask]
+    
+    # If we have good matches, return them
+    if len(exact_matches) >= 5:
+        return exact_matches.head(20)
+    
+    # If few or no exact matches, add fuzzy matching
+    # Filter out NaN values and ensure all names are strings
+    valid_games = games_df.dropna(subset=['name'])
+    all_game_names = valid_games['name'].astype(str).tolist()
+    
+    # Get fuzzy matches using difflib
+    fuzzy_matches = difflib.get_close_matches(
+        str(search_term), 
+        all_game_names, 
+        n=10,  # Get up to 10 suggestions
+        cutoff=0.4  # Lower cutoff for more suggestions
+    )
+    
+    # Combine exact and fuzzy matches
+    fuzzy_mask = games_df['name'].isin(fuzzy_matches)
+    fuzzy_games = games_df[fuzzy_mask]
+    
+    # Combine and remove duplicates
+    combined = pd.concat([exact_matches, fuzzy_games]).drop_duplicates(subset=['universe_id'])
+    
+    return combined.head(20)
+
+def get_search_suggestions(games_df, search_term, max_suggestions=5):
+    """Get search suggestions based on fuzzy matching"""
+    if not search_term or len(search_term) < 2:
+        return []
+    
+    # Filter out NaN values and ensure all names are strings
+    valid_games = games_df.dropna(subset=['name'])
+    all_game_names = valid_games['name'].astype(str).tolist()
+    
+    # Get fuzzy matches
+    suggestions = difflib.get_close_matches(
+        str(search_term),
+        all_game_names,
+        n=max_suggestions,
+        cutoff=0.3
+    )
+    
+    return suggestions
+
+def find_game_data_file(universe_id):
+    """Find the daily revenue JSON file for a given universe ID"""
+    # Look in Top500v2 folder first
+    folder_path = f'Top500v2/universe_{universe_id}'
+    if os.path.exists(folder_path):
+        # Find daily_revenue_*.json file (but exclude per_visit files)
+        pattern = os.path.join(folder_path, 'daily_revenue_*.json')
+        files = glob.glob(pattern)
+        # Filter out per_visit files
+        revenue_files = [f for f in files if 'per_visit' not in f]
+        if revenue_files:
+            return revenue_files[0]  # Return the first (should be only) match
+    
+    # If not found in Top500v2, check other folders (sportGames, etc.)
+    # This maintains backward compatibility
+    sport_games_patterns = [
+        f'sportGames/BasketballZero_universe_{universe_id}/daily_revenue_*.json',
+        f'sportGames/BlueLockRivals_universe_{universe_id}/daily_revenue_*.json'
+    ]
+    
+    for pattern in sport_games_patterns:
+        files = glob.glob(pattern)
+        # Filter out per_visit files
+        revenue_files = [f for f in files if 'per_visit' not in f]
+        if revenue_files:
+            return revenue_files[0]
+    
+    # Check the root universe folder (for the default game)
+    if universe_id == '6931042565':
+        pattern = f'universe_{universe_id}/daily_revenue_*.json'
+        files = glob.glob(pattern)
+        # Filter out per_visit files
+        revenue_files = [f for f in files if 'per_visit' not in f]
+        if revenue_files:
+            return revenue_files[0]
+    
+    return None
+
+@st.cache_data
+def load_data(universe_id='6931042565'):
+    """Load the daily revenue data for a specific universe ID"""
+    file_path = find_game_data_file(universe_id)
+    
+    if not file_path or not os.path.exists(file_path):
+        st.error(f"Data file not found for universe ID: {universe_id}")
+        return pd.DataFrame()
+    
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        
+        # Check if kpiData exists and is not empty
+        if 'kpiData' not in data:
+            st.error(f"No kpiData found in file for universe ID: {universe_id}")
+            return pd.DataFrame()
+        
+        if not data['kpiData']:
+            st.error(f"Empty kpiData in file for universe ID: {universe_id}")
+            return pd.DataFrame()
+        
+        # Convert to DataFrame
+        df = pd.DataFrame(data['kpiData'])
+        
+        # Check if required columns exist
+        if 'Estimated Revenue' not in df.columns:
+            st.error(f"'Estimated Revenue' column not found in data for universe ID: {universe_id}")
+            st.write("Available columns:", df.columns.tolist())
+            return pd.DataFrame()
+        
+        # Convert date column to datetime
+        if 'date' in df.columns:
+            df['date'] = pd.to_datetime(df['date'])
+        else:
+            st.error(f"'date' column not found in data for universe ID: {universe_id}")
+            return pd.DataFrame()
+        
+        return df
+    except Exception as e:
+        st.error(f"Error loading data for universe ID {universe_id}: {str(e)}")
+        return pd.DataFrame()
 
 @st.cache_data
 def load_additional_games_data():
-    """Load additional games data for comparison"""
-    additional_games = {}
-    
-    # Basketball Zero
-    try:
-        with open('sportGames/BasketballZero_universe_7028566528/daily_revenue_20250921_011912.json', 'r') as f:
-            data = json.load(f)
-        df_basketball = pd.DataFrame(data['kpiData'])
-        df_basketball['date'] = pd.to_datetime(df_basketball['date'])
-        additional_games['Basketball Zero'] = df_basketball
-    except FileNotFoundError:
-        pass
-    
-    # Blue Lock Rivals
-    try:
-        with open('sportGames/BlueLockRivals_universe_6325068386/daily_revenue_20250921_011832.json', 'r') as f:
-            data = json.load(f)
-        df_bluelock = pd.DataFrame(data['kpiData'])
-        df_bluelock['date'] = pd.to_datetime(df_bluelock['date'])
-        additional_games['Blue Lock Rivals'] = df_bluelock
-    except FileNotFoundError:
-        pass
-    
-    return additional_games
+    """Load additional games data for comparison - now deprecated in favor of dynamic loading"""
+    # This function is kept for backward compatibility but returns empty dict
+    # The new system allows users to select any game from the top 500 list
+    return {}
 
 def calculate_additional_games_weekly_averages(additional_games, robux_to_usd):
     """Calculate weekly averages for additional games"""
@@ -84,24 +194,41 @@ def calculate_additional_games_weekly_averages(additional_games, robux_to_usd):
 
 def calculate_weekly_averages(df, robux_to_usd):
     """Calculate weekly averages from daily data"""
-    # Convert Robux to USD
-    df['Estimated Revenue USD'] = df['Estimated Revenue'] * robux_to_usd
+    # Check if DataFrame is empty or missing required columns
+    if df.empty:
+        st.error("Cannot calculate weekly averages: DataFrame is empty")
+        return df, pd.DataFrame()
     
-    # Create a week column (starting from Monday)
-    df['week'] = df['date'].dt.to_period('W-MON')
+    if 'Estimated Revenue' not in df.columns:
+        st.error("Cannot calculate weekly averages: 'Estimated Revenue' column not found")
+        return df, pd.DataFrame()
     
-    # Calculate weekly averages for both Robux and USD
-    weekly_avg = df.groupby('week').agg({
-        'Estimated Revenue': 'mean',
-        'Estimated Revenue USD': 'mean'
-    }).reset_index()
-    weekly_avg['week_start'] = weekly_avg['week'].dt.start_time
+    if 'date' not in df.columns:
+        st.error("Cannot calculate weekly averages: 'date' column not found")
+        return df, pd.DataFrame()
     
-    return df, weekly_avg
+    try:
+        # Convert Robux to USD
+        df['Estimated Revenue USD'] = df['Estimated Revenue'] * robux_to_usd
+        
+        # Create a week column (starting from Monday)
+        df['week'] = df['date'].dt.to_period('W-MON')
+        
+        # Calculate weekly averages for both Robux and USD
+        weekly_avg = df.groupby('week').agg({
+            'Estimated Revenue': 'mean',
+            'Estimated Revenue USD': 'mean'
+        }).reset_index()
+        weekly_avg['week_start'] = weekly_avg['week'].dt.start_time
+        
+        return df, weekly_avg
+    except Exception as e:
+        st.error(f"Error calculating weekly averages: {str(e)}")
+        return df, pd.DataFrame()
 
-def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_scale, december_scale, 
-                                            may_deviation_pattern, normal_week_deviations, 
-                                            historical_peak_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, months=18):
+def generate_weekly_projection_with_deviations(start_date, lifetime_mean, december_scale, summer_scale,
+                                            normal_week_deviations, 
+                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18):
     """Generate weekly projection using average as base and applying weekly deviation patterns"""
     projection_weekly_dates = []
     projection_weekly_revenues = []
@@ -110,7 +237,6 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_sc
     end_date = start_date + pd.DateOffset(months=18)  # Exactly 18 months
     
     # Month definitions
-    summer_months = [6, 7, 8]  # June, July, August
     may_month = 5
     december_month = 12
     
@@ -123,14 +249,12 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_sc
         month = current_date.month
         
         # Determine base scaling factor for the month based on toggle settings
-        if month in summer_months:
-            month_scale = 1.2 if summer_peaks else 1.0  # Summer months with moderate peak if enabled
-        elif month == may_month:
-            month_scale = may_scale if summer_peaks else 1.0  # May uses its historical pattern if summer peaks enabled
-        elif month == december_month:
-            month_scale = may_scale if december_peaks else 1.0  # Use May's scale for December if enabled
+        if month == peak_summer_month and summer_peaks:
+            month_scale = summer_scale  # Apply peak only to the specific summer month
+        elif month == december_month and december_peaks:
+            month_scale = december_scale  # December uses peak multiple when enabled
         else:
-            month_scale = 1.0
+            month_scale = 1.0  # All other months use normal scaling
         
         # Get weeks in this month
         if month == 12:
@@ -158,24 +282,49 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, may_sc
         
         # Apply weekly deviation pattern based on month type and toggle settings
         for week_idx, week_start in enumerate(weeks_in_month):
-            if month == may_month and summer_peaks:
-                # Use May's deviation pattern for May if summer peaks enabled
-                deviation_idx = week_idx % len(may_deviation_pattern)
-                weekly_deviation = may_deviation_pattern[deviation_idx]
+            if month == peak_summer_month and summer_peaks:
+                # Create gradual peak pattern: ramp up to center, then ramp down
+                num_weeks = len(weeks_in_month)
+                if num_weeks == 1:
+                    # Single week - use full peak
+                    weekly_deviation = 1.0
+                else:
+                    # Multi-week month - create symmetric bell curve
+                    center_week = (num_weeks - 1) / 2.0
+                    distance_from_center = abs(week_idx - center_week)
+                    max_distance = num_weeks / 2.0
+                    
+                    # Bell curve formula: peak at center (1.0), decline to edges (0.6)
+                    peak_intensity = 1.0 - (distance_from_center / max_distance) * 0.4
+                    weekly_deviation = max(0.6, peak_intensity)
             elif month == december_month and december_peaks:
-                # Use May's deviation pattern for December if December peaks enabled
-                deviation_idx = week_idx % len(may_deviation_pattern)
-                weekly_deviation = may_deviation_pattern[deviation_idx]
+                # Create gradual peak pattern for December
+                num_weeks = len(weeks_in_month)
+                if num_weeks == 1:
+                    weekly_deviation = 1.0
+                else:
+                    center_week = (num_weeks - 1) / 2.0
+                    distance_from_center = abs(week_idx - center_week)
+                    max_distance = num_weeks / 2.0
+                    
+                    # Bell curve formula: peak at center (1.0), decline to edges (0.6)
+                    peak_intensity = 1.0 - (distance_from_center / max_distance) * 0.4
+                    weekly_deviation = max(0.6, peak_intensity)
             else:
                 # Use small deviations for other months or when peaks are disabled
                 deviation_idx = week_idx % len(normal_week_deviations)
                 weekly_deviation = normal_week_deviations[deviation_idx]
             
-            # Calculate weekly revenue: base * month_scale * weekly_deviation * decay_factor^week_counter
-            weekly_revenue = lifetime_mean * month_scale * weekly_deviation * (decay_factor ** week_counter)
-            
-            # Cap the revenue to not exceed historical weekly peak
-            weekly_revenue = min(weekly_revenue, historical_peak_weekly)
+            # For the first projected week, use the last observed weekly value as the baseline
+            if week_counter == 0:
+                # First week starts from the last observed value
+                weekly_revenue = last_observed_weekly
+            else:
+                # Calculate weekly revenue: base * month_scale * weekly_deviation * decay_factor^week_counter
+                weekly_revenue = lifetime_mean * month_scale * weekly_deviation * (decay_factor ** week_counter)
+                
+                # Cap the revenue to not exceed historical weekly peak
+                weekly_revenue = min(weekly_revenue, historical_peak_weekly)
             
             projection_weekly_dates.append(week_start)
             projection_weekly_revenues.append(weekly_revenue)
@@ -339,8 +488,37 @@ def create_revenue_analysis_chart(df, weekly_avg, projection_df, additional_game
         showlegend=True
     )
     
-    # Format y-axis to show currency and set range
-    fig.update_yaxes(tickformat='$,.0f', range=[0, 100000])
+    # Calculate dynamic y-axis maximum based on peak values in the data
+    max_values = []
+    
+    # Add historical daily revenue max
+    if not df.empty and 'Estimated Revenue USD' in df.columns:
+        max_values.append(df['Estimated Revenue USD'].max())
+    
+    # Add weekly average max
+    if not weekly_avg.empty and 'Estimated Revenue USD' in weekly_avg.columns:
+        max_values.append(weekly_avg['Estimated Revenue USD'].max())
+    
+    # Add projection max
+    if not projection_df.empty and 'Estimated Revenue USD' in projection_df.columns:
+        max_values.append(projection_df['Estimated Revenue USD'].max())
+    
+    # Add additional games max if present
+    if show_additional_games and additional_games_weekly:
+        for game_weekly in additional_games_weekly.values():
+            if not game_weekly.empty and 'Estimated Revenue USD' in game_weekly.columns:
+                max_values.append(game_weekly['Estimated Revenue USD'].max())
+    
+    # Calculate y-axis maximum (20% higher than peak, with a minimum of 10000)
+    if max_values:
+        peak_value = max(max_values)
+        y_max = peak_value * 1.2  # 20% higher than peak
+        y_max = max(y_max, 10000)  # Minimum of 10,000 for readability
+    else:
+        y_max = 100000  # Fallback to original value if no data
+    
+    # Format y-axis to show currency and set dynamic range
+    fig.update_yaxes(tickformat='$,.0f', range=[0, y_max])
     
     return fig
 
@@ -417,15 +595,189 @@ def main():
     st.title("📊 Revenue Analysis & Investment Calculator")
     st.markdown("---")
     
-    # Load data
-    df = load_data()
+    # Game Selection Interface
+    st.header("🎮 Select Game to Analyze")
+    
+    # Load games catalog
+    games_df = load_games_catalog()
+    
+    # Create two columns for game selection
+    col1, col2 = st.columns([3, 1])
+    
+    with col1:
+        # Initialize session state for search term and selected game
+        if 'search_term' not in st.session_state:
+            st.session_state.search_term = ""
+        if 'selected_game_name' not in st.session_state:
+            # Set default selected game to Volleyball Legends (universe ID: 6931042565)
+            default_game = games_df[games_df['universe_id'] == 6931042565]
+            if not default_game.empty:
+                st.session_state.selected_game_name = default_game.iloc[0]['name']
+            else:
+                st.session_state.selected_game_name = ""
+        
+        # Search bar
+        search_term = st.text_input(
+            "Search for a game:",
+            value=st.session_state.search_term,
+            placeholder="Type game name to search...",
+            help="Search through 500+ top earning games",
+            key="game_search_input"
+        )
+        
+        # Update session state
+        st.session_state.search_term = search_term
+        
+        # Show clickable search suggestions if user is typing
+        if search_term and len(search_term) >= 2:
+            suggestions = get_search_suggestions(games_df, search_term)
+            if suggestions:
+                st.caption("💡 **Quick Select:**")
+                # Create clickable buttons for suggestions
+                suggestion_cols = st.columns(min(len(suggestions), 3))  # Max 3 columns
+                
+                for i, suggestion in enumerate(suggestions[:3]):  # Show max 3 suggestions
+                    with suggestion_cols[i]:
+                        if st.button(
+                            suggestion,
+                            key=f"suggestion_{i}_{hash(suggestion)}",
+                            help=f"Click to select '{suggestion}'",
+                            use_container_width=True
+                        ):
+                            # Update both search term and selected game, then rerun
+                            st.session_state.search_term = suggestion
+                            st.session_state.selected_game_name = suggestion
+                            st.rerun()
+                
+                # Show additional suggestions as smaller buttons if any
+                if len(suggestions) > 3:
+                    with st.expander(f"Show {len(suggestions) - 3} more suggestions"):
+                        for j, suggestion in enumerate(suggestions[3:], 3):
+                            if st.button(
+                                suggestion,
+                                key=f"suggestion_{j}_{hash(suggestion)}",
+                                help=f"Click to select '{suggestion}'"
+                            ):
+                                # Update both search term and selected game, then rerun
+                                st.session_state.search_term = suggestion
+                                st.session_state.selected_game_name = suggestion
+                                st.rerun()
+        
+        # Filter games based on search
+        if search_term:
+            filtered_games = search_games(games_df, search_term)
+            if len(filtered_games) == 0:
+                st.warning("No games found matching your search. Try checking spelling or using fewer words.")
+                # Show some popular games as fallback
+                st.info("Here are some popular games to explore:")
+                filtered_games = games_df.head(10)  # Show top 10 as fallback
+            else:
+                # Show count of results
+                st.caption(f"Found {len(filtered_games)} game(s) matching '{search_term}'")
+        else:
+            filtered_games = games_df.head(20)  # Show top 20 by default
+            st.caption("Showing top 20 games by revenue. Use search to find specific games.")
+        
+        # Game selection dropdown
+        game_options = filtered_games['name'].tolist()
+        
+        # Determine the default index for the selectbox
+        default_index = 0
+        if st.session_state.selected_game_name and st.session_state.selected_game_name in game_options:
+            # If we have a previously selected game that's in the current options, select it
+            default_index = game_options.index(st.session_state.selected_game_name)
+        elif not search_term and game_options:
+            # If no search term and we have options, try to find Volleyball Legends as default
+            volleyball_legends_name = "[UPD] Volleyball Legends"
+            if volleyball_legends_name in game_options:
+                default_index = game_options.index(volleyball_legends_name)
+                st.session_state.selected_game_name = volleyball_legends_name
+            else:
+                # If Volleyball Legends not in options, default to first option
+                default_index = 0
+                if game_options:
+                    st.session_state.selected_game_name = game_options[0]
+        elif game_options:
+            # Otherwise, default to the first option
+            default_index = 0
+        else:
+            default_index = None
+        
+        selected_game_name = st.selectbox(
+            "Choose a game:",
+            options=game_options,
+            index=default_index,
+            help="Select from filtered results"
+        )
+        
+        # Update session state with the current selection
+        if selected_game_name:
+            st.session_state.selected_game_name = selected_game_name
+    
+    with col2:
+        if selected_game_name:
+            # Get selected game info
+            selected_game = games_df[games_df['name'] == selected_game_name].iloc[0]
+            
+            # Display game icon
+            if pd.notna(selected_game['iconUrl']) and selected_game['iconUrl']:
+                st.image(
+                    selected_game['iconUrl'], 
+                    width=100, 
+                    caption=f"Universe ID: {selected_game['universe_id']}"
+                )
+            else:
+                st.info("No icon available")
+    
+    st.markdown("---")
+    
+    # Load data for selected game
+    selected_universe_id = None
+    selected_game = None
+    
+    if selected_game_name:
+        selected_game = games_df[games_df['name'] == selected_game_name].iloc[0]
+        selected_universe_id = str(selected_game['universe_id'])
+        df = load_data(selected_universe_id)
+        
+        # Display selected game info
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Selected Game", selected_game_name)
+        with col2:
+            st.metric("Universe ID", selected_universe_id)
+        with col3:
+            genre_text = f"{selected_game['genre_l1']} - {selected_game['genre_l2']}" if pd.notna(selected_game['genre_l2']) else selected_game['genre_l1']
+            st.metric("Genre", genre_text)
+    else:
+        # Fallback to default game
+        df = load_data()
+    
+    # Check if data was loaded successfully
+    if df.empty:
+        st.error("Failed to load game data. Please try selecting a different game.")
+        return
+    
+    # Verify required columns exist
+    if 'Estimated Revenue' not in df.columns:
+        st.error("Data is missing the required 'Estimated Revenue' column. Please try selecting a different game.")
+        return
+    
+    if 'date' not in df.columns:
+        st.error("Data is missing the required 'date' column. Please try selecting a different game.")
+        return
+    
     additional_games = load_additional_games_data()
     
     # Sidebar for investment parameters
     st.sidebar.header("💰 Investment Parameters")
     
     # Calculate annual revenue for multiple calculation (temporary calculation)
-    temp_annual_revenue = df['Estimated Revenue'].sum() * 0.0038 * (365 / len(df))  # Rough estimate
+    try:
+        temp_annual_revenue = df['Estimated Revenue'].sum() * 0.0038 * (365 / len(df))  # Rough estimate
+    except Exception as e:
+        st.error(f"Error calculating annual revenue: {str(e)}")
+        return
     
     # Toggle between input modes
     input_mode = st.sidebar.radio(
@@ -549,20 +901,63 @@ def main():
         help="Week-on-week exponential growth (negative) or decay (positive) percentage applied to projected revenue"
     )
     
+    # Calculate data with user parameters (needed for intelligent peak detection)
+    df_with_usd, weekly_avg = calculate_weekly_averages(df.copy(), robux_to_usd)
+    
+    # Calculate lifetime mean for peak detection
+    lifetime_mean = df_with_usd['Estimated Revenue USD'].mean()
+    
+    # Analyze historical data to determine specific summer peak month
+    summer_months = [5, 6, 7, 8]  # May, June, July, August
+    summer_month_avgs = {}
+    peak_summer_month = 6  # Default to June
+    summer_peak_detected = False
+    
+    for month in summer_months:
+        month_data = weekly_avg[weekly_avg['week_start'].dt.month == month]
+        if len(month_data) > 0:
+            month_avg = month_data['Estimated Revenue USD'].mean()
+            summer_month_avgs[month] = month_avg
+    
+    # Find the summer month with highest average (if any exceed 25% threshold)
+    if summer_month_avgs:
+        best_month = max(summer_month_avgs.keys(), key=lambda k: summer_month_avgs[k])
+        best_avg = summer_month_avgs[best_month]
+        
+        if best_avg > lifetime_mean * 1.25:  # 25% greater than average
+            peak_summer_month = best_month
+            summer_peak_detected = True
+        else:
+            # No significant peak detected, default to June
+            peak_summer_month = 6
+            summer_peak_detected = False
+    
+    # December analysis
+    december_data = weekly_avg[weekly_avg['week_start'].dt.month == 12]
+    if len(december_data) > 0:
+        december_avg = december_data['Estimated Revenue USD'].mean()
+        december_peak_detected = december_avg > lifetime_mean * 1.25  # 25% greater than average
+    else:
+        december_peak_detected = False
+    
+    # Month names for display
+    month_names = {5: 'May', 6: 'June', 7: 'July', 8: 'August'}
+    peak_month_name = month_names.get(peak_summer_month, 'June')
+    
     # Seasonal peak toggles
     st.sidebar.markdown("---")
     st.sidebar.markdown("**Seasonal Peaks**")
     
     summer_peaks = st.sidebar.toggle(
-        "Summer Peaks (May, Jun-Aug)",
-        value=True,
-        help="Enable higher revenue during peak months (May, June, July, August)"
+        f"Summer Peak ({peak_month_name})",
+        value=summer_peak_detected,
+        help=f"Enable higher revenue during {peak_month_name}. Auto-detected: {'Peak found in ' + peak_month_name if summer_peak_detected else 'No significant peak, defaulting to June'}"
     )
     
     december_peaks = st.sidebar.toggle(
         "December Peaks",
-        value=True,
-        help="Enable higher revenue during December (using May's pattern)"
+        value=december_peak_detected,
+        help=f"Enable higher revenue during December. Auto-detected: {'Peak found' if december_peak_detected else 'No significant peak'}"
     )
     
     # Additional games toggle
@@ -575,36 +970,35 @@ def main():
         help="Display Basketball Zero and Blue Lock Rivals for comparison"
     )
     
-    # Calculate data with user parameters
-    df_with_usd, weekly_avg = calculate_weekly_averages(df.copy(), robux_to_usd)
-    
     # Calculate weekly averages for additional games
     additional_games_weekly = calculate_additional_games_weekly_averages(additional_games, robux_to_usd)
     
     # Calculate projection parameters
-    lifetime_mean = df_with_usd['Estimated Revenue USD'].mean()
     historical_peak_weekly = weekly_avg['Estimated Revenue USD'].max()
     
-    # May scaling and deviation patterns (from historical data)
-    may_weeks = weekly_avg[weekly_avg['week_start'].dt.month == 5]
-    if len(may_weeks) > 0:
-        may_weekly_avg = may_weeks['Estimated Revenue USD'].mean()
-        may_scale = may_weekly_avg / lifetime_mean
-        may_weekly_deviations = may_weeks['Estimated Revenue USD'] / lifetime_mean
-        may_deviation_pattern = may_weekly_deviations.tolist()
+    # Calculate peak multiple based on highest observed peak (regardless of month)
+    if historical_peak_weekly > 0:
+        peak_multiple = historical_peak_weekly / lifetime_mean
     else:
-        may_scale = 1.0
-        may_deviation_pattern = [1.0]
+        peak_multiple = 1.5  # Conservative fallback
     
-    december_scale = may_scale  # Use May's scale for December
+    # All peaks use the global maximum peak multiple
+    december_scale = peak_multiple
+    summer_scale = peak_multiple
+    
+
+
     normal_week_deviations = [0.9, 1.0, 1.1, 0.95, 1.05]  # Small variations around average
+    
+    # Get the last observed weekly value to ensure smooth transition
+    last_observed_weekly = weekly_avg['Estimated Revenue USD'].iloc[-1] if len(weekly_avg) > 0 else lifetime_mean
     
     # Generate projection
     start_date = df_with_usd['date'].max() + pd.DateOffset(days=1)
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
-        start_date, lifetime_mean, may_scale, december_scale, 
-        may_deviation_pattern, normal_week_deviations, 
-        historical_peak_weekly, decay_pct, summer_peaks, december_peaks
+        start_date, lifetime_mean, december_scale, summer_scale,
+        normal_week_deviations, 
+        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month
     )
     
     projection_df = pd.DataFrame({
@@ -614,10 +1008,7 @@ def main():
     
     # Create the main chart
     col1, col2 = st.columns([1, 4])
-    with col1:
-        st.image("https://tr.rbxcdn.com/180DAY-a1260693b7f075c5e8482b83e0531ad7/512/512/Image/Webp/noFilter", width=100)
-    with col2:
-        st.header("Game Investment Analysis")
+
     
     fig = create_revenue_analysis_chart(df_with_usd, weekly_avg, projection_df, additional_games_weekly, show_additional_games)
     st.plotly_chart(fig, use_container_width=True)

@@ -1,0 +1,1525 @@
+{
+  "ok": true,
+  "kpiData": [
+    {
+      "timestamp": "2024-09-07T00:00:00.000Z",
+      "playing": 2049
+    },
+    {
+      "timestamp": "2024-09-08T00:00:00.000Z",
+      "playing": 1764
+    },
+    {
+      "timestamp": "2024-09-09T00:00:00.000Z",
+      "playing": 1351
+    },
+    {
+      "timestamp": "2024-09-10T00:00:00.000Z",
+      "playing": 1175
+    },
+    {
+      "timestamp": "2024-09-11T00:00:00.000Z",
+      "playing": 1068
+    },
+    {
+      "timestamp": "2024-09-12T00:00:00.000Z",
+      "playing": 956
+    },
+    {
+      "timestamp": "2024-09-13T00:00:00.000Z",
+      "playing": 1046
+    },
+    {
+      "timestamp": "2024-09-14T00:00:00.000Z",
+      "playing": 1046
+    },
+    {
+      "timestamp": "2024-09-15T00:00:00.000Z",
+      "playing": 916
+    },
+    {
+      "timestamp": "2024-09-16T00:00:00.000Z",
+      "playing": 736
+    },
+    {
+      "timestamp": "2024-09-17T00:00:00.000Z",
+      "playing": 780
+    },
+    {
+      "timestamp": "2024-09-18T00:00:00.000Z",
+      "playing": 653
+    },
+    {
+      "timestamp": "2024-09-19T00:00:00.000Z",
+      "playing": 643
+    },
+    {
+      "timestamp": "2024-09-20T00:00:00.000Z",
+      "playing": 712
+    },
+    {
+      "timestamp": "2024-09-21T00:00:00.000Z",
+      "playing": 686
+    },
+    {
+      "timestamp": "2024-09-22T00:00:00.000Z",
+      "playing": 575
+    },
+    {
+      "timestamp": "2024-09-23T00:00:00.000Z",
+      "playing": 451
+    },
+    {
+      "timestamp": "2024-09-24T00:00:00.000Z",
+      "playing": 405
+    },
+    {
+      "timestamp": "2024-09-25T00:00:00.000Z",
+      "playing": 333
+    },
+    {
+      "timestamp": "2024-09-26T00:00:00.000Z",
+      "playing": 327
+    },
+    {
+      "timestamp": "2024-09-27T00:00:00.000Z",
+      "playing": 347
+    },
+    {
+      "timestamp": "2024-09-28T00:00:00.000Z",
+      "playing": 315
+    },
+    {
+      "timestamp": "2024-09-29T00:00:00.000Z",
+      "playing": 335
+    },
+    {
+      "timestamp": "2024-09-30T00:00:00.000Z",
+      "playing": 281
+    },
+    {
+      "timestamp": "2024-10-01T00:00:00.000Z",
+      "playing": 250
+    },
+    {
+      "timestamp": "2024-10-02T00:00:00.000Z",
+      "playing": 237
+    },
+    {
+      "timestamp": "2024-10-03T00:00:00.000Z",
+      "playing": 346
+    },
+    {
+      "timestamp": "2024-10-04T00:00:00.000Z",
+      "playing": 385
+    },
+    {
+      "timestamp": "2024-10-05T00:00:00.000Z",
+      "playing": 434
+    },
+    {
+      "timestamp": "2024-10-06T00:00:00.000Z",
+      "playing": 379
+    },
+    {
+      "timestamp": "2024-10-07T00:00:00.000Z",
+      "playing": 326
+    },
+    {
+      "timestamp": "2024-10-08T00:00:00.000Z",
+      "playing": 301
+    },
+    {
+      "timestamp": "2024-10-09T00:00:00.000Z",
+      "playing": 257
+    },
+    {
+      "timestamp": "2024-10-10T00:00:00.000Z",
+      "playing": 230
+    },
+    {
+      "timestamp": "2024-10-11T00:00:00.000Z",
+      "playing": 370
+    },
+    {
+      "timestamp": "2024-10-12T00:00:00.000Z",
+      "playing": 408
+    },
+    {
+      "timestamp": "2024-10-13T00:00:00.000Z",
+      "playing": 363
+    },
+    {
+      "timestamp": "2024-10-14T00:00:00.000Z",
+      "playing": 347
+    },
+    {
+      "timestamp": "2024-10-15T00:00:00.000Z",
+      "playing": 323
+    },
+    {
+      "timestamp": "2024-10-16T00:00:00.000Z",
+      "playing": 343
+    },
+    {
+      "timestamp": "2024-10-17T00:00:00.000Z",
+      "playing": 316
+    },
+    {
+      "timestamp": "2024-10-18T00:00:00.000Z",
+      "playing": 441
+    },
+    {
+      "timestamp": "2024-10-19T00:00:00.000Z",
+      "playing": 462
+    },
+    {
+      "timestamp": "2024-10-20T00:00:00.000Z",
+      "playing": 381
+    },
+    {
+      "timestamp": "2024-10-21T00:00:00.000Z",
+      "playing": 366
+    },
+    {
+      "timestamp": "2024-10-22T00:00:00.000Z",
+      "playing": 356
+    },
+    {
+      "timestamp": "2024-10-23T00:00:00.000Z",
+      "playing": 343
+    },
+    {
+      "timestamp": "2024-10-24T00:00:00.000Z",
+      "playing": 313
+    },
+    {
+      "timestamp": "2024-10-25T00:00:00.000Z",
+      "playing": 475
+    },
+    {
+      "timestamp": "2024-10-26T00:00:00.000Z",
+      "playing": 443
+    },
+    {
+      "timestamp": "2024-10-27T00:00:00.000Z",
+      "playing": 407
+    },
+    {
+      "timestamp": "2024-10-28T00:00:00.000Z",
+      "playing": 307
+    },
+    {
+      "timestamp": "2024-10-29T00:00:00.000Z",
+      "playing": 317
+    },
+    {
+      "timestamp": "2024-10-30T00:00:00.000Z",
+      "playing": 270
+    },
+    {
+      "timestamp": "2024-10-31T00:00:00.000Z",
+      "playing": 270
+    },
+    {
+      "timestamp": "2024-11-01T00:00:00.000Z",
+      "playing": 479
+    },
+    {
+      "timestamp": "2024-11-02T00:00:00.000Z",
+      "playing": 488
+    },
+    {
+      "timestamp": "2024-11-03T00:00:00.000Z",
+      "playing": 405
+    },
+    {
+      "timestamp": "2024-11-04T00:00:00.000Z",
+      "playing": 330
+    },
+    {
+      "timestamp": "2024-11-05T00:00:00.000Z",
+      "playing": 319
+    },
+    {
+      "timestamp": "2024-11-06T00:00:00.000Z",
+      "playing": 286
+    },
+    {
+      "timestamp": "2024-11-07T00:00:00.000Z",
+      "playing": 261
+    },
+    {
+      "timestamp": "2024-11-08T00:00:00.000Z",
+      "playing": 331
+    },
+    {
+      "timestamp": "2024-11-09T00:00:00.000Z",
+      "playing": 333
+    },
+    {
+      "timestamp": "2024-11-10T00:00:00.000Z",
+      "playing": 247
+    },
+    {
+      "timestamp": "2024-11-11T00:00:00.000Z",
+      "playing": 226
+    },
+    {
+      "timestamp": "2024-11-12T00:00:00.000Z",
+      "playing": 211
+    },
+    {
+      "timestamp": "2024-11-13T00:00:00.000Z",
+      "playing": 196
+    },
+    {
+      "timestamp": "2024-11-14T00:00:00.000Z",
+      "playing": 198
+    },
+    {
+      "timestamp": "2024-11-15T00:00:00.000Z",
+      "playing": 219
+    },
+    {
+      "timestamp": "2024-11-16T00:00:00.000Z",
+      "playing": 220
+    },
+    {
+      "timestamp": "2024-11-17T00:00:00.000Z",
+      "playing": 178
+    },
+    {
+      "timestamp": "2024-11-18T00:00:00.000Z",
+      "playing": 174
+    },
+    {
+      "timestamp": "2024-11-19T00:00:00.000Z",
+      "playing": 169
+    },
+    {
+      "timestamp": "2024-11-20T00:00:00.000Z",
+      "playing": 152
+    },
+    {
+      "timestamp": "2024-11-21T00:00:00.000Z",
+      "playing": 164
+    },
+    {
+      "timestamp": "2024-11-22T00:00:00.000Z",
+      "playing": 197
+    },
+    {
+      "timestamp": "2024-11-23T00:00:00.000Z",
+      "playing": 183
+    },
+    {
+      "timestamp": "2024-11-24T00:00:00.000Z",
+      "playing": 166
+    },
+    {
+      "timestamp": "2024-11-25T00:00:00.000Z",
+      "playing": 159
+    },
+    {
+      "timestamp": "2024-11-26T00:00:00.000Z",
+      "playing": 141
+    },
+    {
+      "timestamp": "2024-11-27T00:00:00.000Z",
+      "playing": 157
+    },
+    {
+      "timestamp": "2024-11-28T00:00:00.000Z",
+      "playing": 142
+    },
+    {
+      "timestamp": "2024-11-29T00:00:00.000Z",
+      "playing": 177
+    },
+    {
+      "timestamp": "2024-11-30T00:00:00.000Z",
+      "playing": 135
+    },
+    {
+      "timestamp": "2024-12-01T00:00:00.000Z",
+      "playing": 140
+    },
+    {
+      "timestamp": "2024-12-02T00:00:00.000Z",
+      "playing": 95
+    },
+    {
+      "timestamp": "2024-12-03T00:00:00.000Z",
+      "playing": 99
+    },
+    {
+      "timestamp": "2024-12-04T00:00:00.000Z",
+      "playing": 101
+    },
+    {
+      "timestamp": "2024-12-05T00:00:00.000Z",
+      "playing": 115
+    },
+    {
+      "timestamp": "2024-12-06T00:00:00.000Z",
+      "playing": 157
+    },
+    {
+      "timestamp": "2024-12-07T00:00:00.000Z",
+      "playing": 215
+    },
+    {
+      "timestamp": "2024-12-08T00:00:00.000Z",
+      "playing": 159
+    },
+    {
+      "timestamp": "2024-12-09T00:00:00.000Z",
+      "playing": 156
+    },
+    {
+      "timestamp": "2024-12-10T00:00:00.000Z",
+      "playing": 165
+    },
+    {
+      "timestamp": "2024-12-11T00:00:00.000Z",
+      "playing": 206
+    },
+    {
+      "timestamp": "2024-12-12T00:00:00.000Z",
+      "playing": 259
+    },
+    {
+      "timestamp": "2024-12-13T00:00:00.000Z",
+      "playing": 283
+    },
+    {
+      "timestamp": "2024-12-14T00:00:00.000Z",
+      "playing": 275
+    },
+    {
+      "timestamp": "2024-12-15T00:00:00.000Z",
+      "playing": 241
+    },
+    {
+      "timestamp": "2024-12-16T00:00:00.000Z",
+      "playing": 218
+    },
+    {
+      "timestamp": "2024-12-17T00:00:00.000Z",
+      "playing": 232
+    },
+    {
+      "timestamp": "2024-12-18T00:00:00.000Z",
+      "playing": 256
+    },
+    {
+      "timestamp": "2024-12-19T00:00:00.000Z",
+      "playing": 227
+    },
+    {
+      "timestamp": "2024-12-20T00:00:00.000Z",
+      "playing": 243
+    },
+    {
+      "timestamp": "2024-12-21T00:00:00.000Z",
+      "playing": 296
+    },
+    {
+      "timestamp": "2024-12-22T00:00:00.000Z",
+      "playing": 266
+    },
+    {
+      "timestamp": "2024-12-23T00:00:00.000Z",
+      "playing": 215
+    },
+    {
+      "timestamp": "2024-12-24T00:00:00.000Z",
+      "playing": 188
+    },
+    {
+      "timestamp": "2024-12-25T00:00:00.000Z",
+      "playing": 161
+    },
+    {
+      "timestamp": "2024-12-26T00:00:00.000Z",
+      "playing": 177
+    },
+    {
+      "timestamp": "2024-12-27T00:00:00.000Z",
+      "playing": 235
+    },
+    {
+      "timestamp": "2024-12-28T00:00:00.000Z",
+      "playing": 225
+    },
+    {
+      "timestamp": "2024-12-29T00:00:00.000Z",
+      "playing": 224
+    },
+    {
+      "timestamp": "2024-12-30T00:00:00.000Z",
+      "playing": 217
+    },
+    {
+      "timestamp": "2024-12-31T00:00:00.000Z",
+      "playing": 217
+    },
+    {
+      "timestamp": "2025-01-01T00:00:00.000Z",
+      "playing": 234
+    },
+    {
+      "timestamp": "2025-01-02T00:00:00.000Z",
+      "playing": 214
+    },
+    {
+      "timestamp": "2025-01-03T00:00:00.000Z",
+      "playing": 242
+    },
+    {
+      "timestamp": "2025-01-04T00:00:00.000Z",
+      "playing": 240
+    },
+    {
+      "timestamp": "2025-01-05T00:00:00.000Z",
+      "playing": 207
+    },
+    {
+      "timestamp": "2025-01-06T00:00:00.000Z",
+      "playing": 179
+    },
+    {
+      "timestamp": "2025-01-07T00:00:00.000Z",
+      "playing": 186
+    },
+    {
+      "timestamp": "2025-01-08T00:00:00.000Z",
+      "playing": 162
+    },
+    {
+      "timestamp": "2025-01-09T00:00:00.000Z",
+      "playing": 220
+    },
+    {
+      "timestamp": "2025-01-10T00:00:00.000Z",
+      "playing": 305
+    },
+    {
+      "timestamp": "2025-01-11T00:00:00.000Z",
+      "playing": 450
+    },
+    {
+      "timestamp": "2025-01-12T00:00:00.000Z",
+      "playing": 390
+    },
+    {
+      "timestamp": "2025-01-13T00:00:00.000Z",
+      "playing": 520
+    },
+    {
+      "timestamp": "2025-01-14T00:00:00.000Z",
+      "playing": 555
+    },
+    {
+      "timestamp": "2025-01-15T00:00:00.000Z",
+      "playing": 548
+    },
+    {
+      "timestamp": "2025-01-16T00:00:00.000Z",
+      "playing": 562
+    },
+    {
+      "timestamp": "2025-01-17T00:00:00.000Z",
+      "playing": 739
+    },
+    {
+      "timestamp": "2025-01-18T00:00:00.000Z",
+      "playing": 807
+    },
+    {
+      "timestamp": "2025-01-19T00:00:00.000Z",
+      "playing": 651
+    },
+    {
+      "timestamp": "2025-01-20T00:00:00.000Z",
+      "playing": 745
+    },
+    {
+      "timestamp": "2025-01-21T00:00:00.000Z",
+      "playing": 639
+    },
+    {
+      "timestamp": "2025-01-22T00:00:00.000Z",
+      "playing": 667
+    },
+    {
+      "timestamp": "2025-01-23T00:00:00.000Z",
+      "playing": 689
+    },
+    {
+      "timestamp": "2025-01-24T00:00:00.000Z",
+      "playing": 774
+    },
+    {
+      "timestamp": "2025-01-25T00:00:00.000Z",
+      "playing": 875
+    },
+    {
+      "timestamp": "2025-01-26T00:00:00.000Z",
+      "playing": 816
+    },
+    {
+      "timestamp": "2025-01-27T00:00:00.000Z",
+      "playing": 722
+    },
+    {
+      "timestamp": "2025-01-28T00:00:00.000Z",
+      "playing": 630
+    },
+    {
+      "timestamp": "2025-01-29T00:00:00.000Z",
+      "playing": 662
+    },
+    {
+      "timestamp": "2025-01-30T00:00:00.000Z",
+      "playing": 679
+    },
+    {
+      "timestamp": "2025-01-31T00:00:00.000Z",
+      "playing": 807
+    },
+    {
+      "timestamp": "2025-02-01T00:00:00.000Z",
+      "playing": 1401
+    },
+    {
+      "timestamp": "2025-02-02T00:00:00.000Z",
+      "playing": 1180
+    },
+    {
+      "timestamp": "2025-02-03T00:00:00.000Z",
+      "playing": 1209
+    },
+    {
+      "timestamp": "2025-02-04T00:00:00.000Z",
+      "playing": 1618
+    },
+    {
+      "timestamp": "2025-02-05T00:00:00.000Z",
+      "playing": 1508
+    },
+    {
+      "timestamp": "2025-02-06T00:00:00.000Z",
+      "playing": 1628
+    },
+    {
+      "timestamp": "2025-02-07T00:00:00.000Z",
+      "playing": 1868
+    },
+    {
+      "timestamp": "2025-02-08T00:00:00.000Z",
+      "playing": 2439
+    },
+    {
+      "timestamp": "2025-02-09T00:00:00.000Z",
+      "playing": 2183
+    },
+    {
+      "timestamp": "2025-02-10T00:00:00.000Z",
+      "playing": 1108
+    },
+    {
+      "timestamp": "2025-02-11T00:00:00.000Z",
+      "playing": 1839
+    },
+    {
+      "timestamp": "2025-02-12T00:00:00.000Z",
+      "playing": 2033
+    },
+    {
+      "timestamp": "2025-02-13T00:00:00.000Z",
+      "playing": 1823
+    },
+    {
+      "timestamp": "2025-02-14T00:00:00.000Z",
+      "playing": 1988
+    },
+    {
+      "timestamp": "2025-02-15T00:00:00.000Z",
+      "playing": 2288
+    },
+    {
+      "timestamp": "2025-02-16T00:00:00.000Z",
+      "playing": 1892
+    },
+    {
+      "timestamp": "2025-02-17T00:00:00.000Z",
+      "playing": 1816
+    },
+    {
+      "timestamp": "2025-02-18T00:00:00.000Z",
+      "playing": 1741
+    },
+    {
+      "timestamp": "2025-02-19T00:00:00.000Z",
+      "playing": 1736
+    },
+    {
+      "timestamp": "2025-02-20T00:00:00.000Z",
+      "playing": 1697
+    },
+    {
+      "timestamp": "2025-02-21T00:00:00.000Z",
+      "playing": 1694
+    },
+    {
+      "timestamp": "2025-02-22T00:00:00.000Z",
+      "playing": 1892
+    },
+    {
+      "timestamp": "2025-02-23T00:00:00.000Z",
+      "playing": 1598
+    },
+    {
+      "timestamp": "2025-02-24T00:00:00.000Z",
+      "playing": 1299
+    },
+    {
+      "timestamp": "2025-02-25T00:00:00.000Z",
+      "playing": 1186
+    },
+    {
+      "timestamp": "2025-02-26T00:00:00.000Z",
+      "playing": 1103
+    },
+    {
+      "timestamp": "2025-02-27T00:00:00.000Z",
+      "playing": 1076
+    },
+    {
+      "timestamp": "2025-02-28T00:00:00.000Z",
+      "playing": 1251
+    },
+    {
+      "timestamp": "2025-03-01T00:00:00.000Z",
+      "playing": 1455
+    },
+    {
+      "timestamp": "2025-03-02T00:00:00.000Z",
+      "playing": 1247
+    },
+    {
+      "timestamp": "2025-03-03T00:00:00.000Z",
+      "playing": 1012
+    },
+    {
+      "timestamp": "2025-03-04T00:00:00.000Z",
+      "playing": 991
+    },
+    {
+      "timestamp": "2025-03-05T00:00:00.000Z",
+      "playing": 875
+    },
+    {
+      "timestamp": "2025-03-06T00:00:00.000Z",
+      "playing": 793
+    },
+    {
+      "timestamp": "2025-03-07T00:00:00.000Z",
+      "playing": 905
+    },
+    {
+      "timestamp": "2025-03-08T00:00:00.000Z",
+      "playing": 938
+    },
+    {
+      "timestamp": "2025-03-09T00:00:00.000Z",
+      "playing": 813
+    },
+    {
+      "timestamp": "2025-03-10T00:00:00.000Z",
+      "playing": 685
+    },
+    {
+      "timestamp": "2025-03-11T00:00:00.000Z",
+      "playing": 657
+    },
+    {
+      "timestamp": "2025-03-12T00:00:00.000Z",
+      "playing": 632
+    },
+    {
+      "timestamp": "2025-03-13T00:00:00.000Z",
+      "playing": 607
+    },
+    {
+      "timestamp": "2025-03-14T00:00:00.000Z",
+      "playing": 1034
+    },
+    {
+      "timestamp": "2025-03-15T00:00:00.000Z",
+      "playing": 1063
+    },
+    {
+      "timestamp": "2025-03-16T00:00:00.000Z",
+      "playing": 949
+    },
+    {
+      "timestamp": "2025-03-17T00:00:00.000Z",
+      "playing": 916
+    },
+    {
+      "timestamp": "2025-03-18T00:00:00.000Z",
+      "playing": 792
+    },
+    {
+      "timestamp": "2025-03-19T00:00:00.000Z",
+      "playing": 762
+    },
+    {
+      "timestamp": "2025-03-20T00:00:00.000Z",
+      "playing": 698
+    },
+    {
+      "timestamp": "2025-03-21T00:00:00.000Z",
+      "playing": 719
+    },
+    {
+      "timestamp": "2025-03-22T00:00:00.000Z",
+      "playing": 784
+    },
+    {
+      "timestamp": "2025-03-23T00:00:00.000Z",
+      "playing": 642
+    },
+    {
+      "timestamp": "2025-03-24T00:00:00.000Z",
+      "playing": 601
+    },
+    {
+      "timestamp": "2025-03-25T00:00:00.000Z",
+      "playing": 595
+    },
+    {
+      "timestamp": "2025-03-26T00:00:00.000Z",
+      "playing": 528
+    },
+    {
+      "timestamp": "2025-03-27T00:00:00.000Z",
+      "playing": 575
+    },
+    {
+      "timestamp": "2025-03-28T00:00:00.000Z",
+      "playing": 554
+    },
+    {
+      "timestamp": "2025-03-29T00:00:00.000Z",
+      "playing": 548
+    },
+    {
+      "timestamp": "2025-03-30T00:00:00.000Z",
+      "playing": 502
+    },
+    {
+      "timestamp": "2025-03-31T00:00:00.000Z",
+      "playing": 482
+    },
+    {
+      "timestamp": "2025-04-01T00:00:00.000Z",
+      "playing": 469
+    },
+    {
+      "timestamp": "2025-04-02T00:00:00.000Z",
+      "playing": 478
+    },
+    {
+      "timestamp": "2025-04-03T00:00:00.000Z",
+      "playing": 501
+    },
+    {
+      "timestamp": "2025-04-04T00:00:00.000Z",
+      "playing": 608
+    },
+    {
+      "timestamp": "2025-04-05T00:00:00.000Z",
+      "playing": 675
+    },
+    {
+      "timestamp": "2025-04-06T00:00:00.000Z",
+      "playing": 595
+    },
+    {
+      "timestamp": "2025-04-07T00:00:00.000Z",
+      "playing": 541
+    },
+    {
+      "timestamp": "2025-04-08T00:00:00.000Z",
+      "playing": 476
+    },
+    {
+      "timestamp": "2025-04-09T00:00:00.000Z",
+      "playing": 507
+    },
+    {
+      "timestamp": "2025-04-10T00:00:00.000Z",
+      "playing": 473
+    },
+    {
+      "timestamp": "2025-04-11T00:00:00.000Z",
+      "playing": 497
+    },
+    {
+      "timestamp": "2025-04-12T00:00:00.000Z",
+      "playing": 508
+    },
+    {
+      "timestamp": "2025-04-13T00:00:00.000Z",
+      "playing": 446
+    },
+    {
+      "timestamp": "2025-04-14T00:00:00.000Z",
+      "playing": 401
+    },
+    {
+      "timestamp": "2025-04-15T00:00:00.000Z",
+      "playing": 474
+    },
+    {
+      "timestamp": "2025-04-16T00:00:00.000Z",
+      "playing": 436
+    },
+    {
+      "timestamp": "2025-04-17T00:00:00.000Z",
+      "playing": 463
+    },
+    {
+      "timestamp": "2025-04-18T00:00:00.000Z",
+      "playing": 489
+    },
+    {
+      "timestamp": "2025-04-19T00:00:00.000Z",
+      "playing": 447
+    },
+    {
+      "timestamp": "2025-04-20T00:00:00.000Z",
+      "playing": 395
+    },
+    {
+      "timestamp": "2025-04-21T00:00:00.000Z",
+      "playing": 390
+    },
+    {
+      "timestamp": "2025-04-22T00:00:00.000Z",
+      "playing": 361
+    },
+    {
+      "timestamp": "2025-04-23T00:00:00.000Z",
+      "playing": 366
+    },
+    {
+      "timestamp": "2025-04-24T00:00:00.000Z",
+      "playing": 384
+    },
+    {
+      "timestamp": "2025-04-25T00:00:00.000Z",
+      "playing": 431
+    },
+    {
+      "timestamp": "2025-04-26T00:00:00.000Z",
+      "playing": 474
+    },
+    {
+      "timestamp": "2025-04-27T00:00:00.000Z",
+      "playing": 419
+    },
+    {
+      "timestamp": "2025-04-28T00:00:00.000Z",
+      "playing": 420
+    },
+    {
+      "timestamp": "2025-04-29T00:00:00.000Z",
+      "playing": 353
+    },
+    {
+      "timestamp": "2025-04-30T00:00:00.000Z",
+      "playing": 418
+    },
+    {
+      "timestamp": "2025-05-01T00:00:00.000Z",
+      "playing": 417
+    },
+    {
+      "timestamp": "2025-05-02T00:00:00.000Z",
+      "playing": 429
+    },
+    {
+      "timestamp": "2025-05-03T00:00:00.000Z",
+      "playing": 573
+    },
+    {
+      "timestamp": "2025-05-04T00:00:00.000Z",
+      "playing": 502
+    },
+    {
+      "timestamp": "2025-05-05T00:00:00.000Z",
+      "playing": 472
+    },
+    {
+      "timestamp": "2025-05-06T00:00:00.000Z",
+      "playing": 411
+    },
+    {
+      "timestamp": "2025-05-07T00:00:00.000Z",
+      "playing": 485
+    },
+    {
+      "timestamp": "2025-05-08T00:00:00.000Z",
+      "playing": 469
+    },
+    {
+      "timestamp": "2025-05-09T00:00:00.000Z",
+      "playing": 580
+    },
+    {
+      "timestamp": "2025-05-10T00:00:00.000Z",
+      "playing": 700
+    },
+    {
+      "timestamp": "2025-05-11T00:00:00.000Z",
+      "playing": 584
+    },
+    {
+      "timestamp": "2025-05-12T00:00:00.000Z",
+      "playing": 569
+    },
+    {
+      "timestamp": "2025-05-13T00:00:00.000Z",
+      "playing": 584
+    },
+    {
+      "timestamp": "2025-05-14T00:00:00.000Z",
+      "playing": 545
+    },
+    {
+      "timestamp": "2025-05-15T00:00:00.000Z",
+      "playing": 618
+    },
+    {
+      "timestamp": "2025-05-16T00:00:00.000Z",
+      "playing": 759
+    },
+    {
+      "timestamp": "2025-05-17T00:00:00.000Z",
+      "playing": 767
+    },
+    {
+      "timestamp": "2025-05-18T00:00:00.000Z",
+      "playing": 616
+    },
+    {
+      "timestamp": "2025-05-19T00:00:00.000Z",
+      "playing": 556
+    },
+    {
+      "timestamp": "2025-05-20T00:00:00.000Z",
+      "playing": 576
+    },
+    {
+      "timestamp": "2025-05-21T00:00:00.000Z",
+      "playing": 586
+    },
+    {
+      "timestamp": "2025-05-22T00:00:00.000Z",
+      "playing": 584
+    },
+    {
+      "timestamp": "2025-05-23T00:00:00.000Z",
+      "playing": 702
+    },
+    {
+      "timestamp": "2025-05-24T00:00:00.000Z",
+      "playing": 595
+    },
+    {
+      "timestamp": "2025-05-25T00:00:00.000Z",
+      "playing": 613
+    },
+    {
+      "timestamp": "2025-05-26T00:00:00.000Z",
+      "playing": 541
+    },
+    {
+      "timestamp": "2025-05-27T00:00:00.000Z",
+      "playing": 529
+    },
+    {
+      "timestamp": "2025-05-28T00:00:00.000Z",
+      "playing": 532
+    },
+    {
+      "timestamp": "2025-05-29T00:00:00.000Z",
+      "playing": 510
+    },
+    {
+      "timestamp": "2025-05-30T00:00:00.000Z",
+      "playing": 580
+    },
+    {
+      "timestamp": "2025-05-31T00:00:00.000Z",
+      "playing": 601
+    },
+    {
+      "timestamp": "2025-06-01T00:00:00.000Z",
+      "playing": 522
+    },
+    {
+      "timestamp": "2025-06-02T00:00:00.000Z",
+      "playing": 546
+    },
+    {
+      "timestamp": "2025-06-03T00:00:00.000Z",
+      "playing": 385
+    },
+    {
+      "timestamp": "2025-06-04T00:00:00.000Z",
+      "playing": 572
+    },
+    {
+      "timestamp": "2025-06-05T00:00:00.000Z",
+      "playing": 616
+    },
+    {
+      "timestamp": "2025-06-06T00:00:00.000Z",
+      "playing": 649
+    },
+    {
+      "timestamp": "2025-06-07T00:00:00.000Z",
+      "playing": 765
+    },
+    {
+      "timestamp": "2025-06-08T00:00:00.000Z",
+      "playing": 779
+    },
+    {
+      "timestamp": "2025-06-09T00:00:00.000Z",
+      "playing": 753
+    },
+    {
+      "timestamp": "2025-06-10T00:00:00.000Z",
+      "playing": 746
+    },
+    {
+      "timestamp": "2025-06-11T00:00:00.000Z",
+      "playing": 695
+    },
+    {
+      "timestamp": "2025-06-12T00:00:00.000Z",
+      "playing": 712
+    },
+    {
+      "timestamp": "2025-06-13T00:00:00.000Z",
+      "playing": 896
+    },
+    {
+      "timestamp": "2025-06-14T00:00:00.000Z",
+      "playing": 1103
+    },
+    {
+      "timestamp": "2025-06-15T00:00:00.000Z",
+      "playing": 941
+    },
+    {
+      "timestamp": "2025-06-16T00:00:00.000Z",
+      "playing": 897
+    },
+    {
+      "timestamp": "2025-06-17T00:00:00.000Z",
+      "playing": 1388
+    },
+    {
+      "timestamp": "2025-06-18T00:00:00.000Z",
+      "playing": 1783
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00.000Z",
+      "playing": 2239
+    },
+    {
+      "timestamp": "2025-06-20T00:00:00.000Z",
+      "playing": 2108
+    },
+    {
+      "timestamp": "2025-06-21T00:00:00.000Z",
+      "playing": 1977
+    },
+    {
+      "timestamp": "2025-06-22T00:00:00.000Z",
+      "playing": 2018
+    },
+    {
+      "timestamp": "2025-06-23T00:00:00.000Z",
+      "playing": 1822
+    },
+    {
+      "timestamp": "2025-06-24T00:00:00.000Z",
+      "playing": 1572
+    },
+    {
+      "timestamp": "2025-06-25T00:00:00.000Z",
+      "playing": 1438
+    },
+    {
+      "timestamp": "2025-06-26T00:00:00.000Z",
+      "playing": 1632
+    },
+    {
+      "timestamp": "2025-06-27T00:00:00.000Z",
+      "playing": 1229
+    },
+    {
+      "timestamp": "2025-06-28T00:00:00.000Z",
+      "playing": 1109
+    },
+    {
+      "timestamp": "2025-06-29T00:00:00.000Z",
+      "playing": 1021
+    },
+    {
+      "timestamp": "2025-06-30T00:00:00.000Z",
+      "playing": 875
+    },
+    {
+      "timestamp": "2025-07-01T00:00:00.000Z",
+      "playing": 889
+    },
+    {
+      "timestamp": "2025-07-02T00:00:00.000Z",
+      "playing": 871
+    },
+    {
+      "timestamp": "2025-07-03T00:00:00.000Z",
+      "playing": 769
+    },
+    {
+      "timestamp": "2025-07-04T00:00:00.000Z",
+      "playing": 954
+    },
+    {
+      "timestamp": "2025-07-05T00:00:00.000Z",
+      "playing": 926
+    },
+    {
+      "timestamp": "2025-07-06T00:00:00.000Z",
+      "playing": 837
+    },
+    {
+      "timestamp": "2025-07-07T00:00:00.000Z",
+      "playing": 755
+    },
+    {
+      "timestamp": "2025-07-08T00:00:00.000Z",
+      "playing": 776
+    },
+    {
+      "timestamp": "2025-07-09T00:00:00.000Z",
+      "playing": 688
+    },
+    {
+      "timestamp": "2025-07-10T00:00:00.000Z",
+      "playing": 756
+    },
+    {
+      "timestamp": "2025-07-11T00:00:00.000Z",
+      "playing": 984
+    },
+    {
+      "timestamp": "2025-07-12T00:00:00.000Z",
+      "playing": 778
+    },
+    {
+      "timestamp": "2025-07-13T00:00:00.000Z",
+      "playing": 674
+    },
+    {
+      "timestamp": "2025-07-14T00:00:00.000Z",
+      "playing": 555
+    },
+    {
+      "timestamp": "2025-07-15T00:00:00.000Z",
+      "playing": 599
+    },
+    {
+      "timestamp": "2025-07-16T00:00:00.000Z",
+      "playing": 665
+    },
+    {
+      "timestamp": "2025-07-17T00:00:00.000Z",
+      "playing": 661
+    },
+    {
+      "timestamp": "2025-07-18T00:00:00.000Z",
+      "playing": 637
+    },
+    {
+      "timestamp": "2025-07-19T00:00:00.000Z",
+      "playing": 681
+    },
+    {
+      "timestamp": "2025-07-20T00:00:00.000Z",
+      "playing": 654
+    },
+    {
+      "timestamp": "2025-07-21T00:00:00.000Z",
+      "playing": 647
+    },
+    {
+      "timestamp": "2025-07-22T00:00:00.000Z",
+      "playing": 617
+    },
+    {
+      "timestamp": "2025-07-23T00:00:00.000Z",
+      "playing": 637
+    },
+    {
+      "timestamp": "2025-07-24T00:00:00.000Z",
+      "playing": 645
+    },
+    {
+      "timestamp": "2025-07-25T00:00:00.000Z",
+      "playing": 783
+    },
+    {
+      "timestamp": "2025-07-26T00:00:00.000Z",
+      "playing": 932
+    },
+    {
+      "timestamp": "2025-07-27T00:00:00.000Z",
+      "playing": 947
+    },
+    {
+      "timestamp": "2025-07-28T00:00:00.000Z",
+      "playing": 1061
+    },
+    {
+      "timestamp": "2025-07-29T00:00:00.000Z",
+      "playing": 1013
+    },
+    {
+      "timestamp": "2025-07-30T00:00:00.000Z",
+      "playing": 1123
+    },
+    {
+      "timestamp": "2025-07-31T00:00:00.000Z",
+      "playing": 1538
+    },
+    {
+      "timestamp": "2025-08-01T00:00:00.000Z",
+      "playing": 1567
+    },
+    {
+      "timestamp": "2025-08-02T00:00:00.000Z",
+      "playing": 1610
+    },
+    {
+      "timestamp": "2025-08-03T00:00:00.000Z",
+      "playing": 1759
+    },
+    {
+      "timestamp": "2025-08-04T00:00:00.000Z",
+      "playing": 1574
+    },
+    {
+      "timestamp": "2025-08-05T00:00:00.000Z",
+      "playing": 1494
+    },
+    {
+      "timestamp": "2025-08-06T00:00:00.000Z",
+      "playing": 1657
+    },
+    {
+      "timestamp": "2025-08-07T00:00:00.000Z",
+      "playing": 1741
+    },
+    {
+      "timestamp": "2025-08-08T00:00:00.000Z",
+      "playing": 1663
+    },
+    {
+      "timestamp": "2025-08-09T00:00:00.000Z",
+      "playing": 1671
+    },
+    {
+      "timestamp": "2025-08-10T00:00:00.000Z",
+      "playing": 1640
+    },
+    {
+      "timestamp": "2025-08-11T00:00:00.000Z",
+      "playing": 1461
+    },
+    {
+      "timestamp": "2025-08-12T00:00:00.000Z",
+      "playing": 1413
+    },
+    {
+      "timestamp": "2025-08-13T00:00:00.000Z",
+      "playing": 1335
+    },
+    {
+      "timestamp": "2025-08-14T00:00:00.000Z",
+      "playing": 1239
+    },
+    {
+      "timestamp": "2025-08-15T00:00:00.000Z",
+      "playing": 1270
+    },
+    {
+      "timestamp": "2025-08-16T00:00:00.000Z",
+      "playing": 1442
+    },
+    {
+      "timestamp": "2025-08-17T00:00:00.000Z",
+      "playing": 1382
+    },
+    {
+      "timestamp": "2025-08-18T00:00:00.000Z",
+      "playing": 1309
+    },
+    {
+      "timestamp": "2025-08-19T00:00:00.000Z",
+      "playing": 1253
+    },
+    {
+      "timestamp": "2025-08-20T00:00:00.000Z",
+      "playing": 1271
+    },
+    {
+      "timestamp": "2025-08-21T00:00:00.000Z",
+      "playing": 1282
+    },
+    {
+      "timestamp": "2025-08-22T00:00:00.000Z",
+      "playing": 1478
+    },
+    {
+      "timestamp": "2025-08-23T00:00:00.000Z",
+      "playing": 1520
+    },
+    {
+      "timestamp": "2025-08-24T00:00:00.000Z",
+      "playing": 1578
+    },
+    {
+      "timestamp": "2025-08-25T00:00:00.000Z",
+      "playing": 1487
+    },
+    {
+      "timestamp": "2025-08-26T00:00:00.000Z",
+      "playing": 1455
+    },
+    {
+      "timestamp": "2025-08-27T00:00:00.000Z",
+      "playing": 1461
+    },
+    {
+      "timestamp": "2025-08-28T00:00:00.000Z",
+      "playing": 1418
+    },
+    {
+      "timestamp": "2025-08-29T00:00:00.000Z",
+      "playing": 1492
+    },
+    {
+      "timestamp": "2025-08-30T00:00:00.000Z",
+      "playing": 1559
+    },
+    {
+      "timestamp": "2025-08-31T00:00:00.000Z",
+      "playing": 1356
+    },
+    {
+      "timestamp": "2025-09-01T00:00:00.000Z",
+      "playing": 1360
+    },
+    {
+      "timestamp": "2025-09-02T00:00:00.000Z",
+      "playing": 1257
+    },
+    {
+      "timestamp": "2025-09-03T00:00:00.000Z",
+      "playing": 1203
+    },
+    {
+      "timestamp": "2025-09-04T00:00:00.000Z",
+      "playing": 1145
+    },
+    {
+      "timestamp": "2025-09-05T00:00:00.000Z",
+      "playing": 1428
+    },
+    {
+      "timestamp": "2025-09-06T00:00:00.000Z",
+      "playing": 1680
+    },
+    {
+      "timestamp": "2025-09-07T00:00:00.000Z",
+      "playing": 1511
+    },
+    {
+      "timestamp": "2025-09-08T00:00:00.000Z",
+      "playing": 1419
+    },
+    {
+      "timestamp": "2025-09-09T00:00:00.000Z",
+      "playing": 1247
+    },
+    {
+      "timestamp": "2025-09-10T00:00:00.000Z",
+      "playing": 1326
+    },
+    {
+      "timestamp": "2025-09-11T00:00:00.000Z",
+      "playing": 1325
+    },
+    {
+      "timestamp": "2025-09-12T00:00:00.000Z",
+      "playing": 1491
+    },
+    {
+      "timestamp": "2025-09-13T00:00:00.000Z",
+      "playing": 1569
+    },
+    {
+      "timestamp": "2025-09-14T00:00:00.000Z",
+      "playing": 1523
+    },
+    {
+      "timestamp": "2025-09-15T00:00:00.000Z",
+      "playing": 1334
+    },
+    {
+      "timestamp": "2025-09-16T00:00:00.000Z",
+      "playing": 1233
+    },
+    {
+      "timestamp": "2025-09-17T00:00:00.000Z",
+      "playing": 1278
+    },
+    {
+      "timestamp": "2025-09-18T00:00:00.000Z",
+      "playing": 1283
+    },
+    {
+      "timestamp": "2025-09-19T00:00:00.000Z",
+      "playing": 1362
+    },
+    {
+      "timestamp": "2025-09-20T00:00:00.000Z",
+      "playing": 1509
+    },
+    {
+      "timestamp": "2025-09-21T00:00:00.000Z",
+      "playing": 1325
+    }
+  ]
+}

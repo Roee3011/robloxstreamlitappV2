@@ -1,0 +1,909 @@
+{
+  "ok": true,
+  "kpiData": [
+    {
+      "timestamp": "2024-12-30T00:00:00.000Z",
+      "sort_position": 270
+    },
+    {
+      "timestamp": "2024-12-31T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-01-01T00:00:00.000Z",
+      "sort_position": 245
+    },
+    {
+      "timestamp": "2025-01-02T00:00:00.000Z",
+      "sort_position": 234
+    },
+    {
+      "timestamp": "2025-01-03T00:00:00.000Z",
+      "sort_position": 223
+    },
+    {
+      "timestamp": "2025-01-04T00:00:00.000Z",
+      "sort_position": 204
+    },
+    {
+      "timestamp": "2025-01-05T00:00:00.000Z",
+      "sort_position": 58
+    },
+    {
+      "timestamp": "2025-01-06T00:00:00.000Z",
+      "sort_position": 264
+    },
+    {
+      "timestamp": "2025-01-07T00:00:00.000Z",
+      "sort_position": 234
+    },
+    {
+      "timestamp": "2025-01-08T00:00:00.000Z",
+      "sort_position": 207
+    },
+    {
+      "timestamp": "2025-01-09T00:00:00.000Z",
+      "sort_position": 198
+    },
+    {
+      "timestamp": "2025-01-10T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-11T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-12T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-13T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-14T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-15T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-16T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-17T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-18T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-19T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-20T00:00:00.000Z",
+      "sort_position": 197
+    },
+    {
+      "timestamp": "2025-01-21T00:00:00.000Z",
+      "sort_position": 232
+    },
+    {
+      "timestamp": "2025-01-22T00:00:00.000Z",
+      "sort_position": 237
+    },
+    {
+      "timestamp": "2025-01-23T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-01-24T00:00:00.000Z",
+      "sort_position": 235
+    },
+    {
+      "timestamp": "2025-01-25T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-01-26T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-01-27T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-01-28T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-01-29T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-01-30T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-01-31T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-02-01T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-02-02T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-02-03T00:00:00.000Z",
+      "sort_position": 236
+    },
+    {
+      "timestamp": "2025-02-04T00:00:00.000Z",
+      "sort_position": 237
+    },
+    {
+      "timestamp": "2025-02-05T00:00:00.000Z",
+      "sort_position": 240
+    },
+    {
+      "timestamp": "2025-02-06T00:00:00.000Z",
+      "sort_position": 241
+    },
+    {
+      "timestamp": "2025-02-07T00:00:00.000Z",
+      "sort_position": 245
+    },
+    {
+      "timestamp": "2025-02-08T00:00:00.000Z",
+      "sort_position": 243
+    },
+    {
+      "timestamp": "2025-02-09T00:00:00.000Z",
+      "sort_position": 248
+    },
+    {
+      "timestamp": "2025-02-10T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-11T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-12T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-13T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-14T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-15T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-16T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-17T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-18T00:00:00.000Z",
+      "sort_position": 261
+    },
+    {
+      "timestamp": "2025-02-19T00:00:00.000Z",
+      "sort_position": 355
+    },
+    {
+      "timestamp": "2025-02-20T00:00:00.000Z",
+      "sort_position": 353
+    },
+    {
+      "timestamp": "2025-02-21T00:00:00.000Z",
+      "sort_position": 355
+    },
+    {
+      "timestamp": "2025-02-22T00:00:00.000Z",
+      "sort_position": 360
+    },
+    {
+      "timestamp": "2025-02-23T00:00:00.000Z",
+      "sort_position": 358
+    },
+    {
+      "timestamp": "2025-02-24T00:00:00.000Z",
+      "sort_position": 359
+    },
+    {
+      "timestamp": "2025-02-25T00:00:00.000Z",
+      "sort_position": 370
+    },
+    {
+      "timestamp": "2025-02-26T00:00:00.000Z",
+      "sort_position": 390
+    },
+    {
+      "timestamp": "2025-02-27T00:00:00.000Z",
+      "sort_position": 409
+    },
+    {
+      "timestamp": "2025-02-28T00:00:00.000Z",
+      "sort_position": 419
+    },
+    {
+      "timestamp": "2025-03-01T00:00:00.000Z",
+      "sort_position": 438
+    },
+    {
+      "timestamp": "2025-03-02T00:00:00.000Z",
+      "sort_position": 448
+    },
+    {
+      "timestamp": "2025-03-03T00:00:00.000Z",
+      "sort_position": 474
+    },
+    {
+      "timestamp": "2025-03-04T00:00:00.000Z",
+      "sort_position": 482
+    },
+    {
+      "timestamp": "2025-03-05T00:00:00.000Z",
+      "sort_position": 482
+    },
+    {
+      "timestamp": "2025-03-06T00:00:00.000Z",
+      "sort_position": 468
+    },
+    {
+      "timestamp": "2025-03-07T00:00:00.000Z",
+      "sort_position": 468
+    },
+    {
+      "timestamp": "2025-03-08T00:00:00.000Z",
+      "sort_position": 469
+    },
+    {
+      "timestamp": "2025-03-09T00:00:00.000Z",
+      "sort_position": 468
+    },
+    {
+      "timestamp": "2025-03-10T00:00:00.000Z",
+      "sort_position": 458
+    },
+    {
+      "timestamp": "2025-03-11T00:00:00.000Z",
+      "sort_position": 458
+    },
+    {
+      "timestamp": "2025-03-12T00:00:00.000Z",
+      "sort_position": 466
+    },
+    {
+      "timestamp": "2025-03-13T00:00:00.000Z",
+      "sort_position": 473
+    },
+    {
+      "timestamp": "2025-03-14T00:00:00.000Z",
+      "sort_position": 475
+    },
+    {
+      "timestamp": "2025-03-15T00:00:00.000Z",
+      "sort_position": 479
+    },
+    {
+      "timestamp": "2025-03-16T00:00:00.000Z",
+      "sort_position": 488
+    },
+    {
+      "timestamp": "2025-03-17T00:00:00.000Z",
+      "sort_position": 483
+    },
+    {
+      "timestamp": "2025-03-18T00:00:00.000Z",
+      "sort_position": 464
+    },
+    {
+      "timestamp": "2025-03-19T00:00:00.000Z",
+      "sort_position": 463
+    },
+    {
+      "timestamp": "2025-03-20T00:00:00.000Z",
+      "sort_position": 455
+    },
+    {
+      "timestamp": "2025-03-21T00:00:00.000Z",
+      "sort_position": 449
+    },
+    {
+      "timestamp": "2025-03-22T00:00:00.000Z",
+      "sort_position": 448
+    },
+    {
+      "timestamp": "2025-03-23T00:00:00.000Z",
+      "sort_position": 455
+    },
+    {
+      "timestamp": "2025-03-24T00:00:00.000Z",
+      "sort_position": 468
+    },
+    {
+      "timestamp": "2025-03-25T00:00:00.000Z",
+      "sort_position": 467
+    },
+    {
+      "timestamp": "2025-03-26T00:00:00.000Z",
+      "sort_position": 464
+    },
+    {
+      "timestamp": "2025-03-27T00:00:00.000Z",
+      "sort_position": 471
+    },
+    {
+      "timestamp": "2025-03-28T00:00:00.000Z",
+      "sort_position": 476
+    },
+    {
+      "timestamp": "2025-03-29T00:00:00.000Z",
+      "sort_position": 479
+    },
+    {
+      "timestamp": "2025-03-30T00:00:00.000Z",
+      "sort_position": 476
+    },
+    {
+      "timestamp": "2025-03-31T00:00:00.000Z",
+      "sort_position": 470
+    },
+    {
+      "timestamp": "2025-04-01T00:00:00.000Z",
+      "sort_position": 446
+    },
+    {
+      "timestamp": "2025-04-02T00:00:00.000Z",
+      "sort_position": 445
+    },
+    {
+      "timestamp": "2025-04-03T00:00:00.000Z",
+      "sort_position": 466
+    },
+    {
+      "timestamp": "2025-04-04T00:00:00.000Z",
+      "sort_position": 476
+    },
+    {
+      "timestamp": "2025-04-05T00:00:00.000Z",
+      "sort_position": 468
+    },
+    {
+      "timestamp": "2025-04-06T00:00:00.000Z",
+      "sort_position": 469
+    },
+    {
+      "timestamp": "2025-04-07T00:00:00.000Z",
+      "sort_position": 468
+    },
+    {
+      "timestamp": "2025-04-08T00:00:00.000Z",
+      "sort_position": 474
+    },
+    {
+      "timestamp": "2025-04-09T00:00:00.000Z",
+      "sort_position": 469
+    },
+    {
+      "timestamp": "2025-04-10T00:00:00.000Z",
+      "sort_position": 451
+    },
+    {
+      "timestamp": "2025-04-11T00:00:00.000Z",
+      "sort_position": 428
+    },
+    {
+      "timestamp": "2025-04-12T00:00:00.000Z",
+      "sort_position": 422
+    },
+    {
+      "timestamp": "2025-04-13T00:00:00.000Z",
+      "sort_position": 424
+    },
+    {
+      "timestamp": "2025-04-14T00:00:00.000Z",
+      "sort_position": 422
+    },
+    {
+      "timestamp": "2025-04-15T00:00:00.000Z",
+      "sort_position": 420
+    },
+    {
+      "timestamp": "2025-04-16T00:00:00.000Z",
+      "sort_position": 422
+    },
+    {
+      "timestamp": "2025-04-17T00:00:00.000Z",
+      "sort_position": 418
+    },
+    {
+      "timestamp": "2025-04-18T00:00:00.000Z",
+      "sort_position": 418
+    },
+    {
+      "timestamp": "2025-04-19T00:00:00.000Z",
+      "sort_position": 433
+    },
+    {
+      "timestamp": "2025-04-20T00:00:00.000Z",
+      "sort_position": 442
+    },
+    {
+      "timestamp": "2025-04-21T00:00:00.000Z",
+      "sort_position": 436
+    },
+    {
+      "timestamp": "2025-04-22T00:00:00.000Z",
+      "sort_position": 427
+    },
+    {
+      "timestamp": "2025-04-23T00:00:00.000Z",
+      "sort_position": 422
+    },
+    {
+      "timestamp": "2025-04-24T00:00:00.000Z",
+      "sort_position": 418
+    },
+    {
+      "timestamp": "2025-04-25T00:00:00.000Z",
+      "sort_position": 404
+    },
+    {
+      "timestamp": "2025-04-26T00:00:00.000Z",
+      "sort_position": 394
+    },
+    {
+      "timestamp": "2025-04-27T00:00:00.000Z",
+      "sort_position": 391
+    },
+    {
+      "timestamp": "2025-04-28T00:00:00.000Z",
+      "sort_position": 387
+    },
+    {
+      "timestamp": "2025-04-29T00:00:00.000Z",
+      "sort_position": 368
+    },
+    {
+      "timestamp": "2025-04-30T00:00:00.000Z",
+      "sort_position": 363
+    },
+    {
+      "timestamp": "2025-05-01T00:00:00.000Z",
+      "sort_position": 356
+    },
+    {
+      "timestamp": "2025-05-02T00:00:00.000Z",
+      "sort_position": 362
+    },
+    {
+      "timestamp": "2025-05-03T00:00:00.000Z",
+      "sort_position": 366
+    },
+    {
+      "timestamp": "2025-05-04T00:00:00.000Z",
+      "sort_position": 378
+    },
+    {
+      "timestamp": "2025-05-05T00:00:00.000Z",
+      "sort_position": 384
+    },
+    {
+      "timestamp": "2025-05-06T00:00:00.000Z",
+      "sort_position": 385
+    },
+    {
+      "timestamp": "2025-05-07T00:00:00.000Z",
+      "sort_position": 395
+    },
+    {
+      "timestamp": "2025-05-08T00:00:00.000Z",
+      "sort_position": 395
+    },
+    {
+      "timestamp": "2025-05-09T00:00:00.000Z",
+      "sort_position": 405
+    },
+    {
+      "timestamp": "2025-05-10T00:00:00.000Z",
+      "sort_position": 420
+    },
+    {
+      "timestamp": "2025-05-11T00:00:00.000Z",
+      "sort_position": 420
+    },
+    {
+      "timestamp": "2025-05-12T00:00:00.000Z",
+      "sort_position": 434
+    },
+    {
+      "timestamp": "2025-05-13T00:00:00.000Z",
+      "sort_position": 468
+    },
+    {
+      "timestamp": "2025-05-14T00:00:00.000Z",
+      "sort_position": 477
+    },
+    {
+      "timestamp": "2025-05-15T00:00:00.000Z",
+      "sort_position": 477
+    },
+    {
+      "timestamp": "2025-05-16T00:00:00.000Z",
+      "sort_position": 489
+    },
+    {
+      "timestamp": "2025-05-17T00:00:00.000Z",
+      "sort_position": 495
+    },
+    {
+      "timestamp": "2025-06-16T00:00:00.000Z",
+      "sort_position": 480
+    },
+    {
+      "timestamp": "2025-06-17T00:00:00.000Z",
+      "sort_position": 462
+    },
+    {
+      "timestamp": "2025-06-18T00:00:00.000Z",
+      "sort_position": 444
+    },
+    {
+      "timestamp": "2025-06-19T00:00:00.000Z",
+      "sort_position": 414
+    },
+    {
+      "timestamp": "2025-06-20T00:00:00.000Z",
+      "sort_position": 395
+    },
+    {
+      "timestamp": "2025-06-21T00:00:00.000Z",
+      "sort_position": 399
+    },
+    {
+      "timestamp": "2025-06-22T00:00:00.000Z",
+      "sort_position": 414
+    },
+    {
+      "timestamp": "2025-06-23T00:00:00.000Z",
+      "sort_position": 434
+    },
+    {
+      "timestamp": "2025-06-24T00:00:00.000Z",
+      "sort_position": 448
+    },
+    {
+      "timestamp": "2025-06-25T00:00:00.000Z",
+      "sort_position": 466
+    },
+    {
+      "timestamp": "2025-06-26T00:00:00.000Z",
+      "sort_position": 466
+    },
+    {
+      "timestamp": "2025-06-27T00:00:00.000Z",
+      "sort_position": 481
+    },
+    {
+      "timestamp": "2025-06-28T00:00:00.000Z",
+      "sort_position": 490
+    },
+    {
+      "timestamp": "2025-07-10T00:00:00.000Z",
+      "sort_position": 496
+    },
+    {
+      "timestamp": "2025-07-11T00:00:00.000Z",
+      "sort_position": 496
+    },
+    {
+      "timestamp": "2025-07-12T00:00:00.000Z",
+      "sort_position": 494
+    },
+    {
+      "timestamp": "2025-07-13T00:00:00.000Z",
+      "sort_position": 488
+    },
+    {
+      "timestamp": "2025-07-14T00:00:00.000Z",
+      "sort_position": 464
+    },
+    {
+      "timestamp": "2025-07-15T00:00:00.000Z",
+      "sort_position": 446
+    },
+    {
+      "timestamp": "2025-07-16T00:00:00.000Z",
+      "sort_position": 433
+    },
+    {
+      "timestamp": "2025-07-17T00:00:00.000Z",
+      "sort_position": 424
+    },
+    {
+      "timestamp": "2025-07-18T00:00:00.000Z",
+      "sort_position": 418
+    },
+    {
+      "timestamp": "2025-07-19T00:00:00.000Z",
+      "sort_position": 386
+    },
+    {
+      "timestamp": "2025-07-20T00:00:00.000Z",
+      "sort_position": 370
+    },
+    {
+      "timestamp": "2025-07-21T00:00:00.000Z",
+      "sort_position": 355
+    },
+    {
+      "timestamp": "2025-07-22T00:00:00.000Z",
+      "sort_position": 335
+    },
+    {
+      "timestamp": "2025-07-23T00:00:00.000Z",
+      "sort_position": 330
+    },
+    {
+      "timestamp": "2025-07-24T00:00:00.000Z",
+      "sort_position": 326
+    },
+    {
+      "timestamp": "2025-07-25T00:00:00.000Z",
+      "sort_position": 328
+    },
+    {
+      "timestamp": "2025-07-26T00:00:00.000Z",
+      "sort_position": 331
+    },
+    {
+      "timestamp": "2025-07-27T00:00:00.000Z",
+      "sort_position": 340
+    },
+    {
+      "timestamp": "2025-07-28T00:00:00.000Z",
+      "sort_position": 347
+    },
+    {
+      "timestamp": "2025-07-29T00:00:00.000Z",
+      "sort_position": 353
+    },
+    {
+      "timestamp": "2025-07-30T00:00:00.000Z",
+      "sort_position": 352
+    },
+    {
+      "timestamp": "2025-07-31T00:00:00.000Z",
+      "sort_position": 346
+    },
+    {
+      "timestamp": "2025-08-01T00:00:00.000Z",
+      "sort_position": 346
+    },
+    {
+      "timestamp": "2025-08-02T00:00:00.000Z",
+      "sort_position": 350
+    },
+    {
+      "timestamp": "2025-08-03T00:00:00.000Z",
+      "sort_position": 358
+    },
+    {
+      "timestamp": "2025-08-04T00:00:00.000Z",
+      "sort_position": 368
+    },
+    {
+      "timestamp": "2025-08-05T00:00:00.000Z",
+      "sort_position": 354
+    },
+    {
+      "timestamp": "2025-08-06T00:00:00.000Z",
+      "sort_position": 352
+    },
+    {
+      "timestamp": "2025-08-07T00:00:00.000Z",
+      "sort_position": 349
+    },
+    {
+      "timestamp": "2025-08-08T00:00:00.000Z",
+      "sort_position": 343
+    },
+    {
+      "timestamp": "2025-08-09T00:00:00.000Z",
+      "sort_position": 342
+    },
+    {
+      "timestamp": "2025-08-10T00:00:00.000Z",
+      "sort_position": 334
+    },
+    {
+      "timestamp": "2025-08-11T00:00:00.000Z",
+      "sort_position": 319
+    },
+    {
+      "timestamp": "2025-08-12T00:00:00.000Z",
+      "sort_position": 317
+    },
+    {
+      "timestamp": "2025-08-13T00:00:00.000Z",
+      "sort_position": 316
+    },
+    {
+      "timestamp": "2025-08-14T00:00:00.000Z",
+      "sort_position": 319
+    },
+    {
+      "timestamp": "2025-08-15T00:00:00.000Z",
+      "sort_position": 317
+    },
+    {
+      "timestamp": "2025-08-16T00:00:00.000Z",
+      "sort_position": 316
+    },
+    {
+      "timestamp": "2025-08-17T00:00:00.000Z",
+      "sort_position": 322
+    },
+    {
+      "timestamp": "2025-08-18T00:00:00.000Z",
+      "sort_position": 325
+    },
+    {
+      "timestamp": "2025-08-19T00:00:00.000Z",
+      "sort_position": 325
+    },
+    {
+      "timestamp": "2025-08-20T00:00:00.000Z",
+      "sort_position": 327
+    },
+    {
+      "timestamp": "2025-08-21T00:00:00.000Z",
+      "sort_position": 324
+    },
+    {
+      "timestamp": "2025-08-22T00:00:00.000Z",
+      "sort_position": 344
+    },
+    {
+      "timestamp": "2025-08-23T00:00:00.000Z",
+      "sort_position": 351
+    },
+    {
+      "timestamp": "2025-08-24T00:00:00.000Z",
+      "sort_position": 352
+    },
+    {
+      "timestamp": "2025-08-25T00:00:00.000Z",
+      "sort_position": 354
+    },
+    {
+      "timestamp": "2025-08-26T00:00:00.000Z",
+      "sort_position": 353
+    },
+    {
+      "timestamp": "2025-08-27T00:00:00.000Z",
+      "sort_position": 355
+    },
+    {
+      "timestamp": "2025-08-28T00:00:00.000Z",
+      "sort_position": 346
+    },
+    {
+      "timestamp": "2025-08-29T00:00:00.000Z",
+      "sort_position": 342
+    },
+    {
+      "timestamp": "2025-08-30T00:00:00.000Z",
+      "sort_position": 349
+    },
+    {
+      "timestamp": "2025-08-31T00:00:00.000Z",
+      "sort_position": 352
+    },
+    {
+      "timestamp": "2025-09-01T00:00:00.000Z",
+      "sort_position": 356
+    },
+    {
+      "timestamp": "2025-09-02T00:00:00.000Z",
+      "sort_position": 353
+    },
+    {
+      "timestamp": "2025-09-03T00:00:00.000Z",
+      "sort_position": 346
+    },
+    {
+      "timestamp": "2025-09-04T00:00:00.000Z",
+      "sort_position": 340
+    },
+    {
+      "timestamp": "2025-09-05T00:00:00.000Z",
+      "sort_position": 342
+    },
+    {
+      "timestamp": "2025-09-06T00:00:00.000Z",
+      "sort_position": 344
+    },
+    {
+      "timestamp": "2025-09-07T00:00:00.000Z",
+      "sort_position": 344
+    },
+    {
+      "timestamp": "2025-09-08T00:00:00.000Z",
+      "sort_position": 344
+    },
+    {
+      "timestamp": "2025-09-09T00:00:00.000Z",
+      "sort_position": 350
+    },
+    {
+      "timestamp": "2025-09-10T00:00:00.000Z",
+      "sort_position": 357
+    },
+    {
+      "timestamp": "2025-09-11T00:00:00.000Z",
+      "sort_position": 356
+    },
+    {
+      "timestamp": "2025-09-12T00:00:00.000Z",
+      "sort_position": 357
+    },
+    {
+      "timestamp": "2025-09-13T00:00:00.000Z",
+      "sort_position": 364
+    },
+    {
+      "timestamp": "2025-09-14T00:00:00.000Z",
+      "sort_position": 376
+    },
+    {
+      "timestamp": "2025-09-15T00:00:00.000Z",
+      "sort_position": 387
+    },
+    {
+      "timestamp": "2025-09-16T00:00:00.000Z",
+      "sort_position": 394
+    },
+    {
+      "timestamp": "2025-09-17T00:00:00.000Z",
+      "sort_position": 399
+    },
+    {
+      "timestamp": "2025-09-18T00:00:00.000Z",
+      "sort_position": 410
+    },
+    {
+      "timestamp": "2025-09-19T00:00:00.000Z",
+      "sort_position": 417
+    },
+    {
+      "timestamp": "2025-09-20T00:00:00.000Z",
+      "sort_position": 426
+    },
+    {
+      "timestamp": "2025-09-21T00:00:00.000Z",
+      "sort_position": 439
+    }
+  ]
+}
