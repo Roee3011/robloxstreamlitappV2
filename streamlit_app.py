@@ -711,24 +711,23 @@ def main():
         # Game selection dropdown
         game_options = filtered_games['name'].tolist()
         
-        # Always ensure Punch Wall is available as an option if not already present
+        # Only add Punch Wall as default option when there's no search term
         punch_wall_name = "Punch Wall"
-        if punch_wall_name not in game_options:
-            # Add Punch Wall to the beginning of the options
+        if not search_term and punch_wall_name not in game_options:
+            # Add Punch Wall to the beginning of the options only when showing default list
             game_options.insert(0, punch_wall_name)
         
         # Determine the default index for the selectbox
         default_index = 0
-        punch_wall_name = "Punch Wall"
         
-        # First priority: if Punch Wall is available, select it as default
-        if punch_wall_name in game_options:
+        # First priority: if we have a previously selected game that's in the current options, select it
+        if st.session_state.selected_game_name and st.session_state.selected_game_name in game_options:
+            default_index = game_options.index(st.session_state.selected_game_name)
+        # Second priority: if no search term and Punch Wall is available, select it as default (only for initial load)
+        elif not search_term and punch_wall_name in game_options:
             default_index = game_options.index(punch_wall_name)
             if 'selected_game_name' not in st.session_state or st.session_state.selected_game_name == "":
                 st.session_state.selected_game_name = punch_wall_name
-        # Second priority: if we have a previously selected game that's in the current options, select it
-        elif st.session_state.selected_game_name and st.session_state.selected_game_name in game_options:
-            default_index = game_options.index(st.session_state.selected_game_name)
         # Third priority: default to first option
         elif game_options:
             default_index = 0
