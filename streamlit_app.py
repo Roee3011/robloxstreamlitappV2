@@ -984,7 +984,7 @@ def main():
     decay_pct = st.sidebar.slider(
         "Weekly Growth/Decay Rate (%)",
         min_value=-5.0,
-        max_value=10.0,
+        max_value=100.0,
         value=0.0,
         step=0.1,
         help="Week-on-week exponential growth (negative) or decay (positive) percentage applied to projected revenue"
