@@ -228,7 +228,7 @@ def calculate_weekly_averages(df, robux_to_usd):
 
 def generate_weekly_projection_with_deviations(start_date, lifetime_mean, december_scale, summer_scale,
                                             normal_week_deviations, 
-                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18):
+                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, allow_unlimited_growth=False):
     """Generate weekly projection using average as base and applying weekly deviation patterns"""
     projection_weekly_dates = []
     projection_weekly_revenues = []
@@ -323,8 +323,9 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                 # Calculate weekly revenue: base * month_scale * weekly_deviation * decay_factor^week_counter
                 weekly_revenue = lifetime_mean * month_scale * weekly_deviation * (decay_factor ** week_counter)
                 
-                # Cap the revenue to not exceed historical weekly peak
-                weekly_revenue = min(weekly_revenue, historical_peak_weekly)
+                # Cap the revenue to not exceed historical weekly peak (unless unlimited growth is allowed)
+                if not allow_unlimited_growth:
+                    weekly_revenue = min(weekly_revenue, historical_peak_weekly)
             
             projection_weekly_dates.append(week_start)
             projection_weekly_revenues.append(weekly_revenue)
@@ -901,6 +902,13 @@ def main():
         help="Week-on-week exponential growth (negative) or decay (positive) percentage applied to projected revenue"
     )
     
+    # Toggle for unlimited growth when using negative decay
+    allow_unlimited_growth = st.sidebar.toggle(
+        "Allow Unlimited Growth",
+        value=False,
+        help="When enabled, projections can exceed historical peaks during growth periods (negative decay). When disabled, projections are capped at historical peak."
+    )
+    
     # Calculate data with user parameters (needed for intelligent peak detection)
     df_with_usd, weekly_avg = calculate_weekly_averages(df.copy(), robux_to_usd)
     
@@ -1010,7 +1018,7 @@ def main():
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
         start_date, last_three_months_mean, december_scale, summer_scale,
         normal_week_deviations, 
-        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month
+        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, allow_unlimited_growth
     )
     
     projection_df = pd.DataFrame({
@@ -1138,6 +1146,7 @@ def main():
     
     st.write(f"**Summer Peaks (May, Jun-Aug):** {'Enabled' if summer_peaks else 'Disabled'}")
     st.write(f"**December Peaks:** {'Enabled' if december_peaks else 'Disabled'}")
+    st.write(f"**Unlimited Growth:** {'Enabled' if allow_unlimited_growth else 'Disabled (Capped at Historical Peak)'}")
     st.write(f"**Comparison Games:** {'Shown' if show_additional_games else 'Hidden'}")
     
     # Additional games info
