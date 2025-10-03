@@ -228,7 +228,7 @@ def calculate_weekly_averages(df, robux_to_usd):
 
 def generate_weekly_projection_with_deviations(start_date, lifetime_mean, december_scale, summer_scale,
                                             normal_week_deviations, 
-                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, allow_unlimited_growth=False):
+                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, allow_unlimited_growth=False, use_polynomial_growth=False):
     """Generate weekly projection using average as base and applying weekly deviation patterns"""
     projection_weekly_dates = []
     projection_weekly_revenues = []
@@ -323,8 +323,37 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                 # Calculate weekly revenue: base * month_scale * weekly_deviation * decay_factor^week_counter
                 weekly_revenue = lifetime_mean * month_scale * weekly_deviation * (decay_factor ** week_counter)
                 
+                # Apply polynomial growth scenario if enabled
+                if use_polynomial_growth:
+                    # 5th degree polynomial with peaks at 3 months (week 12) and 6 months (week 24)
+                    # Normalize week_counter to months (approximately)
+                    month_position = week_counter / 4.33  # Convert weeks to months
+                    
+                    # Define the polynomial multiplier
+                    # Peaks: 10x at 3 months, 5x at 6 months
+                    # Create polynomial coefficients for the desired shape
+                    if month_position <= 18:  # Only apply within 18 months
+                        # Polynomial function: designed to peak at months 3 and 6
+                        # Using a scaled 5th degree polynomial
+                        x = month_position
+                        polynomial_multiplier = (
+                            1.0 +  # Base multiplier
+                            (8.5 * x / 3.0) * (1 - abs(x - 3) / 3.0) * max(0, 1 - abs(x - 3) / 3.0) +  # Peak at 3 months (10x total)
+                            (4.0 * x / 6.0) * (1 - abs(x - 6) / 6.0) * max(0, 1 - abs(x - 6) / 6.0)    # Peak at 6 months (5x total)
+                        )
+                        
+                        # Ensure polynomial doesn't go below 1.0 and smooth the curve
+                        polynomial_multiplier = max(1.0, polynomial_multiplier)
+                        
+                        # Apply smooth decay after peaks
+                        if x > 6:
+                            decay_after_peak = max(0.5, 1.0 - (x - 6) * 0.1)
+                            polynomial_multiplier *= decay_after_peak
+                        
+                        weekly_revenue *= polynomial_multiplier
+                
                 # Cap the revenue to not exceed historical weekly peak (unless unlimited growth is allowed)
-                if not allow_unlimited_growth:
+                if not allow_unlimited_growth and not use_polynomial_growth:
                     weekly_revenue = min(weekly_revenue, historical_peak_weekly)
             
             projection_weekly_dates.append(week_start)
@@ -610,8 +639,8 @@ def main():
         if 'search_term' not in st.session_state:
             st.session_state.search_term = ""
         if 'selected_game_name' not in st.session_state:
-            # Set default selected game to Volleyball Legends (universe ID: 6931042565)
-            default_game = games_df[games_df['universe_id'] == 6931042565]
+            # Set default selected game to Punch Wall (universe ID: 8574921891)
+            default_game = games_df[games_df['universe_id'] == 8574921891]
             if not default_game.empty:
                 st.session_state.selected_game_name = default_game.iloc[0]['name']
             else:
@@ -682,25 +711,29 @@ def main():
         # Game selection dropdown
         game_options = filtered_games['name'].tolist()
         
+        # Always ensure Punch Wall is available as an option if not already present
+        punch_wall_name = "Punch Wall"
+        if punch_wall_name not in game_options:
+            # Add Punch Wall to the beginning of the options
+            game_options.insert(0, punch_wall_name)
+        
         # Determine the default index for the selectbox
         default_index = 0
-        if st.session_state.selected_game_name and st.session_state.selected_game_name in game_options:
-            # If we have a previously selected game that's in the current options, select it
+        punch_wall_name = "Punch Wall"
+        
+        # First priority: if Punch Wall is available, select it as default
+        if punch_wall_name in game_options:
+            default_index = game_options.index(punch_wall_name)
+            if 'selected_game_name' not in st.session_state or st.session_state.selected_game_name == "":
+                st.session_state.selected_game_name = punch_wall_name
+        # Second priority: if we have a previously selected game that's in the current options, select it
+        elif st.session_state.selected_game_name and st.session_state.selected_game_name in game_options:
             default_index = game_options.index(st.session_state.selected_game_name)
-        elif not search_term and game_options:
-            # If no search term and we have options, try to find Volleyball Legends as default
-            volleyball_legends_name = "[UPD] Volleyball Legends"
-            if volleyball_legends_name in game_options:
-                default_index = game_options.index(volleyball_legends_name)
-                st.session_state.selected_game_name = volleyball_legends_name
-            else:
-                # If Volleyball Legends not in options, default to first option
-                default_index = 0
-                if game_options:
-                    st.session_state.selected_game_name = game_options[0]
+        # Third priority: default to first option
         elif game_options:
-            # Otherwise, default to the first option
             default_index = 0
+            if game_options:
+                st.session_state.selected_game_name = game_options[0]
         else:
             default_index = None
         
@@ -783,8 +816,9 @@ def main():
     # Toggle between input modes
     input_mode = st.sidebar.radio(
         "Input Mode",
-        ["Evaluation Multiple", "Evaluation Amount"],
-        help="Choose whether to input multiple or amount directly"
+        ["Evaluation Multiple", "Evaluation Amount", "Price & Equity"],
+        index=2,  # Default to "Price & Equity"
+        help="Choose whether to input multiple, amount directly, or price with equity percentage"
     )
     
     # Initialize session state for values
@@ -792,6 +826,10 @@ def main():
         st.session_state.evaluation_multiple = 1.0
     if 'evaluation_amount' not in st.session_state:
         st.session_state.evaluation_amount = int(temp_annual_revenue * 1.0)
+    if 'investment_price' not in st.session_state:
+        st.session_state.investment_price = 250000
+    if 'equity_percentage' not in st.session_state:
+        st.session_state.equity_percentage = 80.0
     
     if input_mode == "Evaluation Multiple":
         # Input multiple, calculate amount
@@ -818,6 +856,51 @@ def main():
             help="Calculated from annual revenue × multiple"
         )
         
+    elif input_mode == "Price & Equity":
+        # Input price and equity percentage, calculate evaluation
+        investment_price = st.sidebar.number_input(
+            "Investment Price ($)",
+            min_value=1000,
+            value=st.session_state.investment_price,
+            step=5000,
+            help="Amount you're willing to invest"
+        )
+        
+        equity_percentage = st.sidebar.slider(
+            "Equity Percentage (%)",
+            min_value=1.0,
+            max_value=100.0,
+            value=st.session_state.equity_percentage,
+            step=0.5,
+            help="Percentage of equity you want for your investment"
+        )
+        
+        # Calculate evaluation from price and equity percentage
+        # If investing X for Y%, then company valuation = X / (Y/100)
+        upfront = int(investment_price / (equity_percentage / 100))
+        evaluation_multiple = upfront / temp_annual_revenue
+        
+        # Update session state
+        st.session_state.investment_price = investment_price
+        st.session_state.equity_percentage = equity_percentage
+        st.session_state.evaluation_amount = upfront
+        st.session_state.evaluation_multiple = evaluation_multiple
+        
+        # Display calculated values
+        col1, col2 = st.sidebar.columns(2)
+        with col1:
+            st.metric(
+                "Company Valuation",
+                f"${upfront:,}",
+                help="Calculated from investment ÷ equity percentage"
+            )
+        with col2:
+            st.metric(
+                "Valuation Multiple",
+                f"{evaluation_multiple:.2f}x",
+                help="Company valuation ÷ annual revenue"
+            )
+        
     else:  # input_mode == "Evaluation Amount"
         # Input amount, calculate multiple
         upfront = st.sidebar.number_input(
@@ -842,13 +925,19 @@ def main():
             help="Calculated from evaluation amount ÷ annual revenue"
         )
     
-    equity_pct = st.sidebar.slider(
-        "Investor Equity (%)",
-        min_value=0.0,
-        max_value=100.0,
-        value=20.0,
-        step=0.1
-    )
+    # Investor configuration (outside of input mode conditional)
+    if input_mode == "Price & Equity":
+        # Use the equity percentage from the Price & Equity input mode
+        equity_pct = st.session_state.equity_percentage
+    else:
+        # Show equity slider for other input modes
+        equity_pct = st.sidebar.slider(
+            "Investor Equity (%)",
+            min_value=0.0,
+            max_value=100.0,
+            value=20.0,
+            step=0.1
+        )
     
     # Earnout only available for 100% equity deals
     if equity_pct == 100.0:
@@ -907,6 +996,13 @@ def main():
         "Allow Unlimited Growth",
         value=False,
         help="When enabled, projections can exceed historical peaks during growth periods (negative decay). When disabled, projections are capped at historical peak."
+    )
+    
+    # Toggle for polynomial growth scenario
+    use_polynomial_growth = st.sidebar.toggle(
+        "Polynomial Growth Scenario",
+        value=False,
+        help="Use a 5th degree polynomial growth model with peaks at 3 months (10x revenue) and 6 months (5x revenue)"
     )
     
     # Calculate data with user parameters (needed for intelligent peak detection)
@@ -1018,7 +1114,7 @@ def main():
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
         start_date, last_three_months_mean, december_scale, summer_scale,
         normal_week_deviations, 
-        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, allow_unlimited_growth
+        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, allow_unlimited_growth, use_polynomial_growth
     )
     
     projection_df = pd.DataFrame({
@@ -1147,6 +1243,7 @@ def main():
     st.write(f"**Summer Peaks (May, Jun-Aug):** {'Enabled' if summer_peaks else 'Disabled'}")
     st.write(f"**December Peaks:** {'Enabled' if december_peaks else 'Disabled'}")
     st.write(f"**Unlimited Growth:** {'Enabled' if allow_unlimited_growth else 'Disabled (Capped at Historical Peak)'}")
+    st.write(f"**Polynomial Growth Scenario:** {'Enabled (5th degree polynomial with peaks at 3 & 6 months)' if use_polynomial_growth else 'Disabled'}")
     st.write(f"**Comparison Games:** {'Shown' if show_additional_games else 'Hidden'}")
     
     # Additional games info
