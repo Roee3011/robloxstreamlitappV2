@@ -986,7 +986,7 @@ def main():
         min_value=-5.0,
         max_value=100.0,
         value=0.0,
-        step=0.1,
+        step=0.05,
         help="Week-on-week exponential growth (negative) or decay (positive) percentage applied to projected revenue"
     )
     
