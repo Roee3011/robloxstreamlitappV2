@@ -325,29 +325,29 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                 
                 # Apply polynomial growth scenario if enabled
                 if use_polynomial_growth:
-                    # 5th degree polynomial with peaks at 3 months (week 12) and 6 months (week 24)
+                    # 5th degree polynomial with peaks at 0.5 months and 2 months (very early growth)
                     # Normalize week_counter to months (approximately)
                     month_position = week_counter / 4.33  # Convert weeks to months
                     
                     # Define the polynomial multiplier
-                    # Peaks: 10x at 3 months, 5x at 6 months
+                    # Peaks: 10x at 0.5 months, 5x at 2 months
                     # Create polynomial coefficients for the desired shape
                     if month_position <= 18:  # Only apply within 18 months
-                        # Polynomial function: designed to peak at months 3 and 6
+                        # Polynomial function: designed to peak at months 0.5 and 2
                         # Using a scaled 5th degree polynomial
                         x = month_position
                         polynomial_multiplier = (
                             1.0 +  # Base multiplier
-                            (8.5 * x / 3.0) * (1 - abs(x - 3) / 3.0) * max(0, 1 - abs(x - 3) / 3.0) +  # Peak at 3 months (10x total)
-                            (4.0 * x / 6.0) * (1 - abs(x - 6) / 6.0) * max(0, 1 - abs(x - 6) / 6.0)    # Peak at 6 months (5x total)
+                            (8.5 * x / 0.5) * (1 - abs(x - 0.5) / 0.5) * max(0, 1 - abs(x - 0.5) / 0.5) +  # Peak at 0.5 months (10x total)
+                            (4.0 * x / 2.0) * (1 - abs(x - 2) / 2.0) * max(0, 1 - abs(x - 2) / 2.0)    # Peak at 2 months (5x total)
                         )
                         
                         # Ensure polynomial doesn't go below 1.0 and smooth the curve
                         polynomial_multiplier = max(1.0, polynomial_multiplier)
                         
                         # Apply smooth decay after peaks
-                        if x > 6:
-                            decay_after_peak = max(0.5, 1.0 - (x - 6) * 0.1)
+                        if x > 2:
+                            decay_after_peak = max(0.5, 1.0 - (x - 2) * 0.08)
                             polynomial_multiplier *= decay_after_peak
                         
                         weekly_revenue *= polynomial_multiplier
@@ -1001,7 +1001,14 @@ def main():
     use_polynomial_growth = st.sidebar.toggle(
         "Polynomial Growth Scenario",
         value=False,
-        help="Use a 5th degree polynomial growth model with peaks at 3 months (10x revenue) and 6 months (5x revenue)"
+        help="Use a 5th degree polynomial growth model with peaks at 0.5 months (10x revenue) and 2 months (5x revenue)"
+    )
+    
+    # Toggle for using current average
+    use_current_average = st.sidebar.toggle(
+        "Use Current Average",
+        value=False,
+        help="When enabled, use the most recent week's revenue as the prediction baseline instead of the last 3 months average"
     )
     
     # Calculate data with user parameters (needed for intelligent peak detection)
@@ -1016,11 +1023,20 @@ def main():
     three_months_ago = pd.to_datetime(three_months_ago).tz_localize(None)
     weekly_start_normalized = pd.to_datetime(weekly_avg['week_start']).dt.tz_localize(None)
     last_three_months_data = weekly_avg[weekly_start_normalized >= three_months_ago]
-    if len(last_three_months_data) > 0:
-        last_three_months_mean = last_three_months_data['Estimated Revenue USD'].mean()
+    
+    if use_current_average:
+        # Use the most recent week's revenue as baseline
+        if len(weekly_avg) > 0:
+            last_three_months_mean = weekly_avg['Estimated Revenue USD'].iloc[-1]
+        else:
+            last_three_months_mean = lifetime_mean
     else:
-        # Fallback to lifetime mean if not enough recent data
-        last_three_months_mean = lifetime_mean
+        # Use the standard last 3 months average
+        if len(last_three_months_data) > 0:
+            last_three_months_mean = last_three_months_data['Estimated Revenue USD'].mean()
+        else:
+            # Fallback to lifetime mean if not enough recent data
+            last_three_months_mean = lifetime_mean
     
     # Analyze historical data to determine specific summer peak month
     summer_months = [5, 6, 7, 8]  # May, June, July, August
@@ -1230,7 +1246,8 @@ def main():
     current_multiple = upfront / actual_annual_revenue if actual_annual_revenue > 0 else 0
     st.write(f"**Annual Revenue (extrapolated):** ${actual_annual_revenue:,.0f}")
     st.write(f"**Current Evaluation Multiple:** {current_multiple:.1f}x")
-    st.write(f"**Projection Baseline (Last 3 Months Average):** ${last_three_months_mean:,.0f}")
+    baseline_type = "Current Week" if use_current_average else "Last 3 Months Average"
+    st.write(f"**Projection Baseline ({baseline_type}):** ${last_three_months_mean:,.0f}")
     st.write(f"**Lifetime Average:** ${lifetime_mean:,.0f}")
     if decay_pct < 0:
         st.write(f"**Weekly Growth Rate:** {abs(decay_pct):.1f}% per week")
@@ -1242,7 +1259,8 @@ def main():
     st.write(f"**Summer Peaks (May, Jun-Aug):** {'Enabled' if summer_peaks else 'Disabled'}")
     st.write(f"**December Peaks:** {'Enabled' if december_peaks else 'Disabled'}")
     st.write(f"**Unlimited Growth:** {'Enabled' if allow_unlimited_growth else 'Disabled (Capped at Historical Peak)'}")
-    st.write(f"**Polynomial Growth Scenario:** {'Enabled (5th degree polynomial with peaks at 3 & 6 months)' if use_polynomial_growth else 'Disabled'}")
+    st.write(f"**Polynomial Growth Scenario:** {'Enabled (5th degree polynomial with peaks at 0.5 & 2 months)' if use_polynomial_growth else 'Disabled'}")
+    st.write(f"**Use Current Average:** {'Enabled (using most recent week)' if use_current_average else 'Disabled (using last 3 months average)'}")
     st.write(f"**Comparison Games:** {'Shown' if show_additional_games else 'Hidden'}")
     
     # Additional games info
