@@ -228,7 +228,7 @@ def calculate_weekly_averages(df, robux_to_usd):
 
 def generate_weekly_projection_with_deviations(start_date, lifetime_mean, december_scale, summer_scale,
                                             normal_week_deviations, 
-                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, use_polynomial_growth=False, use_current_average_peaks=False, polynomial_peak_multiplier=1000, use_standard_growth=False, standard_growth_percentage=10):
+                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, use_polynomial_growth=False, use_current_average_peaks=False, polynomial_peak_multiplier=1000, use_standard_growth=False, standard_growth_percentage=10, protected_growth_months=1.0):
     """Generate weekly projection using average as base and applying weekly deviation patterns"""
     projection_weekly_dates = []
     projection_weekly_revenues = []
@@ -328,7 +328,20 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                 weekly_revenue = last_observed_weekly
             else:
                 # Calculate base weekly revenue using the passed baseline (which is current average when that mode is enabled)
-                base_weekly_revenue = lifetime_mean * weekly_deviation * (decay_factor ** week_counter)
+                # When standard growth is enabled, don't apply decay for the protected growth period
+                protected_weeks = int(protected_growth_months * 4.33)  # Convert months to weeks (approximately)
+                if use_standard_growth and week_counter <= protected_weeks:
+                    # No decay for protected period when using standard growth
+                    base_weekly_revenue = lifetime_mean * weekly_deviation
+                else:
+                    # Apply decay starting from week 0 after the protected period ends
+                    if use_standard_growth:
+                        # Decay starts counting from 0 after protected period
+                        decay_weeks = week_counter - protected_weeks
+                    else:
+                        # Normal decay from beginning
+                        decay_weeks = week_counter
+                    base_weekly_revenue = lifetime_mean * weekly_deviation * (decay_factor ** decay_weeks)
                 
                 # Apply peak scaling based on the mode
                 if (month == peak_summer_month and summer_peaks) or (month == december_month and december_peaks):
@@ -338,8 +351,18 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                         # weekly_deviation ranges from 0.6 to 1.0, we need to map this to create a 150% peak
                         # Transform weekly_deviation (0.6-1.0) to peak scaling (1.0-1.50)
                         peak_scaling = 1.0 + (weekly_deviation - 0.6) / (1.0 - 0.6) * 0.50
-                        # Apply decay factor to peaks as well
-                        weekly_revenue = last_observed_weekly * peak_scaling * (decay_factor ** week_counter)
+                        # Apply decay factor to peaks as well (but not for protected period if standard growth is on)
+                        if use_standard_growth and week_counter <= protected_weeks:
+                            weekly_revenue = last_observed_weekly * peak_scaling
+                        else:
+                            # Apply decay starting from week 0 after the protected period ends
+                            if use_standard_growth:
+                                # Decay starts counting from 0 after protected period
+                                decay_weeks = week_counter - protected_weeks
+                            else:
+                                # Normal decay from beginning
+                                decay_weeks = week_counter
+                            weekly_revenue = last_observed_weekly * peak_scaling * (decay_factor ** decay_weeks)
                     else:
                         # Historical mode: use the traditional month_scale multiplier
                         weekly_revenue = base_weekly_revenue * month_scale
@@ -1080,8 +1103,18 @@ def main():
             step=1,
             help="Percentage growth to gradually ramp up to over the first few weeks, then maintain for the entire projection"
         )
+        
+        protected_growth_months = st.sidebar.slider(
+            "Protected Growth Period (months)",
+            min_value=0.5,
+            max_value=18.0,
+            value=1.0,
+            step=0.5,
+            help="Period during which decay factor is not applied when standard growth is enabled"
+        )
     else:
         standard_growth_percentage = 10  # Default 10% growth
+        protected_growth_months = 1.0  # Default 1 month
     
     # Toggle for using current average
     use_current_average = st.sidebar.toggle(
@@ -1327,7 +1360,7 @@ def main():
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
         start_date, baseline_for_projection, december_scale, summer_scale,
         normal_week_deviations, 
-        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, use_polynomial_growth, use_current_average, polynomial_peak_multiplier, use_standard_growth, standard_growth_percentage
+        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, use_polynomial_growth, use_current_average, polynomial_peak_multiplier, use_standard_growth, standard_growth_percentage, protected_growth_months
     )
     
     projection_df = pd.DataFrame({
