@@ -228,7 +228,7 @@ def calculate_weekly_averages(df, robux_to_usd):
 
 def generate_weekly_projection_with_deviations(start_date, lifetime_mean, december_scale, summer_scale,
                                             normal_week_deviations, 
-                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, allow_unlimited_growth=False, use_polynomial_growth=False):
+                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, use_polynomial_growth=False, use_current_average_peaks=False, polynomial_peak_multiplier=1000, use_standard_growth=False, standard_growth_percentage=10):
     """Generate weekly projection using average as base and applying weekly deviation patterns"""
     projection_weekly_dates = []
     projection_weekly_revenues = []
@@ -249,12 +249,19 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
         month = current_date.month
         
         # Determine base scaling factor for the month based on toggle settings
-        if month == peak_summer_month and summer_peaks:
-            month_scale = summer_scale  # Apply peak only to the specific summer month
-        elif month == december_month and december_peaks:
-            month_scale = december_scale  # December uses peak multiple when enabled
+        # Note: When use_current_average_peaks is True, the actual peak scaling 
+        # will be handled later in the weekly calculation loop
+        if not use_current_average_peaks:
+            # Traditional mode: use month_scale for peaks
+            if month == peak_summer_month and summer_peaks:
+                month_scale = summer_scale  # Apply peak only to the specific summer month
+            elif month == december_month and december_peaks:
+                month_scale = december_scale  # December uses peak multiple when enabled
+            else:
+                month_scale = 1.0  # All other months use normal scaling
         else:
-            month_scale = 1.0  # All other months use normal scaling
+            # Current average mode: month_scale is not used, peaks handled separately
+            month_scale = 1.0
         
         # Get weeks in this month
         if month == 12:
@@ -320,8 +327,25 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                 # First week starts from the last observed value
                 weekly_revenue = last_observed_weekly
             else:
-                # Calculate weekly revenue: base * month_scale * weekly_deviation * decay_factor^week_counter
-                weekly_revenue = lifetime_mean * month_scale * weekly_deviation * (decay_factor ** week_counter)
+                # Calculate base weekly revenue using the passed baseline (which is current average when that mode is enabled)
+                base_weekly_revenue = lifetime_mean * weekly_deviation * (decay_factor ** week_counter)
+                
+                # Apply peak scaling based on the mode
+                if (month == peak_summer_month and summer_peaks) or (month == december_month and december_peaks):
+                    if use_current_average_peaks:
+                        # Current average mode: create symmetrical peak at 150% of the current week's running average
+                        # Use the weekly_deviation as the scaling factor for the symmetrical curve
+                        # weekly_deviation ranges from 0.6 to 1.0, we need to map this to create a 150% peak
+                        # Transform weekly_deviation (0.6-1.0) to peak scaling (1.0-1.50)
+                        peak_scaling = 1.0 + (weekly_deviation - 0.6) / (1.0 - 0.6) * 0.50
+                        # Apply decay factor to peaks as well
+                        weekly_revenue = last_observed_weekly * peak_scaling * (decay_factor ** week_counter)
+                    else:
+                        # Historical mode: use the traditional month_scale multiplier
+                        weekly_revenue = base_weekly_revenue * month_scale
+                else:
+                    # Non-peak months: use base calculation
+                    weekly_revenue = base_weekly_revenue
                 
                 # Apply polynomial growth scenario if enabled
                 if use_polynomial_growth:
@@ -329,8 +353,12 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                     # Normalize week_counter to months (approximately)
                     month_position = week_counter / 4.33  # Convert weeks to months
                     
+                    # Convert percentage to multiplier (e.g., 1000% = 10x, 500% = 5x)
+                    peak_multiplier_factor = polynomial_peak_multiplier / 100.0
+                    first_peak_multiplier = peak_multiplier_factor  # Use full multiplier for first peak
+                    second_peak_multiplier = peak_multiplier_factor * 0.5  # Half of first peak for second peak
+                    
                     # Define the polynomial multiplier
-                    # Peaks: 10x at 0.5 months, 5x at 2 months
                     # Create polynomial coefficients for the desired shape
                     if month_position <= 18:  # Only apply within 18 months
                         # Polynomial function: designed to peak at months 0.5 and 2
@@ -338,8 +366,8 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                         x = month_position
                         polynomial_multiplier = (
                             1.0 +  # Base multiplier
-                            (8.5 * x / 0.5) * (1 - abs(x - 0.5) / 0.5) * max(0, 1 - abs(x - 0.5) / 0.5) +  # Peak at 0.5 months (10x total)
-                            (4.0 * x / 2.0) * (1 - abs(x - 2) / 2.0) * max(0, 1 - abs(x - 2) / 2.0)    # Peak at 2 months (5x total)
+                            ((first_peak_multiplier - 1.0) * x / 0.5) * (1 - abs(x - 0.5) / 0.5) * max(0, 1 - abs(x - 0.5) / 0.5) +  # First peak at 0.5 months
+                            ((second_peak_multiplier - 1.0) * x / 2.0) * (1 - abs(x - 2) / 2.0) * max(0, 1 - abs(x - 2) / 2.0)    # Second peak at 2 months
                         )
                         
                         # Ensure polynomial doesn't go below 1.0 and smooth the curve
@@ -352,9 +380,19 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                         
                         weekly_revenue *= polynomial_multiplier
                 
-                # Cap the revenue to not exceed historical weekly peak (unless unlimited growth is allowed)
-                if not allow_unlimited_growth and not use_polynomial_growth:
-                    weekly_revenue = min(weekly_revenue, historical_peak_weekly)
+                # Apply standard growth scenario if enabled (gradual ramp up affecting entire future projection)
+                if use_standard_growth and week_counter > 0:
+                    # Gradual ramp-up over first 4 weeks, then maintain the full growth rate
+                    ramp_weeks = 4
+                    if week_counter <= ramp_weeks:
+                        # Gradual increase: week 1 = 25%, week 2 = 50%, week 3 = 75%, week 4 = 100%
+                        growth_factor = (week_counter / ramp_weeks) * (standard_growth_percentage / 100.0)
+                    else:
+                        # Full growth rate for all subsequent weeks
+                        growth_factor = standard_growth_percentage / 100.0
+                    
+                    # Apply the growth factor (1.0 + growth_factor gives us the multiplier)
+                    weekly_revenue *= (1.0 + growth_factor)
             
             projection_weekly_dates.append(week_start)
             projection_weekly_revenues.append(weekly_revenue)
@@ -1005,19 +1043,45 @@ def main():
         help="Week-on-week exponential growth (negative) or decay (positive) percentage applied to projected revenue"
     )
     
-    # Toggle for unlimited growth when using negative decay
-    allow_unlimited_growth = st.sidebar.toggle(
-        "Allow Unlimited Growth",
-        value=False,
-        help="When enabled, projections can exceed historical peaks during growth periods (negative decay). When disabled, projections are capped at historical peak."
-    )
-    
     # Toggle for polynomial growth scenario
     use_polynomial_growth = st.sidebar.toggle(
         "Polynomial Growth Scenario",
         value=False,
-        help="Use a 5th degree polynomial growth model with peaks at 0.5 months (10x revenue) and 2 months (5x revenue)"
+        help="Use a 5th degree polynomial growth model with peaks at 0.5 months and 2 months"
     )
+    
+    # Polynomial growth peak multiplier slider (only shown when polynomial growth is enabled)
+    if use_polynomial_growth:
+        polynomial_peak_multiplier = st.sidebar.slider(
+            "Polynomial Peak Multiplier (%)",
+            min_value=100,
+            max_value=2000,
+            value=250,
+            step=50,
+            help="Peak multiplier percentage for polynomial growth. 1000% = 10x revenue at first peak, 500% = 5x at second peak"
+        )
+    else:
+        polynomial_peak_multiplier = 1000  # Default value when not using polynomial growth
+    
+    # Toggle for standard growth scenario
+    use_standard_growth = st.sidebar.toggle(
+        "Standard Growth Scenario",
+        value=False,
+        help="Apply 10% growth multiplier over the first 2-4 prediction weeks"
+    )
+    
+    # Standard growth parameters (only shown when standard growth is enabled)
+    if use_standard_growth:
+        standard_growth_percentage = st.sidebar.slider(
+            "Growth Percentage (%)",
+            min_value=5,
+            max_value=50,
+            value=10,
+            step=1,
+            help="Percentage growth to gradually ramp up to over the first few weeks, then maintain for the entire projection"
+        )
+    else:
+        standard_growth_percentage = 10  # Default 10% growth
     
     # Toggle for using current average
     use_current_average = st.sidebar.toggle(
@@ -1059,32 +1123,99 @@ def main():
     peak_summer_month = 6  # Default to June
     summer_peak_detected = False
     
-    for month in summer_months:
-        month_data = weekly_avg[weekly_avg['week_start'].dt.month == month]
-        if len(month_data) > 0:
-            month_avg = month_data['Estimated Revenue USD'].mean()
-            summer_month_avgs[month] = month_avg
-    
-    # Find the summer month with highest average (if any exceed 25% threshold based on last 3 months)
-    if summer_month_avgs:
-        best_month = max(summer_month_avgs.keys(), key=lambda k: summer_month_avgs[k])
-        best_avg = summer_month_avgs[best_month]
+    if use_current_average:
+        # When using current average, enable peaks by default as 150% of current baseline
+        summer_peak_detected = True
+        # Still find the best historical summer month for timing preference
+        for month in summer_months:
+            month_data = weekly_avg[weekly_avg['week_start'].dt.month == month]
+            if len(month_data) > 0:
+                month_avg = month_data['Estimated Revenue USD'].mean()
+                summer_month_avgs[month] = month_avg
         
-        if best_avg > last_three_months_mean * 1.25:  # 25% greater than last 3 months average
-            peak_summer_month = best_month
-            summer_peak_detected = True
+        if summer_month_avgs:
+            peak_summer_month = max(summer_month_avgs.keys(), key=lambda k: summer_month_avgs[k])
         else:
-            # No significant peak detected, default to June
-            peak_summer_month = 6
-            summer_peak_detected = False
+            peak_summer_month = 6  # Default to June
+    else:
+        # Use historical comparison logic when not using current average
+        # Calculate baseline from non-summer months to avoid skewing by recent trends
+        non_summer_data = weekly_avg[~weekly_avg['week_start'].dt.month.isin(summer_months)]
+        if len(non_summer_data) > 0:
+            baseline_mean = non_summer_data['Estimated Revenue USD'].mean()
+        else:
+            # Fallback to lifetime mean if no non-summer data
+            baseline_mean = lifetime_mean
+        
+        # Detect explosive growth pattern
+        # If non-summer baseline is significantly higher than summer data,
+        # it indicates explosive growth where summer data is from early lifecycle
+        summer_data = weekly_avg[weekly_avg['week_start'].dt.month.isin(summer_months)]
+        if len(summer_data) > 0:
+            summer_mean = summer_data['Estimated Revenue USD'].mean()
+            # If non-summer average is more than 3x summer average, we have explosive growth
+            explosive_growth = baseline_mean > summer_mean * 3.0
+        else:
+            explosive_growth = False
+            summer_mean = lifetime_mean
+        
+        for month in summer_months:
+            month_data = weekly_avg[weekly_avg['week_start'].dt.month == month]
+            if len(month_data) > 0:
+                month_avg = month_data['Estimated Revenue USD'].mean()
+                summer_month_avgs[month] = month_avg
+        
+        # Smart peak detection logic
+        if explosive_growth:
+            # For explosive growth games, default to summer peaks being 150% of recent baseline
+            # This assumes summer peaks are beneficial and should be enabled
+            summer_peak_detected = True
+            # Still find the best historical summer month for timing
+            if summer_month_avgs:
+                peak_summer_month = max(summer_month_avgs.keys(), key=lambda k: summer_month_avgs[k])
+            else:
+                peak_summer_month = 6  # Default to June
+        else:
+            # For stable games, use traditional comparison method
+            if summer_month_avgs:
+                best_month = max(summer_month_avgs.keys(), key=lambda k: summer_month_avgs[k])
+                best_avg = summer_month_avgs[best_month]
+                
+                if best_avg > baseline_mean * 1.25:  # 25% greater than non-summer average
+                    peak_summer_month = best_month
+                    summer_peak_detected = True
+                else:
+                    # No significant peak detected, default to June
+                    peak_summer_month = 6
+                    summer_peak_detected = False
     
     # December analysis
     december_data = weekly_avg[weekly_avg['week_start'].dt.month == 12]
-    if len(december_data) > 0:
-        december_avg = december_data['Estimated Revenue USD'].mean()
-        december_peak_detected = december_avg > last_three_months_mean * 1.25  # 25% greater than last 3 months average
+    december_explosive_growth = False
+    if use_current_average:
+        # When using current average, enable December peaks by default
+        december_peak_detected = True
     else:
-        december_peak_detected = False
+        # Use historical comparison logic when not using current average
+        if len(december_data) > 0:
+            december_avg = december_data['Estimated Revenue USD'].mean()
+            # Use non-December months as baseline for fair comparison
+            non_december_data = weekly_avg[weekly_avg['week_start'].dt.month != 12]
+            if len(non_december_data) > 0:
+                december_baseline = non_december_data['Estimated Revenue USD'].mean()
+            else:
+                december_baseline = lifetime_mean
+            
+            # Check for explosive growth pattern for December too
+            if december_baseline > december_avg * 3.0:
+                # Explosive growth: December data is from early lifecycle, enable peaks by default
+                december_peak_detected = True
+                december_explosive_growth = True
+            else:
+                # Normal growth: use traditional comparison
+                december_peak_detected = december_avg > december_baseline * 1.25  # 25% greater than non-December average
+        else:
+            december_peak_detected = False
     
     # Month names for display
     month_names = {5: 'May', 6: 'June', 7: 'July', 8: 'August'}
@@ -1094,16 +1225,25 @@ def main():
     st.sidebar.markdown("---")
     st.sidebar.markdown("**Seasonal Peaks**")
     
+    # Generate help text based on detection method
+    if use_current_average:
+        summer_help_text = f"Enable higher revenue during {peak_month_name}. Auto-detected: Peak enabled (using 150% of current average)"
+        december_help_text = f"Enable higher revenue during December. Auto-detected: Peak enabled (using 150% of current average)"
+    else:
+        # In historical mode, we may have explosive growth detection
+        summer_help_text = f"Enable higher revenue during {peak_month_name}. Auto-detected: {'Peak found in ' + peak_month_name if summer_peak_detected else 'No significant peak, defaulting to June'}"
+        december_help_text = f"Enable higher revenue during December. Auto-detected: {'Peak enabled due to explosive growth pattern' if december_explosive_growth else ('Peak found' if december_peak_detected else 'No significant peak')}"
+    
     summer_peaks = st.sidebar.toggle(
         f"Summer Peak ({peak_month_name})",
         value=summer_peak_detected,
-        help=f"Enable higher revenue during {peak_month_name}. Auto-detected: {'Peak found in ' + peak_month_name if summer_peak_detected else 'No significant peak, defaulting to June'} (based on last 3 months average)"
+        help=summer_help_text
     )
     
     december_peaks = st.sidebar.toggle(
         "December Peaks",
         value=december_peak_detected,
-        help=f"Enable higher revenue during December. Auto-detected: {'Peak found' if december_peak_detected else 'No significant peak'} (based on last 3 months average)"
+        help=december_help_text
     )
     
     # Additional games toggle
@@ -1122,13 +1262,18 @@ def main():
     # Calculate projection parameters
     historical_peak_weekly = weekly_avg['Estimated Revenue USD'].max()
     
-    # Calculate peak multiple based on highest observed peak (use last 3 months mean for more recent context)
-    if historical_peak_weekly > 0:
-        peak_multiple = historical_peak_weekly / last_three_months_mean
+    # Calculate peak multiple - will be recalculated after last_observed_weekly is determined
+    if use_current_average:
+        # When using current average, peaks should be 150% of current baseline
+        peak_multiple = 1.50
     else:
-        peak_multiple = 1.5  # Conservative fallback
+        # When using historical average, calculate peak multiple based on highest observed peak
+        if historical_peak_weekly > 0 and last_three_months_mean > 0:
+            peak_multiple = historical_peak_weekly / last_three_months_mean
+        else:
+            peak_multiple = 1.5  # Conservative fallback
     
-    # All peaks use the global maximum peak multiple
+    # All peaks use the same peak multiple
     december_scale = peak_multiple
     summer_scale = peak_multiple
     
@@ -1182,7 +1327,7 @@ def main():
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
         start_date, baseline_for_projection, december_scale, summer_scale,
         normal_week_deviations, 
-        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, allow_unlimited_growth, use_polynomial_growth
+        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, use_polynomial_growth, use_current_average, polynomial_peak_multiplier, use_standard_growth, standard_growth_percentage
     )
     
     projection_df = pd.DataFrame({
@@ -1337,8 +1482,16 @@ def main():
     
     st.write(f"**Summer Peaks (May, Jun-Aug):** {'Enabled' if summer_peaks else 'Disabled'}")
     st.write(f"**December Peaks:** {'Enabled' if december_peaks else 'Disabled'}")
-    st.write(f"**Unlimited Growth:** {'Enabled' if allow_unlimited_growth else 'Disabled (Capped at Historical Peak)'}")
-    st.write(f"**Polynomial Growth Scenario:** {'Enabled (5th degree polynomial with peaks at 0.5 & 2 months)' if use_polynomial_growth else 'Disabled'}")
+    if use_polynomial_growth:
+        first_peak_value = polynomial_peak_multiplier / 100.0
+        second_peak_value = (polynomial_peak_multiplier / 100.0) * 0.5
+        st.write(f"**Polynomial Growth Scenario:** Enabled ({first_peak_value:.1f}x at 0.5 months, {second_peak_value:.1f}x at 2 months)")
+    else:
+        st.write(f"**Polynomial Growth Scenario:** Disabled")
+    if use_standard_growth:
+        st.write(f"**Standard Growth Scenario:** Enabled ({standard_growth_percentage}% growth ramped up over 4 weeks, then maintained)")
+    else:
+        st.write(f"**Standard Growth Scenario:** Disabled")
     st.write(f"**Use Current Average:** {'Enabled (using most recent week)' if use_current_average else 'Disabled (using last 3 months average)'}")
     st.write(f"**Comparison Games:** {'Shown' if show_additional_games else 'Hidden'}")
     
