@@ -367,7 +367,7 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
     
     return projection_weekly_dates, projection_weekly_revenues
 
-def create_revenue_analysis_chart(df, weekly_avg, projection_df, additional_games_weekly=None, show_additional_games=True):
+def create_revenue_analysis_chart(df, weekly_avg, projection_df, additional_games_weekly=None, show_additional_games=True, current_week_info=None):
     """Create the main revenue analysis chart"""
     fig = go.Figure()
     
@@ -420,6 +420,21 @@ def create_revenue_analysis_chart(df, weekly_avg, projection_df, additional_game
         marker=dict(size=8, color='blue'),
         opacity=0.8
     ))
+    
+    # Add current running week marker if provided
+    if current_week_info and current_week_info.get('show_marker', False):
+        current_week_date = current_week_info['date']
+        current_week_value = current_week_info['value']
+        current_week_days = current_week_info.get('days_count', 0)
+        
+        fig.add_trace(go.Scatter(
+            x=[current_week_date.strftime('%Y-%m-%d')],
+            y=[current_week_value],
+            mode='markers',
+            name=f'Current Running Week ({current_week_days} days)',
+            marker=dict(size=12, color='cyan', symbol='circle', line=dict(color='darkblue', width=2)),
+            opacity=1.0
+        ))
     
     # Plot projected weekly revenue
     fig.add_trace(go.Scatter(
@@ -1007,7 +1022,7 @@ def main():
     # Toggle for using current average
     use_current_average = st.sidebar.toggle(
         "Use Current Average",
-        value=False,
+        value=True,
         help="When enabled, use the most recent week's revenue as the prediction baseline instead of the last 3 months average"
     )
     
@@ -1121,13 +1136,51 @@ def main():
 
     normal_week_deviations = [0.9, 1.0, 1.1, 0.95, 1.05]  # Small variations around average
     
-    # Get the last observed weekly value to ensure smooth transition
-    last_observed_weekly = weekly_avg['Estimated Revenue USD'].iloc[-1] if len(weekly_avg) > 0 else last_three_months_mean
+    # Calculate the current running weekly average (including incomplete current week)
+    if len(weekly_avg) > 0:
+        # Check if there's an incomplete current week by comparing the last week in weekly_avg 
+        # with the actual last date in the data
+        last_data_date = df_with_usd['date'].max()
+        last_week_start = weekly_avg['week_start'].iloc[-1]
+        last_week_end = last_week_start + pd.DateOffset(days=6)
+        
+        # Normalize timezone information to avoid comparison issues
+        if hasattr(last_data_date, 'tz') and last_data_date.tz is not None:
+            last_data_date = last_data_date.tz_localize(None)
+        if hasattr(last_week_end, 'tz') and last_week_end.tz is not None:
+            last_week_end = last_week_end.tz_localize(None)
+        if hasattr(last_week_start, 'tz') and last_week_start.tz is not None:
+            last_week_start = last_week_start.tz_localize(None)
+        
+        # Convert to pandas Timestamp for safe comparison
+        last_data_date = pd.to_datetime(last_data_date).tz_localize(None)
+        last_week_end = pd.to_datetime(last_week_end).tz_localize(None)
+        last_week_start = pd.to_datetime(last_week_start).tz_localize(None)
+        
+        # If the last week is incomplete (current week is still ongoing)
+        if last_data_date < last_week_end:
+            # Calculate running average for the current incomplete week
+            # Normalize dates in DataFrame for comparison
+            df_dates_normalized = pd.to_datetime(df_with_usd['date']).dt.tz_localize(None)
+            current_week_data = df_with_usd[df_dates_normalized >= last_week_start]
+            if len(current_week_data) > 0:
+                current_week_running_avg = current_week_data['Estimated Revenue USD'].mean()
+                last_observed_weekly = current_week_running_avg
+            else:
+                # Fallback to last complete week if current week has no data
+                last_observed_weekly = weekly_avg['Estimated Revenue USD'].iloc[-1]
+        else:
+            # Use the last complete week's average
+            last_observed_weekly = weekly_avg['Estimated Revenue USD'].iloc[-1]
+    else:
+        # Fallback if no weekly data available
+        last_observed_weekly = last_three_months_mean
     
-    # Generate projection using last 3 months average as baseline
+    # Generate projection using the appropriate baseline (current week or last 3 months average)
+    baseline_for_projection = last_observed_weekly if use_current_average else last_three_months_mean
     start_date = df_with_usd['date'].max() + pd.DateOffset(days=1)
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
-        start_date, last_three_months_mean, december_scale, summer_scale,
+        start_date, baseline_for_projection, december_scale, summer_scale,
         normal_week_deviations, 
         historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, allow_unlimited_growth, use_polynomial_growth
     )
@@ -1137,11 +1190,36 @@ def main():
         'Estimated Revenue USD': projection_revenues
     })
     
+    # Prepare current week information for chart visualization
+    current_week_info = None
+    if use_current_average and len(weekly_avg) > 0:
+        last_data_date = df_with_usd['date'].max()
+        last_week_start = weekly_avg['week_start'].iloc[-1]
+        last_week_end = last_week_start + pd.DateOffset(days=6)
+        
+        # Normalize timezone for comparison
+        last_data_date_norm = pd.to_datetime(last_data_date).tz_localize(None)
+        last_week_end_norm = pd.to_datetime(last_week_end).tz_localize(None)
+        last_week_start_norm = pd.to_datetime(last_week_start).tz_localize(None)
+        
+        # Check if current week is incomplete
+        if last_data_date_norm < last_week_end_norm:
+            # Get current week data for display
+            df_dates_normalized = pd.to_datetime(df_with_usd['date']).dt.tz_localize(None)
+            current_week_data = df_with_usd[df_dates_normalized >= last_week_start_norm]
+            if len(current_week_data) > 0:
+                current_week_info = {
+                    'show_marker': True,
+                    'date': last_week_start,
+                    'value': current_week_data['Estimated Revenue USD'].mean(),
+                    'days_count': len(current_week_data)
+                }
+    
     # Create the main chart
     col1, col2 = st.columns([1, 4])
 
     
-    fig = create_revenue_analysis_chart(df_with_usd, weekly_avg, projection_df, additional_games_weekly, show_additional_games)
+    fig = create_revenue_analysis_chart(df_with_usd, weekly_avg, projection_df, additional_games_weekly, show_additional_games, current_week_info)
     st.plotly_chart(fig, use_container_width=True)
     
     # Investment Analysis
@@ -1247,7 +1325,8 @@ def main():
     st.write(f"**Annual Revenue (extrapolated):** ${actual_annual_revenue:,.0f}")
     st.write(f"**Current Evaluation Multiple:** {current_multiple:.1f}x")
     baseline_type = "Current Week" if use_current_average else "Last 3 Months Average"
-    st.write(f"**Projection Baseline ({baseline_type}):** ${last_three_months_mean:,.0f}")
+    baseline_value = baseline_for_projection
+    st.write(f"**Projection Baseline ({baseline_type}):** ${baseline_value:,.0f}")
     st.write(f"**Lifetime Average:** ${lifetime_mean:,.0f}")
     if decay_pct < 0:
         st.write(f"**Weekly Growth Rate:** {abs(decay_pct):.1f}% per week")
