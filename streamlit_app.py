@@ -1095,9 +1095,9 @@ def main():
     
     # Standard growth parameters (only shown when standard growth is enabled)
     if use_standard_growth:
-        standard_growth_percentage = st.sidebar.slider(
+        standard_growth_percentage = st.sidebar.number_input(
             "Growth Percentage (%)",
-            min_value=5,
+            min_value=0,
             max_value=1000,
             value=10,
             step=1,
