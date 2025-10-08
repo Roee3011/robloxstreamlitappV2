@@ -1098,7 +1098,7 @@ def main():
         standard_growth_percentage = st.sidebar.slider(
             "Growth Percentage (%)",
             min_value=5,
-            max_value=50,
+            max_value=1000,
             value=10,
             step=1,
             help="Percentage growth to gradually ramp up to over the first few weeks, then maintain for the entire projection"
