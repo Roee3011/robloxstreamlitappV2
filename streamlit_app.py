@@ -11,6 +11,7 @@ from plotly.subplots import make_subplots
 import os
 import glob
 import difflib
+import hashlib
 
 # Set page config
 st.set_page_config(
@@ -23,8 +24,46 @@ st.set_page_config(
 plt.style.use('seaborn-v0_8')
 sns.set_palette("husl")
 
+def get_file_cache_key(file_path):
+    """Generate a cache key based on file modification time and size"""
+    if not os.path.exists(file_path):
+        return "file_not_found"
+    
+    try:
+        stat = os.stat(file_path)
+        # Combine mtime, size, and file path for a unique cache key
+        cache_key = f"{file_path}_{stat.st_mtime}_{stat.st_size}"
+        return hashlib.md5(cache_key.encode()).hexdigest()
+    except Exception:
+        # Fallback to just the file path if stat fails
+        return hashlib.md5(file_path.encode()).hexdigest()
+
+def get_directory_cache_key(dir_path):
+    """Generate a cache key based on directory contents and modification times"""
+    if not os.path.exists(dir_path):
+        return "dir_not_found"
+    
+    try:
+        # Get all files in directory and subdirectories
+        files = []
+        for root, dirs, filenames in os.walk(dir_path):
+            for filename in filenames:
+                file_path = os.path.join(root, filename)
+                try:
+                    stat = os.stat(file_path)
+                    files.append(f"{file_path}_{stat.st_mtime}_{stat.st_size}")
+                except Exception:
+                    files.append(file_path)
+        
+        # Create hash from all file signatures
+        cache_key = "_".join(sorted(files))
+        return hashlib.md5(cache_key.encode()).hexdigest()
+    except Exception:
+        # Fallback to just the directory path
+        return hashlib.md5(dir_path.encode()).hexdigest()
+
 @st.cache_data
-def load_games_catalog():
+def load_games_catalog(_cache_key=None):
     """Load the top 500 earning games catalog"""
     df = pd.read_csv('top_500_earning_games.csv')
     return df
@@ -122,7 +161,7 @@ def find_game_data_file(universe_id):
     return None
 
 @st.cache_data
-def load_data(universe_id='6931042565'):
+def load_data(universe_id='6931042565', _cache_key=None):
     """Load the daily revenue data for a specific universe ID"""
     file_path = find_game_data_file(universe_id)
     
@@ -165,7 +204,7 @@ def load_data(universe_id='6931042565'):
         return pd.DataFrame()
 
 @st.cache_data
-def load_additional_games_data():
+def load_additional_games_data(_cache_key=None):
     """Load additional games data for comparison - now deprecated in favor of dynamic loading"""
     # This function is kept for backward compatibility but returns empty dict
     # The new system allows users to select any game from the top 500 list
@@ -705,7 +744,8 @@ def main():
     st.header("🎮 Select Game to Analyze")
     
     # Load games catalog
-    games_df = load_games_catalog()
+    catalog_cache_key = get_file_cache_key('top_500_earning_games.csv')
+    games_df = load_games_catalog(_cache_key=catalog_cache_key)
     
     # Create two columns for game selection
     col1, col2 = st.columns([3, 1])
@@ -847,7 +887,13 @@ def main():
     if selected_game_name:
         selected_game = games_df[games_df['name'] == selected_game_name].iloc[0]
         selected_universe_id = str(selected_game['universe_id'])
-        df = load_data(selected_universe_id)
+        # Generate cache key for the specific game data file
+        game_file_path = find_game_data_file(selected_universe_id)
+        if game_file_path:
+            data_cache_key = get_file_cache_key(game_file_path)
+        else:
+            data_cache_key = selected_universe_id  # Fallback if file not found
+        df = load_data(selected_universe_id, _cache_key=data_cache_key)
         
         # Display selected game info
         col1, col2, col3 = st.columns(3)
@@ -860,7 +906,12 @@ def main():
             st.metric("Genre", genre_text)
     else:
         # Fallback to default game
-        df = load_data()
+        default_file_path = find_game_data_file('6931042565')
+        if default_file_path:
+            default_cache_key = get_file_cache_key(default_file_path)
+        else:
+            default_cache_key = '6931042565'  # Fallback
+        df = load_data(_cache_key=default_cache_key)
     
     # Check if data was loaded successfully
     if df.empty:
@@ -876,7 +927,8 @@ def main():
         st.error("Data is missing the required 'date' column. Please try selecting a different game.")
         return
     
-    additional_games = load_additional_games_data()
+    # Since this function returns empty dict, cache key doesn't matter but keeping consistent
+    additional_games = load_additional_games_data(_cache_key="deprecated_function")
     
     # Sidebar for investment parameters
     st.sidebar.header("💰 Investment Parameters")
