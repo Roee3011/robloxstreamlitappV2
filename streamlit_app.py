@@ -1137,7 +1137,7 @@ def main():
     last_three_months_data = weekly_avg[weekly_start_normalized >= three_months_ago]
     
     if use_current_average:
-        # Use the most recent week's revenue as baseline
+       
         if len(weekly_avg) > 0:
             last_three_months_mean = weekly_avg['Estimated Revenue USD'].iloc[-1]
         else:
