@@ -272,7 +272,8 @@ def calculate_weekly_averages(df, robux_to_usd, monthly_opex=0):
 def generate_weekly_projection_with_deviations(start_date, lifetime_mean, december_scale, summer_scale,
                                             normal_week_deviations, 
                                             historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, use_polynomial_growth=False, use_current_average_peaks=False, polynomial_peak_multiplier=1000, use_standard_growth=False, standard_growth_percentage=10, protected_growth_months=1.0, monthly_opex=0):
-    """Generate weekly projection using average as base and applying weekly deviation patterns"""
+    """Generate weekly projection using average as base and applying weekly deviation patterns.
+    Returns daily averages (not weekly totals) for consistency with historical data visualization."""
     projection_weekly_dates = []
     projection_weekly_revenues = []
     
@@ -460,9 +461,9 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                     # Apply the growth factor (1.0 + growth_factor gives us the multiplier)
                     weekly_revenue *= (1.0 + growth_factor)
             
-            # Subtract weekly OPEX (monthly OPEX / ~4.33 weeks per month)
-            weekly_opex = monthly_opex / 4.33
-            weekly_revenue_after_opex = weekly_revenue - weekly_opex
+            # Subtract daily OPEX (monthly OPEX / ~30.44 days per month) since weekly_revenue is actually a daily average
+            daily_opex = monthly_opex / 30.44
+            weekly_revenue_after_opex = weekly_revenue - daily_opex
             
             projection_weekly_dates.append(week_start)
             projection_weekly_revenues.append(weekly_revenue_after_opex)
