@@ -231,7 +231,7 @@ def calculate_additional_games_weekly_averages(additional_games, robux_to_usd):
     
     return weekly_data
 
-def calculate_weekly_averages(df, robux_to_usd):
+def calculate_weekly_averages(df, robux_to_usd, monthly_opex=0):
     """Calculate weekly averages from daily data"""
     # Check if DataFrame is empty or missing required columns
     if df.empty:
@@ -250,6 +250,10 @@ def calculate_weekly_averages(df, robux_to_usd):
         # Convert Robux to USD
         df['Estimated Revenue USD'] = df['Estimated Revenue'] * robux_to_usd
         
+        # Subtract daily OPEX (monthly OPEX / ~30.44 days per month)
+        daily_opex = monthly_opex / 30.44
+        df['Estimated Revenue USD'] = df['Estimated Revenue USD'] - daily_opex
+        
         # Create a week column (starting from Monday)
         df['week'] = df['date'].dt.to_period('W-MON')
         
@@ -267,7 +271,7 @@ def calculate_weekly_averages(df, robux_to_usd):
 
 def generate_weekly_projection_with_deviations(start_date, lifetime_mean, december_scale, summer_scale,
                                             normal_week_deviations, 
-                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, use_polynomial_growth=False, use_current_average_peaks=False, polynomial_peak_multiplier=1000, use_standard_growth=False, standard_growth_percentage=10, protected_growth_months=1.0):
+                                            historical_peak_weekly, last_observed_weekly, decay_pct=0.0, summer_peaks=True, december_peaks=True, peak_summer_month=6, months=18, use_polynomial_growth=False, use_current_average_peaks=False, polynomial_peak_multiplier=1000, use_standard_growth=False, standard_growth_percentage=10, protected_growth_months=1.0, monthly_opex=0):
     """Generate weekly projection using average as base and applying weekly deviation patterns"""
     projection_weekly_dates = []
     projection_weekly_revenues = []
@@ -456,8 +460,12 @@ def generate_weekly_projection_with_deviations(start_date, lifetime_mean, decemb
                     # Apply the growth factor (1.0 + growth_factor gives us the multiplier)
                     weekly_revenue *= (1.0 + growth_factor)
             
+            # Subtract weekly OPEX (monthly OPEX / ~4.33 weeks per month)
+            weekly_opex = monthly_opex / 4.33
+            weekly_revenue_after_opex = weekly_revenue - weekly_opex
+            
             projection_weekly_dates.append(week_start)
-            projection_weekly_revenues.append(weekly_revenue)
+            projection_weekly_revenues.append(weekly_revenue_after_opex)
             
             # Increment week counter for decay calculation
             week_counter += 1
@@ -1109,6 +1117,14 @@ def main():
         format="%.4f"
     )
     
+    monthly_opex = st.sidebar.number_input(
+        "Monthly OPEX Cost (USD)",
+        min_value=0,
+        value=0,
+        step=1000,
+        help="Monthly operating expenses that will be subtracted from revenue (applied to both historical and projected data)"
+    )
+    
     decay_pct = st.sidebar.slider(
         "Weekly Growth/Decay Rate (%)",
         min_value=-5.0,
@@ -1176,7 +1192,7 @@ def main():
     )
     
     # Calculate data with user parameters (needed for intelligent peak detection)
-    df_with_usd, weekly_avg = calculate_weekly_averages(df.copy(), robux_to_usd)
+    df_with_usd, weekly_avg = calculate_weekly_averages(df.copy(), robux_to_usd, monthly_opex)
     
     # Calculate lifetime mean for peak detection
     lifetime_mean = df_with_usd['Estimated Revenue USD'].mean()
@@ -1412,7 +1428,7 @@ def main():
     projection_dates, projection_revenues = generate_weekly_projection_with_deviations(
         start_date, baseline_for_projection, december_scale, summer_scale,
         normal_week_deviations, 
-        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, use_polynomial_growth, use_current_average, polynomial_peak_multiplier, use_standard_growth, standard_growth_percentage, protected_growth_months
+        historical_peak_weekly, last_observed_weekly, decay_pct, summer_peaks, december_peaks, peak_summer_month, 18, use_polynomial_growth, use_current_average, polynomial_peak_multiplier, use_standard_growth, standard_growth_percentage, protected_growth_months, monthly_opex
     )
     
     projection_df = pd.DataFrame({
@@ -1548,6 +1564,14 @@ def main():
     st.write(f"**Historical Data:** {len(df_with_usd)} days from {df_with_usd['date'].min().strftime('%Y-%m-%d')} to {df_with_usd['date'].max().strftime('%Y-%m-%d')}")
     st.write(f"**Projection Period:** {len(projection_df)} weeks from {projection_df['date'].min().strftime('%Y-%m-%d')} to {projection_df['date'].max().strftime('%Y-%m-%d')}")
     st.write(f"**Robux to USD Rate:** {robux_to_usd:.4f}")
+    
+    # Show OPEX information if applicable
+    if monthly_opex > 0:
+        annual_opex = monthly_opex * 12
+        st.write(f"**Monthly OPEX:** ${monthly_opex:,.0f} (${annual_opex:,.0f} annually)")
+        st.write(f"**Daily OPEX:** ${monthly_opex/30.44:,.0f} | **Weekly OPEX:** ${monthly_opex/4.33:,.0f}")
+    else:
+        st.write(f"**Monthly OPEX:** $0 (no operating expenses applied)")
     
     # Calculate and display current evaluation multiple
     actual_annual_revenue = df_with_usd['Estimated Revenue USD'].sum() * (365 / len(df_with_usd))
